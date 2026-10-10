@@ -1,0 +1,20 @@
+.root { display: flex; gap: var(--space-2); width: 100%; }
+.stack { flex-direction: column; }
+.row { flex-direction: row; }
+.row > .button { flex: 1; min-width: 0; padding-inline: var(--space-2); }
+
+/* Brand glyphs read slightly larger than the default 12px button icon slot. */
+.button > span:first-child:has(svg) { width: var(--size-icon-sm); height: var(--size-icon-sm); }
+
+.or {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+}
+.or > .orLine { flex: 1; width: auto; }
+.orLabel {
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  color: var(--color-fg-muted);
+  text-transform: lowercase;
+}

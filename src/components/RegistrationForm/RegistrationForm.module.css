@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: calc(var(--size-layout-dialog-md) - var(--space-8));
+  color: var(--color-fg-default);
+}
+.stack { display: flex; flex-direction: column; gap: var(--space-1); }
+
+.terms { border-radius: var(--radius-sm); }
+.termsLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  color: var(--color-fg-secondary);
+  cursor: pointer;
+}
+/* Align the 12px box with the first line of 12px / 1.3 text. */
+.termsBox { flex: none; margin-top: calc((var(--font-size-sm) * var(--font-line-height-snug) - var(--component-checkbox-size)) / 2); }
+.termsInvalid .termsLabel { color: var(--color-fg-default); }
+
+.link {
+  color: var(--color-fg-link);
+  text-decoration: underline;
+  text-underline-offset: var(--space-half);
+  border-radius: var(--radius-xs);
+}
+.link:is(:hover, [data-state~='hover']) { color: var(--color-fg-accent-hover); }
+.link:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--space-px);
+}
+
+.footnote {
+  margin: 0;
+  text-align: center;
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  color: var(--color-fg-muted);
+}
