@@ -2,7 +2,7 @@
 .frame { margin: 0; position: relative; display: flex; flex-direction: column; gap: var(--space-2); width: 100%; min-width: 0; color: var(--color-fg-default); }
 .header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); }
 .title { margin: 0; font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--typography-title-sm-line-height) var(--typography-title-sm-family); }
-.subtitle { margin: 0; font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family); color: var(--color-fg-muted); }
+.subtitle { margin: 0; font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family); color: var(--color-fg-secondary); }
 .plot { position: relative; width: 100%; }
 .svg { display: block; overflow: visible; }
 
@@ -21,7 +21,8 @@
 .legendButton { display: inline-flex; align-items: center; gap: var(--space-1); padding: var(--space-half) var(--space-1); border-radius: var(--radius-sm); color: inherit; }
 .legendButton:hover { background: var(--color-bg-hover); }
 .legendButton:focus-visible { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }
-.legendButton[aria-pressed='false'] { opacity: var(--opacity-dimmed); }
+.legendButton[aria-pressed='false'] { color: var(--color-fg-muted); text-decoration: line-through; }
+.legendButton[aria-pressed='false'] .swatch { opacity: var(--opacity-dimmed); }
 .swatch { flex: none; width: var(--space-2); height: var(--space-2); border-radius: var(--radius-xs); }
 .swatchLine { height: var(--space-half); border-radius: var(--radius-full); }
 .swatchDot { border-radius: var(--radius-full); }
@@ -45,5 +46,5 @@
 }
 .tooltipTitle { margin: 0 0 var(--space-1); font-weight: var(--font-weight-semibold); }
 .tooltipRow { display: flex; align-items: center; gap: var(--space-2); }
-.tooltipLabel { flex: 1; color: var(--color-fg-muted); }
+.tooltipLabel { flex: 1; color: var(--color-fg-secondary); }
 .tooltipValue { font-variant-numeric: tabular-nums; font-weight: var(--font-weight-semibold); }
