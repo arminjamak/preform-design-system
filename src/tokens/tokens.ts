@@ -154,6 +154,10 @@ export const tokens = {
       info: 'var(--color-status-info)',
       'info-strong': 'var(--color-status-info-strong)',
       'info-soft': 'var(--color-status-info-soft)',
+      'success-fg': 'var(--color-status-success-fg)',
+      'warning-fg': 'var(--color-status-warning-fg)',
+      'danger-fg': 'var(--color-status-danger-fg)',
+      'info-fg': 'var(--color-status-info-fg)',
     },
     control: {
       'track-off': 'var(--color-control-track-off)',
@@ -184,6 +188,16 @@ export const tokens = {
       'sequential-low': 'var(--color-chart-sequential-low)',
       'sequential-high': 'var(--color-chart-sequential-high)',
       track: 'var(--color-chart-track)',
+    },
+    syntax: {
+      keyword: 'var(--color-syntax-keyword)',
+      string: 'var(--color-syntax-string)',
+      number: 'var(--color-syntax-number)',
+      comment: 'var(--color-syntax-comment)',
+      function: 'var(--color-syntax-function)',
+      type: 'var(--color-syntax-type)',
+      property: 'var(--color-syntax-property)',
+      punctuation: 'var(--color-syntax-punctuation)',
     },
   },
   space: {

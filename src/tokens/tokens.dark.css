@@ -55,6 +55,10 @@
   --color-status-info: var(--color-blue-500);
   --color-status-info-strong: var(--color-blue-300);
   --color-status-info-soft: var(--color-blue-900);
+  --color-status-success-fg: var(--color-green-300);
+  --color-status-warning-fg: var(--color-amber-300);
+  --color-status-danger-fg: var(--color-red-300);
+  --color-status-info-fg: var(--color-blue-300);
   --color-control-track-off: var(--color-neutral-600);
   --color-control-track-on: var(--color-blue-500);
   --color-control-thumb: var(--color-neutral-0);
@@ -79,4 +83,12 @@
   --color-chart-sequential-low: var(--color-blue-900);
   --color-chart-sequential-high: var(--color-blue-300);
   --color-chart-track: var(--color-neutral-700);
+  --color-syntax-keyword: var(--color-blue-400);
+  --color-syntax-string: var(--color-green-300);
+  --color-syntax-number: var(--color-amber-300);
+  --color-syntax-comment: var(--color-neutral-400);
+  --color-syntax-function: var(--color-red-300);
+  --color-syntax-type: var(--color-magenta-100);
+  --color-syntax-property: var(--color-orange-100);
+  --color-syntax-punctuation: var(--color-neutral-300);
 }

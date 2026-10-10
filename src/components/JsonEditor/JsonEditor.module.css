@@ -99,11 +99,11 @@
   box-shadow: inset var(--border-width-2) 0 0 var(--color-status-danger);
 }
 
-.key { color: var(--color-fg-accent); }
-.string { color: var(--color-status-success-strong); }
-.number { color: var(--color-status-warning-strong); }
-.literal { color: var(--color-accent-tone-magenta); }
-.punct { color: var(--color-fg-secondary); }
+.key { color: var(--color-syntax-keyword); }
+.string { color: var(--color-syntax-string); }
+.number { color: var(--color-syntax-number); }
+.literal { color: var(--color-syntax-type); }
+.punct { color: var(--color-syntax-punctuation); }
 .other { color: var(--color-status-danger); text-decoration: underline wavy var(--color-status-danger); text-underline-offset: var(--space-half); }
 
 .status {
@@ -119,6 +119,6 @@
   margin-top: calc((var(--typography-body-sm-size) * var(--typography-body-sm-line-height) - var(--size-icon-xs)) / 2);
 }
 .status strong { font-weight: var(--font-weight-semibold); }
-.statusOk { color: var(--color-status-success-strong); }
+.statusOk { color: var(--color-status-success-fg); }
 .statusError { color: var(--color-status-danger); }
 .statusIdle { color: var(--color-fg-muted); }

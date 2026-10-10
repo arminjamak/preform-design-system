@@ -16,6 +16,7 @@ src/stories/<Name>.stories.tsx            Storybook stories (CSF3)
 
 - **Only tokens.** Every colour, length, radius, shadow, font, duration and z-index is a `var(--…)` from `src/tokens/tokens.css`. No hex, rgb, px, rem, ms, em anywhere in component CSS or TSX, except `0` and unitless numbers (`flex: 1`, `line-height: 1`, `opacity` via `var(--opacity-*)`).
 - Need a value that has no token? Use `calc()` on existing tokens (`calc(var(--space-2) * 3)`). Do **not** add tokens from a parallel task; note the need in your report.
+- Status text on a tinted wash or surface: `--color-status-{success,warning,danger,info}-fg` (readable in both themes). Code colouring: `--color-syntax-{keyword,string,number,comment,function,type,property,punctuation}`. Visually hidden text: the global `.pf-sr-only` class.
 - Prefer **semantic** tokens (`--color-bg-*`, `--color-fg-*`, `--color-border-*`, `--color-status-*`, `--color-chart-*`, `--elevation-*`, `--typography-*`) over primitives (`--color-blue-600`). Primitives are allowed only for an intentional accent (e.g. `--color-blue-800` for a pressed primary).
 - Text: use the composite font shorthand, e.g.
   `font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);`

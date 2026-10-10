@@ -1722,6 +1722,62 @@
     "theme": "light"
   },
   {
+    "name": "--color-status-success-fg",
+    "path": [
+      "color",
+      "status",
+      "success-fg"
+    ],
+    "type": "color",
+    "value": "#118011",
+    "ref": "color.green.700",
+    "description": "Readable status text on the matching *-soft wash and on surfaces.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-warning-fg",
+    "path": [
+      "color",
+      "status",
+      "warning-fg"
+    ],
+    "type": "color",
+    "value": "#b57109",
+    "ref": "color.amber.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-danger-fg",
+    "path": [
+      "color",
+      "status",
+      "danger-fg"
+    ],
+    "type": "color",
+    "value": "#d0201b",
+    "ref": "color.red.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-info-fg",
+    "path": [
+      "color",
+      "status",
+      "info-fg"
+    ],
+    "type": "color",
+    "value": "#0857b2",
+    "ref": "color.blue.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
     "name": "--color-control-track-off",
     "path": [
       "color",
@@ -2053,6 +2109,118 @@
     "type": "color",
     "value": "#e5e8eb",
     "ref": "color.neutral.200",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-syntax-keyword",
+    "path": [
+      "color",
+      "syntax",
+      "keyword"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-syntax-string",
+    "path": [
+      "color",
+      "syntax",
+      "string"
+    ],
+    "type": "color",
+    "value": "#118011",
+    "ref": "color.green.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-syntax-number",
+    "path": [
+      "color",
+      "syntax",
+      "number"
+    ],
+    "type": "color",
+    "value": "#b57109",
+    "ref": "color.amber.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-syntax-comment",
+    "path": [
+      "color",
+      "syntax",
+      "comment"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-syntax-function",
+    "path": [
+      "color",
+      "syntax",
+      "function"
+    ],
+    "type": "color",
+    "value": "#d0201b",
+    "ref": "color.red.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-syntax-type",
+    "path": [
+      "color",
+      "syntax",
+      "type"
+    ],
+    "type": "color",
+    "value": "#b31a8f",
+    "ref": "color.magenta.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-syntax-property",
+    "path": [
+      "color",
+      "syntax",
+      "property"
+    ],
+    "type": "color",
+    "value": "#c24f0e",
+    "ref": "color.orange.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-syntax-punctuation",
+    "path": [
+      "color",
+      "syntax",
+      "punctuation"
+    ],
+    "type": "color",
+    "value": "#4b5056",
+    "ref": "color.neutral.700",
     "description": null,
     "tier": "semantic",
     "theme": "light"

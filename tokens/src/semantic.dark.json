@@ -165,6 +165,18 @@
       },
       "info-soft": {
         "$value": "{color.blue.900}"
+      },
+      "success-fg": {
+        "$value": "{color.green.300}"
+      },
+      "warning-fg": {
+        "$value": "{color.amber.300}"
+      },
+      "danger-fg": {
+        "$value": "{color.red.300}"
+      },
+      "info-fg": {
+        "$value": "{color.blue.300}"
       }
     },
     "control": {
@@ -243,6 +255,32 @@
       },
       "track": {
         "$value": "{color.neutral.700}"
+      }
+    },
+    "syntax": {
+      "keyword": {
+        "$value": "{color.blue.400}"
+      },
+      "string": {
+        "$value": "{color.green.300}"
+      },
+      "number": {
+        "$value": "{color.amber.300}"
+      },
+      "comment": {
+        "$value": "{color.neutral.400}"
+      },
+      "function": {
+        "$value": "{color.red.300}"
+      },
+      "type": {
+        "$value": "{color.magenta.100}"
+      },
+      "property": {
+        "$value": "{color.orange.100}"
+      },
+      "punctuation": {
+        "$value": "{color.neutral.300}"
       }
     }
   }

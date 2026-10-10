@@ -70,14 +70,14 @@
 .twistyOpen { rotate: 90deg; }
 .item[aria-expanded] > .row { cursor: pointer; }
 
-.key { color: var(--color-fg-accent); }
+.key { color: var(--color-syntax-keyword); }
 .rootKey { font-weight: var(--font-weight-semibold); }
 .index { color: var(--color-fg-muted); }
-.punct { color: var(--color-fg-secondary); }
+.punct { color: var(--color-syntax-punctuation); }
 .value { min-width: 0; overflow-wrap: anywhere; }
-.string { color: var(--color-status-success-strong); }
-.number { color: var(--color-status-warning-strong); }
-.literal { color: var(--color-accent-tone-magenta); }
+.string { color: var(--color-syntax-string); }
+.number { color: var(--color-syntax-number); }
+.literal { color: var(--color-syntax-type); }
 .summary { color: var(--color-fg-muted); }
 
 .mark {

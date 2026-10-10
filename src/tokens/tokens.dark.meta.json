@@ -728,6 +728,62 @@
     "theme": "dark"
   },
   {
+    "name": "--color-status-success-fg",
+    "path": [
+      "color",
+      "status",
+      "success-fg"
+    ],
+    "type": "color",
+    "value": "#6fd86f",
+    "ref": "color.green.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-warning-fg",
+    "path": [
+      "color",
+      "status",
+      "warning-fg"
+    ],
+    "type": "color",
+    "value": "#f7c466",
+    "ref": "color.amber.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-danger-fg",
+    "path": [
+      "color",
+      "status",
+      "danger-fg"
+    ],
+    "type": "color",
+    "value": "#ef8c8c",
+    "ref": "color.red.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-info-fg",
+    "path": [
+      "color",
+      "status",
+      "info-fg"
+    ],
+    "type": "color",
+    "value": "#9cc0ea",
+    "ref": "color.blue.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
     "name": "--color-control-track-off",
     "path": [
       "color",
@@ -1059,6 +1115,118 @@
     "type": "color",
     "value": "#4b5056",
     "ref": "color.neutral.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-syntax-keyword",
+    "path": [
+      "color",
+      "syntax",
+      "keyword"
+    ],
+    "type": "color",
+    "value": "#7fb0e3",
+    "ref": "color.blue.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-syntax-string",
+    "path": [
+      "color",
+      "syntax",
+      "string"
+    ],
+    "type": "color",
+    "value": "#6fd86f",
+    "ref": "color.green.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-syntax-number",
+    "path": [
+      "color",
+      "syntax",
+      "number"
+    ],
+    "type": "color",
+    "value": "#f7c466",
+    "ref": "color.amber.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-syntax-comment",
+    "path": [
+      "color",
+      "syntax",
+      "comment"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-syntax-function",
+    "path": [
+      "color",
+      "syntax",
+      "function"
+    ],
+    "type": "color",
+    "value": "#ef8c8c",
+    "ref": "color.red.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-syntax-type",
+    "path": [
+      "color",
+      "syntax",
+      "type"
+    ],
+    "type": "color",
+    "value": "#f7b6e4",
+    "ref": "color.magenta.100",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-syntax-property",
+    "path": [
+      "color",
+      "syntax",
+      "property"
+    ],
+    "type": "color",
+    "value": "#f9c9a8",
+    "ref": "color.orange.100",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-syntax-punctuation",
+    "path": [
+      "color",
+      "syntax",
+      "punctuation"
+    ],
+    "type": "color",
+    "value": "#d6d9dd",
+    "ref": "color.neutral.300",
     "description": null,
     "tier": "semantic",
     "theme": "dark"

@@ -211,6 +211,10 @@
   --color-status-info: var(--color-blue-500);
   --color-status-info-strong: var(--color-blue-600);
   --color-status-info-soft: var(--color-blue-50);
+  --color-status-success-fg: var(--color-green-700); /** Readable status text on the matching *-soft wash and on surfaces. */
+  --color-status-warning-fg: var(--color-amber-700);
+  --color-status-danger-fg: var(--color-red-700);
+  --color-status-info-fg: var(--color-blue-700);
   --color-control-track-off: var(--color-neutral-600); /** Toggle track when off. */
   --color-control-track-on: var(--color-blue-600);
   --color-control-thumb: var(--color-neutral-0);
@@ -235,6 +239,14 @@
   --color-chart-sequential-low: var(--color-blue-50);
   --color-chart-sequential-high: var(--color-blue-800);
   --color-chart-track: var(--color-neutral-200);
+  --color-syntax-keyword: var(--color-blue-600);
+  --color-syntax-string: var(--color-green-700);
+  --color-syntax-number: var(--color-amber-700);
+  --color-syntax-comment: var(--color-neutral-600);
+  --color-syntax-function: var(--color-red-700);
+  --color-syntax-type: var(--color-magenta-700);
+  --color-syntax-property: var(--color-orange-700);
+  --color-syntax-punctuation: var(--color-neutral-700);
   --shadow-xs: 0px 1px 2px 0px var(--color-shadow-ink-12);
   --shadow-sm: 0px 1px 4px 0px var(--color-shadow-ink-14);
   --shadow-md: 0px 3px 12px 0px var(--color-shadow-ink-14);
