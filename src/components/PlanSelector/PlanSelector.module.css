@@ -1,0 +1,172 @@
+/* Billing plan picker. Cards are white surfaces on the panel; selection uses the accent border + subtle wash like Card `selected`. */
+.root { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; color: var(--color-fg-default); }
+
+.periodRow { display: flex; align-items: center; gap: var(--space-2); }
+.periodRow > [role='radiogroup'] { width: calc(var(--size-field-lg) + var(--space-8)); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--size-layout-menu-min), 1fr));
+  gap: var(--space-3);
+  align-items: stretch;
+  padding-top: var(--space-2);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-3) var(--space-3);
+  border-radius: var(--radius-lg);
+  border: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  box-shadow: var(--elevation-raised);
+  cursor: pointer;
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-standard),
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.card:is(:hover, [data-state~='hover']):not(.disabled) { border-color: var(--color-border-accent); box-shadow: var(--elevation-card); }
+.card:is(:has(.input:focus-visible), [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.card:is([data-state~='active']):not(.disabled) { background: var(--color-bg-subtle); }
+.recommended { border-color: var(--color-fg-accent); }
+.selected {
+  border-color: var(--color-fg-accent);
+  background: var(--color-bg-accent-subtle);
+  box-shadow: 0 0 0 var(--border-width-1) var(--color-fg-accent), var(--elevation-card);
+}
+.disabled { cursor: not-allowed; opacity: var(--opacity-disabled); }
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: var(--space-5);
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-accent);
+  color: var(--color-fg-on-accent);
+  font: var(--typography-caption-weight) var(--font-size-xs) / var(--font-line-height-none) var(--typography-caption-family);
+  white-space: nowrap;
+}
+.ribbon > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); }
+
+/* Head: native radio (visually hidden) + drawn dot + name */
+.head { display: flex; align-items: center; gap: var(--space-2); min-width: 0; cursor: inherit; }
+.input {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.radioDot {
+  flex: none;
+  width: var(--space-4);
+  height: var(--space-4);
+  border-radius: var(--radius-full);
+  border: var(--border-width-1) solid var(--color-border-strong);
+  background: var(--color-bg-surface);
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.selected .radioDot { border-color: var(--color-fg-accent); box-shadow: inset 0 0 0 var(--border-width-3) var(--color-bg-surface), inset 0 0 0 var(--space-2) var(--color-fg-accent); }
+.name { flex: 1; min-width: 0; font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--typography-title-sm-line-height) var(--typography-title-sm-family); }
+.currentBadge { flex: none; }
+
+.body { display: flex; flex-direction: column; gap: var(--space-3); flex: 1; }
+.tagline { margin: 0; font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family); color: var(--color-fg-muted); }
+
+.priceBlock { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--space-1); margin: 0; }
+.price { font: var(--typography-heading-weight) var(--typography-heading-size) / var(--typography-heading-line-height) var(--typography-heading-family); font-variant-numeric: tabular-nums; }
+.priceSuffix { font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family); color: var(--color-fg-muted); }
+.priceNote { flex-basis: 100%; margin-top: var(--space-half); font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family); color: var(--color-fg-muted); }
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3) 0 0;
+  list-style: none;
+  border-top: var(--border-width-1) solid var(--color-border-subtle);
+}
+.feature { display: flex; align-items: flex-start; gap: var(--space-2); font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family); color: var(--color-fg-secondary); }
+.feature > svg { flex: none; width: var(--size-icon-xs); height: var(--size-icon-xs); margin-top: var(--space-half); color: var(--color-status-success); }
+
+.cta { margin-top: auto; }
+
+/* Comparison */
+.compare { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.chevron { transition: transform var(--motion-duration-fast) var(--motion-easing-standard); }
+.chevronOpen { transform: rotate(180deg); }
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-surface);
+}
+.tableWrap[hidden] { display: none; }
+.table { width: 100%; border-collapse: collapse; font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family); }
+.table th,
+.table td { padding: var(--space-2) var(--space-3); border-bottom: var(--border-width-1) solid var(--color-border-subtle); }
+.table tbody tr:last-child > * { border-bottom: 0; }
+.featureHead,
+.planHead {
+  background: var(--color-bg-subtle);
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  border-bottom-color: var(--color-border-default);
+}
+.featureHead,
+.rowHead { text-align: left; font-weight: var(--font-weight-regular); color: var(--color-fg-secondary); }
+.featureHead { font-weight: var(--font-weight-medium); color: var(--color-fg-muted); }
+.planHead { text-align: center; white-space: nowrap; }
+.valueCell { text-align: center; color: var(--color-fg-default); }
+.colSelected { background: var(--color-bg-accent-subtle); }
+.planHead.colSelected { color: var(--color-fg-accent); }
+.yes,
+.no { display: inline-flex; vertical-align: middle; }
+.yes > svg,
+.no > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); }
+.yes { color: var(--color-status-success); }
+.no { color: var(--color-fg-faint); }
+
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Status pill: tone carried by the wash and dot; text stays --color-fg-default so it reads in both themes. */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: none;
+  height: var(--space-5);
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--pill-bg);
+  font: var(--typography-caption-weight) var(--font-size-xs) / var(--font-line-height-none) var(--typography-caption-family);
+  color: var(--color-fg-default);
+  white-space: nowrap;
+}
+.statusDot { width: calc(var(--space-1) + var(--space-half)); height: calc(var(--space-1) + var(--space-half)); border-radius: var(--radius-full); background: var(--pill-dot); }
+.toneNeutral { --pill-bg: var(--color-bg-muted); --pill-dot: var(--color-fg-muted); }
+.toneAccent  { --pill-bg: var(--color-bg-accent-soft); --pill-dot: var(--color-fg-accent); }
+.toneSuccess { --pill-bg: var(--color-status-success-soft); --pill-dot: var(--color-status-success); }
+.toneWarning { --pill-bg: var(--color-status-warning-soft); --pill-dot: var(--color-status-warning); }
+.toneDanger  { --pill-bg: var(--color-status-danger-soft); --pill-dot: var(--color-status-danger); }
+.toneInfo    { --pill-bg: var(--color-status-info-soft); --pill-dot: var(--color-status-info); }

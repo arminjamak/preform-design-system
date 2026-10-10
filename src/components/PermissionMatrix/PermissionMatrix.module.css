@@ -1,0 +1,164 @@
+/* Roles × permissions grid. Sticky header row and first column sit on opaque surface tokens so scrolled cells never show through. */
+.root {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  box-shadow: var(--elevation-card);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--size-control-lg);
+  padding: var(--space-1) var(--space-3);
+  border-bottom: var(--border-width-1) solid var(--color-border-default);
+}
+.title { flex: 1; min-width: 0; font: var(--typography-body-strong-weight) var(--typography-body-strong-size) / var(--typography-body-strong-line-height) var(--typography-body-strong-family); }
+
+.scroller {
+  overflow: auto;
+  max-height: var(--pm-max-height, calc(var(--space-24) * 4));
+  overscroll-behavior: contain;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+}
+
+/* Header */
+.headCell {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-subtle);
+  border-bottom: var(--border-width-1) solid var(--color-border-default);
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  color: var(--color-fg-default);
+  white-space: nowrap;
+}
+.corner {
+  left: 0;
+  z-index: calc(var(--z-index-sticky) + 1);
+  text-align: left;
+  color: var(--color-fg-muted);
+  border-right: var(--border-width-1) solid var(--color-border-subtle);
+}
+.roleHead { text-align: center; min-width: calc(var(--size-field-md) - var(--space-2)); }
+.roleHead > * { vertical-align: middle; }
+.roleLabel { display: block; margin-bottom: var(--space-1); }
+
+/* First column */
+.sticky {
+  position: sticky;
+  left: 0;
+  z-index: var(--z-index-raised);
+  border-right: var(--border-width-1) solid var(--color-border-subtle);
+}
+
+.groupRow > * { background: var(--color-bg-panel); border-bottom: var(--border-width-1) solid var(--color-border-subtle); }
+.groupHead {
+  padding: var(--space-1) var(--space-3);
+  text-align: left;
+  font: var(--typography-caption-weight) var(--typography-caption-size) / var(--typography-caption-line-height) var(--typography-caption-family);
+  letter-spacing: var(--font-letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+  white-space: nowrap;
+}
+.groupFill { padding: 0; }
+
+.rowHead {
+  min-width: calc(var(--size-layout-menu-min) + var(--space-10));
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  font-weight: inherit;
+  background: var(--color-bg-surface);
+  border-bottom: var(--border-width-1) solid var(--color-border-subtle);
+}
+.permLabel { display: block; font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family); color: var(--color-fg-default); }
+.permDescription { display: block; margin-top: var(--space-half); font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family); color: var(--color-fg-muted); }
+
+.cell {
+  height: var(--size-control-lg);
+  padding: var(--space-1) var(--space-3);
+  text-align: center;
+  background: var(--color-bg-surface);
+  border-bottom: var(--border-width-1) solid var(--color-border-subtle);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.row:last-child > * { border-bottom-color: var(--color-border-default); }
+tbody:last-child .row:last-child > * { border-bottom: 0; }
+
+.row:hover > .cell,
+.row:hover > .rowHead { background: var(--color-bg-subtle); }
+
+/* Unsaved changes: warm wash plus a left rule so it does not rely on colour alone. */
+.cell.changed,
+.row:hover > .cell.changed {
+  background: var(--color-status-warning-soft);
+  box-shadow: inset var(--border-width-2) 0 0 var(--color-status-warning);
+}
+
+.cellInner { position: relative; display: inline-flex; align-items: center; vertical-align: middle; }
+.lockTip { position: absolute; left: calc(100% + var(--space-1)); top: 50%; translate: 0 -50%; }
+.lock {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+  border-radius: var(--radius-sm);
+  color: var(--color-fg-muted);
+}
+.lock > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); }
+.lock:is(:hover, [data-state~='hover']) { color: var(--color-fg-default); background: var(--color-bg-hover); }
+.lock:is(:focus-visible, [data-state~='focus']) { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }
+
+/* Read-only marks */
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+  color: var(--color-fg-faint);
+}
+.mark > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); }
+.markOn { color: var(--color-fg-accent); }
+
+/* Status pill: tone carried by the wash and dot; text stays --color-fg-default so it reads in both themes. */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: none;
+  height: var(--space-5);
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--pill-bg);
+  font: var(--typography-caption-weight) var(--font-size-xs) / var(--font-line-height-none) var(--typography-caption-family);
+  color: var(--color-fg-default);
+  white-space: nowrap;
+}
+.statusDot { width: calc(var(--space-1) + var(--space-half)); height: calc(var(--space-1) + var(--space-half)); border-radius: var(--radius-full); background: var(--pill-dot); }
+.toneNeutral { --pill-bg: var(--color-bg-muted); --pill-dot: var(--color-fg-muted); }
+.toneAccent  { --pill-bg: var(--color-bg-accent-soft); --pill-dot: var(--color-fg-accent); }
+.toneSuccess { --pill-bg: var(--color-status-success-soft); --pill-dot: var(--color-status-success); }
+.toneWarning { --pill-bg: var(--color-status-warning-soft); --pill-dot: var(--color-status-warning); }
+.toneDanger  { --pill-bg: var(--color-status-danger-soft); --pill-dot: var(--color-status-danger); }
+.toneInfo    { --pill-bg: var(--color-status-info-soft); --pill-dot: var(--color-status-info); }
+
+/* Keep header cells immune to host table styles (e.g. docs tables that uppercase every th). */
+.table :is(.headCell, .rowHead) { text-transform: none; letter-spacing: var(--font-letter-spacing-normal); }
