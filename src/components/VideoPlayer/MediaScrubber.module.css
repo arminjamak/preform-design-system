@@ -1,0 +1,108 @@
+/* Seek bar: mirrors the Slider `fill` variant (track + thumb) with a buffer rail. */
+.wrap {
+  --scrub-track: var(--space-1);
+  --scrub-thumb: var(--space-3);
+  --scrub-rail: var(--color-control-slider-rail);
+  --scrub-buffer: var(--color-border-strong);
+  --scrub-fill: var(--color-control-slider-fill);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: var(--size-control-xs);
+}
+.media {
+  --scrub-rail: color-mix(in srgb, var(--color-fg-on-inverse) 28%, transparent);
+  --scrub-buffer: color-mix(in srgb, var(--color-fg-on-inverse) 50%, transparent);
+}
+
+.rail,
+.buffer,
+.fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: var(--scrub-track);
+  transform: translateY(-50%);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+  transition: height var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.rail { right: 0; background: var(--scrub-rail); }
+.buffer { width: calc(var(--scrub-buf) * 100%); background: var(--scrub-buffer); }
+.fill { width: calc(var(--scrub-pct) * (100% - var(--scrub-thumb)) + var(--scrub-thumb) / 2); background: var(--scrub-fill); }
+.wrap:is(:hover, :focus-within) .rail,
+.wrap:is(:hover, :focus-within) .buffer,
+.wrap:is(:hover, :focus-within) .fill { height: calc(var(--scrub-track) * 1.5); }
+
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.input::-webkit-slider-runnable-track { height: 100%; background: transparent; }
+.input::-moz-range-track { height: 100%; background: transparent; }
+.input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--scrub-thumb);
+  height: var(--scrub-thumb);
+  margin-top: calc((var(--size-control-xs) - var(--scrub-thumb)) / 2);
+  border-radius: var(--radius-full);
+  background: var(--color-control-thumb);
+  border: var(--border-width-1) solid var(--color-border-strong);
+  box-shadow: var(--elevation-raised);
+  transition: transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.input::-moz-range-thumb {
+  width: var(--scrub-thumb);
+  height: var(--scrub-thumb);
+  border-radius: var(--radius-full);
+  background: var(--color-control-thumb);
+  border: var(--border-width-1) solid var(--color-border-strong);
+  box-shadow: var(--elevation-raised);
+}
+.wrap:hover .input:not(:disabled)::-webkit-slider-thumb { transform: scale(1.15); }
+.input:focus-visible {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+  border-radius: var(--radius-sm);
+}
+.input:disabled { cursor: default; }
+.disabled .fill { background: var(--color-fg-disabled); }
+
+/* Waveform variant: bars replace the rail, a thin playhead replaces the thumb. */
+.wave { height: var(--size-control-lg); }
+.wave .input::-webkit-slider-thumb { opacity: var(--opacity-hidden); }
+.wave .input::-moz-range-thumb { opacity: var(--opacity-hidden); }
+.bars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.barsSvg { display: block; width: 100%; height: 100%; overflow: visible; }
+.bar {
+  fill: var(--color-border-strong);
+  transition: fill var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.media .bar { fill: var(--scrub-rail); }
+.bar.played { fill: var(--scrub-fill); }
+.wrap.wave:hover .bar:not(.played) { fill: var(--color-fg-muted); }
+.disabled .bar { fill: var(--color-border-default); }
+.playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--scrub-pct) * 100%);
+  width: var(--border-width-2);
+  margin-left: calc(var(--border-width-2) / -2);
+  border-radius: var(--radius-full);
+  background: var(--color-fg-default);
+}
+.disabled .playhead { opacity: var(--opacity-hidden); }
