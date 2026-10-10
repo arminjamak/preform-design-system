@@ -18,7 +18,8 @@
     "tokens": "node tokens/build.mjs",
     "lint:tokens": "node scripts/check-no-raw-values.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "check": "npm run tokens && npm run lint:tokens && npm run typecheck"
+    "check": "npm run tokens && npm run barrel && npm run lint:tokens && npm run typecheck",
+    "barrel": "node scripts/gen-barrel.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.546.0",

@@ -7,6 +7,19 @@ import { Meta } from '@storybook/addon-docs/blocks';
 A token-first component library distilled from the **PreForm 3D Printing Interface** prototype
 ([arminjamak/PreForm-3D-Printing-Interface](https://github.com/arminjamak/PreForm-3D-Printing-Interface)).
 
+## Two versions in one Storybook
+
+Use the **PreForm Design System ▾** switcher at the top left of the sidebar.
+
+| Version | What it contains |
+| --- | --- |
+| **v1.0 · Current** | The 28 components distilled directly from the PreForm app. |
+| **v2.0 · Expanded** | The full library: 162 component folders covering all 200 patterns of a complete UI inventory, from buttons to charts, editors, collaboration and admin tools. |
+
+The **Coverage** page (v2.0) maps every one of the 200 patterns to the component that provides it. Related
+patterns share one component with a variant instead of becoming separate components: every button type is a
+`Button` variant, Pie and Donut are one `PieChart`, Toast and Snackbar are one `Toast`.
+
 ## How it is layered
 
 | Tier | Source | Example |
@@ -32,6 +45,7 @@ Style Dictionary 4 into `src/tokens/tokens.css` (light, `:root`), `tokens.dark.c
 - Pick a component in the sidebar. **Playground** exposes every prop in the Controls panel; the **Code** panel below the canvas shows the JSX for the current args.
 - The **Theme** and **Surface** toolbar items switch dark mode and the background token behind the story.
 - **Foundations** pages render straight from the compiled token metadata, so they can never drift from the CSS.
+- New in v2.0 tokens: a `--color-chart-*` data-visualisation palette, `--color-syntax-*` for code, `--color-status-*-fg` for readable status text in both themes, a stronger dark-theme scrim, and the `.pf-sr-only` utility class.
 
 ## Installing in an app
 

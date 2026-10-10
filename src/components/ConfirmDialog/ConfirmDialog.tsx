@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useId, useRef } from 'react';
 import { cx } from '../../lib/cx';
 import { Button } from '../Button/Button';
 import s from './ConfirmDialog.module.css';
@@ -21,6 +21,8 @@ export type ConfirmDialogProps = {
 /** Compact alert dialog with a text cancel on the left and pill actions on the right. */
 export function ConfirmDialog({ open, title, message, confirmLabel, onConfirm, onCancel, cancelLabel = 'Keep Editing', secondaryLabel, onSecondary, tone = 'default', inline }: ConfirmDialogProps) {
   const confirmRef = useRef<HTMLButtonElement>(null);
+  const titleId = useId();
+  const messageId = useId();
 
   useEffect(() => {
     if (!open) return;
@@ -33,11 +35,11 @@ export function ConfirmDialog({ open, title, message, confirmLabel, onConfirm, o
   if (!open) return null;
   return (
     <div className={cx(s.scrim, inline && s.inline)} onMouseDown={(e) => e.target === e.currentTarget && onCancel()}>
-      <div role="alertdialog" aria-modal="true" aria-labelledby="confirm-title" aria-describedby="confirm-message" className={s.dialog}>
-        <h2 id="confirm-title" className={s.title}>
+      <div role="alertdialog" aria-modal="true" aria-labelledby={titleId} aria-describedby={messageId} className={s.dialog}>
+        <h2 id={titleId} className={s.title}>
           {title}
         </h2>
-        <p id="confirm-message" className={s.message}>
+        <p id={messageId} className={s.message}>
           {message}
         </p>
         <div className={s.actions}>

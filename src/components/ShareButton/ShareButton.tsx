@@ -50,7 +50,7 @@ const noop = () => {};
 export function ShareButton({
   url,
   title,
-  targets = DEFAULT_SHARE_TARGETS,
+  targets: targetsProp,
   onShare,
   label = 'Share',
   size = 'sm',
@@ -77,6 +77,9 @@ export function ShareButton({
     if (open) inputRef.current?.focus();
   }, [open]);
 
+  // Resolved here rather than as a parameter default: Storybook's docgen tries to print the default's
+  // array literal and cannot serialise the JSX icons inside it.
+  const targets = targetsProp ?? DEFAULT_SHARE_TARGETS;
   const copyTarget = targets.find((t) => t.id === 'copy-link');
 
   const items: MenuItem[] = targets.map((t) => ({

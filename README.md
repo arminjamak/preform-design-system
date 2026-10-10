@@ -39,6 +39,7 @@ Requires Node 20 or newer (`.nvmrc` pins 22). Every push to `main` also publishe
 | `npm run dev` | Storybook sandbox at http://localhost:6006 |
 | `npm run tokens` | Rebuild `src/tokens/*` from `tokens/src/*.json` |
 | `npm run lint:tokens` | Fail if a component stylesheet uses a raw colour or length |
+| `npm run barrel` | Regenerate `src/components/index.ts` and fail on duplicate export names |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run check` | tokens + lint + typecheck |
 | `npm run build` | Static Storybook → `dist/storybook` |
@@ -66,11 +67,27 @@ Generated output, with references preserved:
 
 ## Components
 
-Avatar · Badge / PassBadge · Button · Callout · Card · Checkbox · ConfirmDialog · Divider · FieldRow · IconButton ·
-KeyValueList · ListItem · Menu / MenuList · Modal · NumberField · PanelShell · Popover · SectionTitle · Segmented ·
-Select · Slider · Spinner · Stepper · Tabs · TextField · Toggle · ToolRail / ToolButton · Tooltip / InfoTip
+Storybook has a version switcher at the top left of the sidebar.
 
-Every interactive component accepts `data-state="hover" | "focus" | "active"` so its states can be rendered without a pointer (see each component's **States** story).
+- **v1.0 · Current**: the 28 components distilled from the PreForm app.
+- **v2.0 · Expanded**: 162 component folders covering all 200 patterns of a full UI inventory. The **Coverage** page maps each pattern to its component.
+
+| Category | Components |
+| --- | --- |
+| Actions | Button, IconButton, Segmented, SplitButton, ButtonGroup, ToggleButton, Fab, CopyButton, ShareButton |
+| Inputs | TextField, TextArea, SearchField, PasswordField, Email/Url/PhoneField, NumberField, Select, MultiSelect, Combobox, Checkbox, RadioGroup, Toggle, Slider, RangeSlider, CodeInput, DatePicker, DateRangePicker, TimePicker, Calendar, FileUpload, ColorPicker, FieldRow |
+| Navigation | TopNav, SidebarNav, BottomNav, Tabs, Breadcrumbs, Pagination, Stepper, MegaMenu, ContextMenu, AnchorNav, BackButton, BackToTop, ToolRail |
+| Feedback | Toast, Banner, Callout, Tooltip, ProgressBar, CircularProgress, Spinner, Skeleton, EmptyState, StatusBadge, NotificationBadge, Badge, ValidationMessage, ConnectionStatus, LiveRegion |
+| Layout | Card, PanelShell, SectionTitle, Accordion, Stack, Grid, Container, SplitPane, ScrollArea, AspectRatio, StickyBar, Divider |
+| Data display | DataTable, KeyValueList, DescriptionList, StatCard, KpiIndicator, Avatar, AvatarGroup, Chip, Rating, Timeline, TreeView, FileList, ListItem |
+| Overlays | Modal, ConfirmDialog, Popover, Menu, Sheet, FullScreenDialog, CommandPalette, HoverCard, TourPopover, CookieConsent, HelpWidget |
+| Media | Image, MediaThumbnail, ImageGallery, Lightbox, Carousel, VideoPlayer, AudioPlayer, ImageCropper, DocumentPreview, TranscriptViewer, CodeBlock, CodeEditor, MarkdownEditor, RichTextEditor, Blockquote, Prose |
+| Charts | BarChart, LineChart, AreaChart, PieChart, ScatterChart, Heatmap, FunnelChart, WaterfallChart, GaugeChart, Sparkline, MapChart, Legend, ChartTooltip |
+| Collaboration | ProfileMenu, ProfileCard, PresenceIndicator, SignInForm, RegistrationForm, SocialLoginButtons, TwoFactorPrompt, LoginModal, MentionInput, CommentThread, ReactionPicker, ChatBubble, ChatComposer, CollaboratorCursor |
+| Interaction | SortableList, KanbanBoard, CalendarView, GanttChart, NodeEditor, CanvasViewport, ZoomControls, PanControl, BulkActionBar, UndoRedo, Kbd, FilterBuilder |
+| Specialized | JsonViewer, JsonEditor, Terminal, LogViewer, DiffViewer, VersionHistory, SettingsPanel, PermissionMatrix, ApiKeyField, WebhookForm, PlanSelector, UsageMeter, OnboardingChecklist, FeatureFlagToggle, BreadcrumbEditor |
+
+Every interactive component accepts `data-state="hover" | "focus" | "active"` so its states can be rendered without a pointer (see each component's **States** story). Contributor rules live in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Using it in an app
 
