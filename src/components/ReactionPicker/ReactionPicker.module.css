@@ -1,0 +1,174 @@
+/* Popover anchor: the layer inherits this width (8 cells + padding). */
+.anchor {
+  --pop-w: calc(var(--size-control-md) * 8 + var(--space-4));
+}
+
+.picker {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border-bottom: var(--border-width-1) solid var(--color-border-subtle);
+}
+.quickEmoji,
+.cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-height-none);
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    scale var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.quickEmoji {
+  width: var(--size-control-lg);
+  height: var(--size-control-lg);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-2xl);
+}
+.cell {
+  width: var(--size-control-md);
+  height: var(--size-control-md);
+}
+.quickEmoji:is(:hover, [data-state~='hover']),
+.cell:is(:hover, [data-state~='hover']) {
+  background: var(--color-bg-hover);
+}
+.quickEmoji:is(:hover, [data-state~='hover']) {
+  scale: 1.12;
+}
+.quickEmoji:is(:focus-visible, [data-state~='focus']),
+.cell:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: calc(var(--component-focus-ring-offset) * -1);
+}
+.quickEmoji:active,
+.cell:active {
+  background: var(--color-bg-pressed);
+}
+.selected {
+  background: var(--color-bg-accent-soft);
+  box-shadow: inset 0 0 0 var(--border-width-1) var(--color-border-accent);
+}
+
+.search {
+  padding: var(--space-2) var(--space-2) 0;
+}
+
+.scroll {
+  max-height: calc(var(--size-control-md) * 7);
+  overflow-y: auto;
+  padding: var(--space-1) var(--space-2) var(--space-2);
+  overscroll-behavior: contain;
+}
+.section + .section {
+  margin-top: var(--space-1);
+}
+.sectionLabel {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-raised);
+  margin: 0;
+  padding: var(--space-1) 0;
+  background: var(--color-bg-surface);
+  color: var(--color-fg-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--font-letter-spacing-wide);
+  font: var(--typography-caption-weight) var(--typography-caption-size) / var(--typography-caption-line-height) var(--typography-caption-family);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, var(--size-control-md));
+}
+.empty {
+  margin: 0;
+  padding: var(--space-4) 0;
+  text-align: center;
+  color: var(--color-fg-muted);
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+}
+
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  margin: calc(var(--space-px) * -1);
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- ReactionBar ---------- */
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+}
+.chipTip {
+  display: inline-flex;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: var(--size-control-sm);
+  padding-inline: var(--space-2);
+  border: var(--border-width-1) solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-secondary);
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    border-color var(--motion-duration-fast) var(--motion-easing-standard),
+    color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.chip:is(:hover, [data-state~='hover']):not(:disabled) {
+  background: var(--color-bg-panel);
+  border-color: var(--color-border-strong);
+}
+.chip:is(:active, [data-state~='active']):not(:disabled) {
+  background: var(--color-bg-muted);
+}
+.chip:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.chip:disabled {
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
+
+.chip.reacted {
+  background: var(--color-bg-accent-subtle);
+  border-color: var(--color-border-accent);
+  color: var(--color-fg-accent);
+}
+.chip.reacted:is(:hover, [data-state~='hover']):not(:disabled) {
+  background: var(--color-bg-accent-soft);
+  border-color: var(--color-fg-accent);
+}
+.chip.reacted:is(:active, [data-state~='active']):not(:disabled) {
+  background: var(--color-bg-accent-selected);
+}
+
+.chipEmoji {
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-none);
+}
+.count {
+  min-width: var(--space-2);
+  text-align: center;
+  font: var(--font-weight-semibold) var(--font-size-sm) / var(--font-line-height-none) var(--font-family-sans);
+  font-variant-numeric: tabular-nums;
+}

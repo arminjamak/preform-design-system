@@ -1,0 +1,115 @@
+.standalone {
+  display: inline-flex;
+  flex: none;
+}
+
+.dot {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  box-sizing: border-box;
+  width: var(--pi-size);
+  height: var(--pi-size);
+  border-radius: var(--radius-full);
+  background: var(--pi-color);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.ringed {
+  box-shadow: 0 0 0 var(--border-width-2) var(--pi-ring);
+}
+.ringSurface {
+  --pi-ring: var(--color-bg-surface);
+}
+.ringPanel {
+  --pi-ring: var(--color-bg-panel);
+}
+.ringInverse {
+  --pi-ring: var(--color-bg-inverse);
+}
+
+.sm {
+  --pi-size: var(--space-2);
+}
+.md {
+  --pi-size: calc(var(--space-2) + var(--space-half));
+}
+.lg {
+  --pi-size: var(--space-3);
+}
+
+.online {
+  --pi-color: var(--color-status-success);
+}
+.away {
+  --pi-color: var(--color-status-warning);
+}
+.busy {
+  --pi-color: var(--color-status-danger);
+}
+/* Offline is a hollow ring so it reads without colour. */
+.offline {
+  --pi-color: transparent;
+  border: var(--border-width-2) solid var(--color-fg-muted);
+  background-color: var(--pi-ring, var(--color-bg-surface));
+}
+/* Busy carries a bar ("do not disturb"). */
+.busy::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  right: 25%;
+  height: var(--border-width-2);
+  translate: 0 -50%;
+  border-radius: var(--radius-full);
+  background: var(--color-fg-on-status);
+}
+.sm.busy::after {
+  height: var(--space-px);
+}
+/* Away carries a notch, like a clock hand. */
+.away::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: var(--border-width-2);
+  height: 35%;
+  translate: -50% 0;
+  border-radius: var(--radius-full);
+  background: var(--color-fg-on-status);
+}
+.sm.away::after {
+  width: var(--space-px);
+}
+
+.withLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-fg-secondary);
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+}
+.lastActive {
+  color: var(--color-fg-muted);
+}
+
+.avatarWrap {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  height: max-content;
+}
+.overlay {
+  position: absolute;
+  right: calc(var(--space-half) * -1);
+  bottom: calc(var(--space-half) * -1);
+  display: inline-flex;
+}

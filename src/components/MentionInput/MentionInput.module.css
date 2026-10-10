@@ -1,0 +1,189 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: var(--mi-w, calc(var(--size-field-lg) * 2));
+  min-width: 0;
+}
+.fullWidth { display: flex; width: 100%; }
+
+.sm { --mi-font: var(--font-size-sm); --mi-pad-y: var(--space-1); }
+.md { --mi-font: var(--font-size-md); --mi-pad-y: calc(var(--space-1) + var(--space-half)); }
+
+.label {
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  color: var(--color-fg-default);
+}
+
+/* Field frame. The mirror sets the height; the textarea sits on top of it. */
+.box {
+  --mi-line: calc(var(--mi-font) * var(--typography-body-sm-line-height));
+  --mi-pad-x: var(--component-field-padding-x);
+  position: relative;
+  border-radius: var(--component-field-radius);
+  border: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.box:is(:hover, [data-state~='hover']):not(.disabled) { border-color: var(--color-border-strong); }
+.box:is(:focus-within, [data-state~='focus']) {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 var(--component-focus-ring-width) var(--color-focus-ring-soft);
+}
+.invalid,
+.invalid:is(:hover, [data-state~='hover']):not(.disabled),
+.invalid:is(:focus-within, [data-state~='focus']) { border-color: var(--color-status-danger); }
+.disabled { background: var(--color-bg-sunken); cursor: not-allowed; }
+
+.bare,
+.bare:is(:hover, [data-state~='hover']):not(.disabled),
+.bare:is(:focus-within, [data-state~='focus']) {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.mirror,
+.textarea {
+  margin: 0;
+  padding: var(--mi-pad-y) var(--mi-pad-x);
+  font: var(--typography-body-sm-weight) var(--mi-font) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  letter-spacing: var(--font-letter-spacing-normal);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: normal;
+  scrollbar-gutter: stable;
+}
+
+.mirror {
+  position: relative;
+  height: calc(var(--mi-line) * var(--mi-rows) + var(--mi-pad-y) * 2);
+  overflow: hidden;
+  color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+.autoGrow .mirror {
+  height: auto;
+  min-height: calc(var(--mi-line) * var(--mi-rows) + var(--mi-pad-y) * 2);
+  max-height: calc(var(--mi-line) * var(--mi-max-rows) + var(--mi-pad-y) * 2);
+}
+
+.textarea {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: var(--color-fg-default);
+  caret-color: var(--color-fg-default);
+  resize: none;
+  outline: none;
+  overflow-y: auto;
+}
+.textarea::placeholder { color: var(--color-fg-placeholder); }
+.textarea:disabled { color: var(--color-fg-disabled); cursor: not-allowed; }
+
+/* Mention highlight painted behind the live text; no padding so glyphs stay aligned. */
+.mark {
+  border-radius: var(--radius-xs);
+  background: var(--color-bg-accent-soft);
+  box-shadow: 0 0 0 var(--space-half) var(--color-bg-accent-soft);
+}
+
+/* Suggestion listbox, anchored to the `@` via --caret-x / --caret-y (unitless px from layout). */
+.list {
+  --mi-list-w: min(var(--size-layout-sidebar), 100%);
+  position: absolute;
+  z-index: var(--z-index-popover);
+  left: clamp(var(--space-0), calc(var(--caret-x) * var(--space-px)), calc(100% - var(--mi-list-w)));
+  width: var(--mi-list-w);
+  max-height: calc(var(--component-menu-item-height) * 6 + var(--space-2));
+  margin: 0;
+  padding: var(--space-1) 0;
+  overflow-y: auto;
+  list-style: none;
+  border-radius: var(--component-menu-radius);
+  background: var(--color-bg-surface);
+  box-shadow: var(--elevation-popover), 0 0 0 var(--border-width-1) var(--color-border-subtle);
+  color: var(--color-fg-default);
+  animation: enter var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.below { top: calc((var(--caret-y) + var(--caret-h)) * var(--space-px) + var(--space-1)); transform-origin: top left; }
+.above { bottom: calc(100% - var(--caret-y) * var(--space-px) + var(--space-1)); transform-origin: bottom left; }
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--component-menu-item-height);
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.option[aria-selected='true'] { background: var(--color-bg-accent-subtle); }
+.optionName { flex: none; max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.match { font-weight: var(--font-weight-bold); color: var(--color-fg-accent); }
+.optionRole {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  color: var(--color-fg-muted);
+}
+
+/* renderMentions() output. Parents may retint via --mention-fg / --mention-bg. */
+.mention {
+  padding-inline: var(--space-half);
+  border-radius: var(--radius-xs);
+  background: var(--mention-bg, var(--color-bg-accent-soft));
+  color: var(--mention-fg, var(--color-fg-accent));
+  font-weight: var(--font-weight-semibold);
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-subtle);
+  border: var(--border-width-1) dashed var(--color-border-default);
+}
+.previewLabel {
+  font: var(--typography-caption-weight) var(--typography-caption-size) / var(--typography-caption-line-height) var(--typography-caption-family);
+  letter-spacing: var(--font-letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+}
+.previewText {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  font: var(--typography-body-sm-weight) var(--mi-font) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  color: var(--color-fg-default);
+}
+.previewEmpty { color: var(--color-fg-placeholder); }
+
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  margin: calc(var(--space-px) * -1);
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes enter {
+  from { opacity: 0; scale: 0.96; }
+  to { opacity: 1; scale: 1; }
+}
