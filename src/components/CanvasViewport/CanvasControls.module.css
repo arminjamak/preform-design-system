@@ -1,0 +1,58 @@
+/* Floating viewport controls (ZoomControls, PanControl): white pill/disc with the raised ink shadow from the app. */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-half);
+  height: calc(var(--size-control-sm) + var(--space-1));
+  padding-inline: var(--space-half);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  box-shadow: var(--elevation-raised), 0 0 0 var(--border-width-1) var(--color-border-subtle);
+  color: var(--color-fg-default);
+}
+
+.readout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-half);
+  min-width: var(--space-12);
+  height: var(--size-control-sm);
+  padding-inline: var(--space-1);
+  border-radius: var(--radius-full);
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--font-line-height-none) var(--typography-label-family);
+  font-variant-numeric: tabular-nums;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.readout > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); color: var(--color-fg-muted); }
+.readout:is(:hover, [data-state~='hover']) { background: var(--color-bg-hover); }
+.readout[aria-expanded='true'] { background: var(--color-bg-accent-soft); color: var(--color-fg-accent); }
+.readout:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.menu { min-width: var(--size-field-lg); }
+
+.sep {
+  width: var(--border-width-1);
+  height: var(--size-icon-sm);
+  margin-inline: var(--space-half);
+  background: var(--color-border-subtle);
+}
+
+.pad {
+  display: grid;
+  grid-template-columns: repeat(3, var(--size-control-xs));
+  grid-template-rows: repeat(3, var(--size-control-xs));
+  place-items: center;
+  padding: var(--space-1);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  box-shadow: var(--elevation-raised), 0 0 0 var(--border-width-1) var(--color-border-subtle);
+  color: var(--color-fg-default);
+}
+.up { grid-area: 1 / 2; }
+.left { grid-area: 2 / 1; }
+.center { grid-area: 2 / 2; }
+.right { grid-area: 2 / 3; }
+.down { grid-area: 3 / 2; }

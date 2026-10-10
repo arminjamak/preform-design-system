@@ -1,0 +1,86 @@
+.root {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  min-height: calc(var(--space-24) * 3);
+  background-color: var(--color-bg-canvas);
+  border-radius: var(--radius-lg);
+  color: var(--color-fg-default);
+  touch-action: none;
+  user-select: none;
+  outline: none;
+}
+.root:is(:focus-visible, [data-state~='focus']) {
+  box-shadow: inset 0 0 0 var(--component-focus-ring-width) var(--color-focus-ring);
+}
+
+/* Dotted grid: one dot per tile, tile size follows zoom, origin follows pan. */
+.grid {
+  --cv-step: calc(var(--space-5) * var(--cv-zoom) * var(--cv-grid-mult));
+  /* Ink at ~22% reads as a quiet dot on both the light and dark canvas. */
+  --cv-dot: color-mix(in oklab, var(--color-fg-default) 22%, transparent);
+  background-image: radial-gradient(circle at center, var(--cv-dot) 0 var(--space-px), transparent calc(var(--space-px) + var(--space-half) / 2));
+  background-size: var(--cv-step) var(--cv-step);
+  background-position: calc(var(--cv-x) * var(--space-px) - var(--cv-step) / 2) calc(var(--cv-y) * var(--space-px) - var(--cv-step) / 2);
+}
+
+.grab { cursor: grab; }
+.panning { cursor: grabbing; }
+
+.world {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  transform-origin: 0 0;
+  transform: translate(calc(var(--cv-x) * var(--space-px)), calc(var(--cv-y) * var(--space-px))) scale(var(--cv-zoom));
+}
+.grab .world, .panning .world { pointer-events: none; }
+
+.item {
+  position: absolute;
+  left: calc(var(--ci-x) * var(--space-px));
+  top: calc(var(--ci-y) * var(--space-px));
+}
+
+.selection {
+  position: absolute;
+  z-index: var(--z-index-raised);
+  border: var(--border-width-1) solid var(--color-border-focus);
+  background: var(--color-focus-ring-soft);
+  border-radius: var(--radius-xs);
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-index-sticky);
+  pointer-events: none;
+}
+
+.pin {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+  pointer-events: auto;
+}
+.topLeft { top: var(--space-3); left: var(--space-3); }
+.topRight { top: var(--space-3); right: var(--space-3); }
+.bottomLeft { bottom: var(--space-3); left: var(--space-3); }
+.bottomRight { bottom: var(--space-3); right: var(--space-3); }
+.bottomCenter { bottom: var(--space-3); left: 50%; translate: -50% 0; }
+.topCenter { top: var(--space-3); left: 50%; translate: -50% 0; }
+
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
