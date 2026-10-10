@@ -1,0 +1,25 @@
+.wrap { position: relative; display: inline-flex; }
+.bubble {
+  position: absolute;
+  z-index: var(--z-index-popover);
+  left: 50%;
+  max-width: var(--size-layout-sidebar);
+  width: max-content;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-inverse);
+  color: var(--color-fg-on-inverse);
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  box-shadow: var(--elevation-popover);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, var(--tt-shift));
+  transition: opacity var(--motion-duration-fast) var(--motion-easing-standard), transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.top { bottom: calc(100% + var(--space-1)); --tt-shift: var(--space-1); }
+.bottom { top: calc(100% + var(--space-1)); --tt-shift: calc(var(--space-1) * -1); }
+.wrap:is(:hover, :focus-within, [data-state~='hover'], [data-state~='focus'], [data-open='true']) .bubble { opacity: 1; transform: translate(-50%, 0); }
+
+.infoTrigger { display: inline-flex; flex: none; color: var(--color-fg-muted); border-radius: var(--radius-full); }
+.infoTrigger > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); }
+.infoTrigger:focus-visible { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }

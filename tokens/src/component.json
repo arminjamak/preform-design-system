@@ -1,0 +1,53 @@
+{
+  "component": {
+    "$description": "Component-scoped tokens. They alias semantic or primitive tokens so a component can be re-skinned without touching its CSS.",
+    "button": {
+      "height-sm": { "$type": "dimension", "$value": "{size.control.sm}" },
+      "height-md": { "$type": "dimension", "$value": "{size.control.md}" },
+      "height-lg": { "$type": "dimension", "$value": "{size.control.lg}" },
+      "padding-x": { "$type": "dimension", "$value": "{space.3}" },
+      "gap":       { "$type": "dimension", "$value": "{space.2}" },
+      "radius":    { "$type": "dimension", "$value": "{radius.full}" }
+    },
+    "field": {
+      "height":  { "$type": "dimension", "$value": "{size.control.sm}" },
+      "radius":  { "$type": "dimension", "$value": "{radius.sm}" },
+      "padding-x": { "$type": "dimension", "$value": "{space.2}" }
+    },
+    "toggle": {
+      "width":  { "$type": "dimension", "$value": "{space.5}" },
+      "height": { "$type": "dimension", "$value": "{space.3}" },
+      "thumb":  { "$type": "dimension", "$value": "{space.2}" },
+      "inset":  { "$type": "dimension", "$value": "{space.half}" }
+    },
+    "checkbox": {
+      "size":   { "$type": "dimension", "$value": "{space.3}" },
+      "radius": { "$type": "dimension", "$value": "{radius.xs}" }
+    },
+    "panel": {
+      "width":         { "$type": "dimension", "$value": "{size.layout.panel}" },
+      "header-height": { "$type": "dimension", "$value": "{size.control.lg}" },
+      "radius":        { "$type": "dimension", "$value": "{radius.lg}" },
+      "padding-x":     { "$type": "dimension", "$value": "{space.2}" }
+    },
+    "menu": {
+      "min-width": { "$type": "dimension", "$value": "{size.layout.menu-min}" },
+      "radius":    { "$type": "dimension", "$value": "{radius.lg}" },
+      "item-height": { "$type": "dimension", "$value": "{size.control.md}" }
+    },
+    "modal": {
+      "radius":   { "$type": "dimension", "$value": "{radius.xl}" },
+      "width-sm": { "$type": "dimension", "$value": "{size.layout.dialog-sm}" },
+      "width-md": { "$type": "dimension", "$value": "{size.layout.dialog-md}" },
+      "width-lg": { "$type": "dimension", "$value": "{size.layout.dialog-lg}" }
+    },
+    "tool-button": {
+      "size":   { "$type": "dimension", "$value": "{size.control.xl}" },
+      "radius": { "$type": "dimension", "$value": "{radius.md}" }
+    },
+    "focus-ring": {
+      "width":  { "$type": "dimension", "$value": "{border-width.2}" },
+      "offset": { "$type": "dimension", "$value": "{space.half}" }
+    }
+  }
+}

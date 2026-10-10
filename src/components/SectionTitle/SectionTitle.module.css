@@ -1,0 +1,4 @@
+.row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); padding: var(--space-2) 0 var(--space-1); }
+.lead { display: flex; align-items: center; gap: var(--space-1); min-width: 0; }
+.title { margin: 0; font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--typography-title-sm-line-height) var(--typography-title-sm-family); color: var(--color-fg-default); }
+.sm .title { font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family); font-weight: var(--font-weight-bold); }

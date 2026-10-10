@@ -1,0 +1,246 @@
+{
+  "color": {
+    "$type": "color",
+    "neutral": {
+      "0":    { "$value": "#ffffff", "$description": "White. Surfaces, text on dark." },
+      "50":   { "$value": "#f8f8f9" },
+      "100":  { "$value": "#f3f4f6" },
+      "150":  { "$value": "#eceef0" },
+      "200":  { "$value": "#e5e8eb" },
+      "300":  { "$value": "#d6d9dd" },
+      "400":  { "$value": "#b2b6bc" },
+      "500":  { "$value": "#8d9298" },
+      "600":  { "$value": "#767b82" },
+      "700":  { "$value": "#4b5056" },
+      "750":  { "$value": "#3c4551" },
+      "800":  { "$value": "#30343a" },
+      "850":  { "$value": "#2e3640" },
+      "900":  { "$value": "#1b2129" },
+      "1000": { "$value": "#000000" }
+    },
+    "blue": {
+      "50":  { "$value": "#f2f6fb" },
+      "100": { "$value": "#dbe8f8" },
+      "200": { "$value": "#cfe0f4" },
+      "300": { "$value": "#9cc0ea" },
+      "400": { "$value": "#7fb0e3" },
+      "500": { "$value": "#3a9be0" },
+      "600": { "$value": "#0a63c9", "$description": "PreForm brand blue." },
+      "700": { "$value": "#0857b2" },
+      "800": { "$value": "#06447f" },
+      "900": { "$value": "#0b2f55" }
+    },
+    "green": {
+      "50":  { "$value": "#e2f8e1" },
+      "100": { "$value": "#c3efc1" },
+      "300": { "$value": "#6fd86f" },
+      "500": { "$value": "#22b922" },
+      "600": { "$value": "#16a316" },
+      "700": { "$value": "#118011" },
+      "900": { "$value": "#0a4d0a" }
+    },
+    "amber": {
+      "50":  { "$value": "#fcf0dc" },
+      "100": { "$value": "#f9dfb0" },
+      "300": { "$value": "#f7c466" },
+      "500": { "$value": "#f5a623" },
+      "600": { "$value": "#dd8c10" },
+      "700": { "$value": "#b57109" },
+      "900": { "$value": "#6b4206" }
+    },
+    "red": {
+      "50":  { "$value": "#fdecec" },
+      "100": { "$value": "#f9cfcf" },
+      "300": { "$value": "#ef8c8c" },
+      "500": { "$value": "#e53935" },
+      "600": { "$value": "#e02424" },
+      "700": { "$value": "#d0201b" },
+      "900": { "$value": "#7a1210" }
+    },
+    "orange": {
+      "50":  { "$value": "#fde9dc" },
+      "100": { "$value": "#f9c9a8" },
+      "500": { "$value": "#f06a1d" },
+      "700": { "$value": "#c24f0e" }
+    },
+    "magenta": {
+      "50":  { "$value": "#fce1f3" },
+      "100": { "$value": "#f7b6e4" },
+      "500": { "$value": "#ec2fc0" },
+      "700": { "$value": "#b31a8f" }
+    },
+    "alpha": {
+      "ink-5":    { "$value": "#1b21290d", "$description": "Ink at 5%. Hover washes on light surfaces." },
+      "ink-10":   { "$value": "#1b21291a" },
+      "ink-15":   { "$value": "#1b212926" },
+      "ink-30":   { "$value": "#1b21294d", "$description": "Modal scrim." },
+      "white-5":  { "$value": "#ffffff0d" },
+      "white-10": { "$value": "#ffffff1a" },
+      "white-90": { "$value": "#ffffffe6" },
+      "blue-15":  { "$value": "#0a63c926", "$description": "Focus ring halo." },
+      "blue-40":  { "$value": "#0a63c966" },
+      "blue-60":  { "$value": "#0a63c999" }
+    },
+    "shadow": {
+      "ink-6":  { "$value": "#141c260f" },
+      "ink-12": { "$value": "#141c261f" },
+      "ink-14": { "$value": "#141c2624" },
+      "ink-18": { "$value": "#141c262e" },
+      "ink-22": { "$value": "#141c2638" },
+      "ink-25": { "$value": "#141c2640" }
+    }
+  },
+
+  "space": {
+    "$type": "dimension",
+    "$description": "4pt spacing scale. The only off-grid steps are px (1) and half (2) for hairlines and micro gaps.",
+    "0":    { "$value": "0px" },
+    "px":   { "$value": "1px" },
+    "half": { "$value": "2px" },
+    "1":    { "$value": "4px" },
+    "2":    { "$value": "8px" },
+    "3":    { "$value": "12px" },
+    "4":    { "$value": "16px" },
+    "5":    { "$value": "20px" },
+    "6":    { "$value": "24px" },
+    "7":    { "$value": "28px" },
+    "8":    { "$value": "32px" },
+    "10":   { "$value": "40px" },
+    "12":   { "$value": "48px" },
+    "16":   { "$value": "64px" },
+    "20":   { "$value": "80px" },
+    "24":   { "$value": "96px" }
+  },
+
+  "size": {
+    "$type": "dimension",
+    "control": {
+      "xs": { "$value": "20px", "$description": "Dense chrome controls (close buttons)." },
+      "sm": { "$value": "24px", "$description": "Default field/button height." },
+      "md": { "$value": "28px" },
+      "lg": { "$value": "32px" },
+      "xl": { "$value": "40px" }
+    },
+    "icon": {
+      "xs": { "$value": "12px" },
+      "sm": { "$value": "16px" },
+      "md": { "$value": "20px" },
+      "lg": { "$value": "24px" }
+    },
+    "field": {
+      "sm": { "$value": "84px", "$description": "Numeric field width (84 = 21 × 4)." },
+      "md": { "$value": "96px" },
+      "lg": { "$value": "160px" }
+    },
+    "layout": {
+      "nav": { "$value": "40px" },
+      "rail": { "$value": "40px" },
+      "panel": { "$value": "300px" },
+      "sidebar": { "$value": "232px" },
+      "dialog-sm": { "$value": "320px" },
+      "dialog-md": { "$value": "380px" },
+      "dialog-lg": { "$value": "520px" },
+      "menu-min": { "$value": "180px" }
+    }
+  },
+
+  "radius": {
+    "$type": "dimension",
+    "none": { "$value": "0px" },
+    "xs":   { "$value": "2px" },
+    "sm":   { "$value": "4px" },
+    "md":   { "$value": "6px" },
+    "lg":   { "$value": "8px" },
+    "xl":   { "$value": "12px" },
+    "full": { "$value": "9999px" }
+  },
+
+  "border-width": {
+    "$type": "dimension",
+    "1": { "$value": "1px" },
+    "2": { "$value": "2px" },
+    "3": { "$value": "3px" }
+  },
+
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "sans": { "$value": ["Figtree", "system-ui", "sans-serif"] },
+      "mono": { "$value": ["JetBrains Mono", "ui-monospace", "monospace"] }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular":   { "$value": 400 },
+      "medium":    { "$value": 500 },
+      "semibold":  { "$value": 600 },
+      "bold":      { "$value": 700 },
+      "extrabold": { "$value": 800 }
+    },
+    "size": {
+      "$type": "dimension",
+      "2xs": { "$value": "10px" },
+      "xs":  { "$value": "11px" },
+      "sm":  { "$value": "12px" },
+      "md":  { "$value": "13px" },
+      "lg":  { "$value": "14px" },
+      "xl":  { "$value": "16px" },
+      "2xl": { "$value": "20px" },
+      "3xl": { "$value": "24px" },
+      "4xl": { "$value": "30px" }
+    },
+    "line-height": {
+      "$type": "number",
+      "none":   { "$value": 1 },
+      "tight":  { "$value": 1.15 },
+      "snug":   { "$value": 1.3 },
+      "normal": { "$value": 1.45 }
+    },
+    "letter-spacing": {
+      "$type": "dimension",
+      "normal": { "$value": "0px" },
+      "wide":   { "$value": "0.4px" }
+    }
+  },
+
+  "shadow": {
+    "$type": "shadow",
+    "xs": { "$value": { "color": "{color.shadow.ink-12}", "offsetX": "0px", "offsetY": "1px", "blur": "2px", "spread": "0px" } },
+    "sm": { "$value": { "color": "{color.shadow.ink-14}", "offsetX": "0px", "offsetY": "1px", "blur": "4px", "spread": "0px" } },
+    "md": { "$value": { "color": "{color.shadow.ink-14}", "offsetX": "0px", "offsetY": "3px", "blur": "12px", "spread": "0px" } },
+    "lg": { "$value": { "color": "{color.shadow.ink-18}", "offsetX": "0px", "offsetY": "6px", "blur": "20px", "spread": "0px" } },
+    "xl": { "$value": { "color": "{color.shadow.ink-25}", "offsetX": "0px", "offsetY": "12px", "blur": "40px", "spread": "0px" } }
+  },
+
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "instant": { "$value": "0ms" },
+      "fast":    { "$value": "150ms" },
+      "base":    { "$value": "200ms" },
+      "slow":    { "$value": "300ms" }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": [0.23, 1, 0.32, 1], "$description": "Ease-out quint used across PreForm overlays." },
+      "linear":   { "$value": [0, 0, 1, 1] }
+    }
+  },
+
+  "z-index": {
+    "$type": "number",
+    "base":     { "$value": 0 },
+    "raised":   { "$value": 10 },
+    "sticky":   { "$value": 20 },
+    "dropdown": { "$value": 30 },
+    "modal":    { "$value": 50 },
+    "popover":  { "$value": 80, "$description": "Popovers may open from inside modals, so they sit above them." },
+    "toast":    { "$value": 90 }
+  },
+
+  "opacity": {
+    "$type": "number",
+    "disabled": { "$value": 0.6 },
+    "dimmed":   { "$value": 0.5 },
+    "hidden":   { "$value": 0 }
+  }
+}

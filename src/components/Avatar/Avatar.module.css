@@ -1,0 +1,23 @@
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: var(--av-size);
+  height: var(--av-size);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-accent);
+  color: var(--color-fg-on-accent);
+  font: var(--font-weight-bold) var(--av-font) / var(--font-line-height-none) var(--font-family-sans);
+  text-transform: uppercase;
+  letter-spacing: var(--font-letter-spacing-wide);
+  overflow: hidden;
+}
+.avatar > img { width: 100%; height: 100%; object-fit: cover; }
+.xs { --av-size: var(--size-icon-md); --av-font: var(--font-size-2xs); }
+.sm { --av-size: var(--size-control-sm); --av-font: var(--font-size-2xs); }
+.md { --av-size: var(--size-control-lg); --av-font: var(--font-size-sm); }
+.lg { --av-size: var(--size-control-xl); --av-font: var(--font-size-lg); }
+.neutral { background: var(--color-fg-muted); }
+.accent { background: var(--color-bg-accent); }
+.inverse { background: var(--color-bg-inverse-active); }

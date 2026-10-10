@@ -1,0 +1,9 @@
+.divider { flex: none; border: 0; margin: 0; background: var(--color-border-default); }
+.horizontal { width: 100%; height: var(--border-width-1); margin-block: var(--divider-gap); }
+.vertical { width: var(--border-width-1); align-self: stretch; margin-inline: var(--divider-gap); }
+.subtle { background: var(--color-border-subtle); }
+.inverse { background: var(--color-border-inverse); }
+.none { --divider-gap: 0; }
+.sm { --divider-gap: var(--space-1); }
+.md { --divider-gap: var(--space-2); }
+.lg { --divider-gap: var(--space-4); }

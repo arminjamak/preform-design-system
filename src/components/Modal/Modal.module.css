@@ -1,0 +1,51 @@
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: var(--color-bg-overlay);
+  animation: fade var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.inline { position: relative; inset: auto; border-radius: var(--radius-lg); }
+.dialog {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  width: var(--modal-w);
+  max-width: 100%;
+  border-radius: var(--component-modal-radius);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  box-shadow: var(--elevation-modal);
+  animation: pop var(--motion-duration-base) var(--motion-easing-standard);
+}
+.sm { --modal-w: var(--component-modal-width-sm); }
+.md { --modal-w: var(--component-modal-width-md); }
+.lg { --modal-w: var(--component-modal-width-lg); }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4) var(--space-2);
+  border-bottom: var(--border-width-1) solid var(--color-border-default);
+}
+.titles { min-width: 0; flex: 1; }
+.title { margin: 0; font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--typography-title-sm-line-height) var(--typography-title-sm-family); }
+.description { margin: var(--space-half) 0 0; font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--font-line-height-snug) var(--typography-label-sm-family); color: var(--color-fg-muted); }
+.body { min-height: 0; flex: 1; overflow-y: auto; padding: var(--space-3) var(--space-4); }
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-top: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-subtle);
+  border-radius: 0 0 var(--component-modal-radius) var(--component-modal-radius);
+}
+
+@keyframes fade { from { opacity: 0; } }
+@keyframes pop { from { opacity: 0; scale: 0.96; } }

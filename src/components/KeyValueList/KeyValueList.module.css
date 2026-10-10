@@ -1,0 +1,9 @@
+.list { margin: 0; display: flex; flex-direction: column; gap: var(--space-half); width: 100%; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); min-height: var(--kv-h); }
+.key { display: flex; align-items: center; gap: var(--space-1); margin: 0; color: var(--color-fg-muted); font-size: var(--kv-font); }
+.key > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); color: var(--color-fg-secondary); }
+.value { display: flex; align-items: center; gap: var(--space-1); margin: 0; color: var(--color-fg-default); font-size: var(--kv-font); font-variant-numeric: tabular-nums; }
+.indent .key { padding-left: var(--space-5); }
+.sm { --kv-h: var(--size-icon-md); --kv-font: var(--font-size-xs); }
+.md { --kv-h: var(--size-control-sm); --kv-font: var(--font-size-sm); }
+.divided .row + .row { border-top: var(--border-width-1) solid var(--color-border-subtle); }

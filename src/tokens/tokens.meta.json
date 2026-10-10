@@ -1,0 +1,4184 @@
+[
+  {
+    "name": "--color-neutral-0",
+    "path": [
+      "color",
+      "neutral",
+      "0"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": null,
+    "description": "White. Surfaces, text on dark.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-50",
+    "path": [
+      "color",
+      "neutral",
+      "50"
+    ],
+    "type": "color",
+    "value": "#f8f8f9",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-100",
+    "path": [
+      "color",
+      "neutral",
+      "100"
+    ],
+    "type": "color",
+    "value": "#f3f4f6",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-150",
+    "path": [
+      "color",
+      "neutral",
+      "150"
+    ],
+    "type": "color",
+    "value": "#eceef0",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-200",
+    "path": [
+      "color",
+      "neutral",
+      "200"
+    ],
+    "type": "color",
+    "value": "#e5e8eb",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-300",
+    "path": [
+      "color",
+      "neutral",
+      "300"
+    ],
+    "type": "color",
+    "value": "#d6d9dd",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-400",
+    "path": [
+      "color",
+      "neutral",
+      "400"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-500",
+    "path": [
+      "color",
+      "neutral",
+      "500"
+    ],
+    "type": "color",
+    "value": "#8d9298",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-600",
+    "path": [
+      "color",
+      "neutral",
+      "600"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-700",
+    "path": [
+      "color",
+      "neutral",
+      "700"
+    ],
+    "type": "color",
+    "value": "#4b5056",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-750",
+    "path": [
+      "color",
+      "neutral",
+      "750"
+    ],
+    "type": "color",
+    "value": "#3c4551",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-800",
+    "path": [
+      "color",
+      "neutral",
+      "800"
+    ],
+    "type": "color",
+    "value": "#30343a",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-850",
+    "path": [
+      "color",
+      "neutral",
+      "850"
+    ],
+    "type": "color",
+    "value": "#2e3640",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-900",
+    "path": [
+      "color",
+      "neutral",
+      "900"
+    ],
+    "type": "color",
+    "value": "#1b2129",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-neutral-1000",
+    "path": [
+      "color",
+      "neutral",
+      "1000"
+    ],
+    "type": "color",
+    "value": "#000000",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-50",
+    "path": [
+      "color",
+      "blue",
+      "50"
+    ],
+    "type": "color",
+    "value": "#f2f6fb",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-100",
+    "path": [
+      "color",
+      "blue",
+      "100"
+    ],
+    "type": "color",
+    "value": "#dbe8f8",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-200",
+    "path": [
+      "color",
+      "blue",
+      "200"
+    ],
+    "type": "color",
+    "value": "#cfe0f4",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-300",
+    "path": [
+      "color",
+      "blue",
+      "300"
+    ],
+    "type": "color",
+    "value": "#9cc0ea",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-400",
+    "path": [
+      "color",
+      "blue",
+      "400"
+    ],
+    "type": "color",
+    "value": "#7fb0e3",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-500",
+    "path": [
+      "color",
+      "blue",
+      "500"
+    ],
+    "type": "color",
+    "value": "#3a9be0",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-600",
+    "path": [
+      "color",
+      "blue",
+      "600"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": null,
+    "description": "PreForm brand blue.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-700",
+    "path": [
+      "color",
+      "blue",
+      "700"
+    ],
+    "type": "color",
+    "value": "#0857b2",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-800",
+    "path": [
+      "color",
+      "blue",
+      "800"
+    ],
+    "type": "color",
+    "value": "#06447f",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-blue-900",
+    "path": [
+      "color",
+      "blue",
+      "900"
+    ],
+    "type": "color",
+    "value": "#0b2f55",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-green-50",
+    "path": [
+      "color",
+      "green",
+      "50"
+    ],
+    "type": "color",
+    "value": "#e2f8e1",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-green-100",
+    "path": [
+      "color",
+      "green",
+      "100"
+    ],
+    "type": "color",
+    "value": "#c3efc1",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-green-300",
+    "path": [
+      "color",
+      "green",
+      "300"
+    ],
+    "type": "color",
+    "value": "#6fd86f",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-green-500",
+    "path": [
+      "color",
+      "green",
+      "500"
+    ],
+    "type": "color",
+    "value": "#22b922",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-green-600",
+    "path": [
+      "color",
+      "green",
+      "600"
+    ],
+    "type": "color",
+    "value": "#16a316",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-green-700",
+    "path": [
+      "color",
+      "green",
+      "700"
+    ],
+    "type": "color",
+    "value": "#118011",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-green-900",
+    "path": [
+      "color",
+      "green",
+      "900"
+    ],
+    "type": "color",
+    "value": "#0a4d0a",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-amber-50",
+    "path": [
+      "color",
+      "amber",
+      "50"
+    ],
+    "type": "color",
+    "value": "#fcf0dc",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-amber-100",
+    "path": [
+      "color",
+      "amber",
+      "100"
+    ],
+    "type": "color",
+    "value": "#f9dfb0",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-amber-300",
+    "path": [
+      "color",
+      "amber",
+      "300"
+    ],
+    "type": "color",
+    "value": "#f7c466",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-amber-500",
+    "path": [
+      "color",
+      "amber",
+      "500"
+    ],
+    "type": "color",
+    "value": "#f5a623",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-amber-600",
+    "path": [
+      "color",
+      "amber",
+      "600"
+    ],
+    "type": "color",
+    "value": "#dd8c10",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-amber-700",
+    "path": [
+      "color",
+      "amber",
+      "700"
+    ],
+    "type": "color",
+    "value": "#b57109",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-amber-900",
+    "path": [
+      "color",
+      "amber",
+      "900"
+    ],
+    "type": "color",
+    "value": "#6b4206",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-red-50",
+    "path": [
+      "color",
+      "red",
+      "50"
+    ],
+    "type": "color",
+    "value": "#fdecec",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-red-100",
+    "path": [
+      "color",
+      "red",
+      "100"
+    ],
+    "type": "color",
+    "value": "#f9cfcf",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-red-300",
+    "path": [
+      "color",
+      "red",
+      "300"
+    ],
+    "type": "color",
+    "value": "#ef8c8c",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-red-500",
+    "path": [
+      "color",
+      "red",
+      "500"
+    ],
+    "type": "color",
+    "value": "#e53935",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-red-600",
+    "path": [
+      "color",
+      "red",
+      "600"
+    ],
+    "type": "color",
+    "value": "#e02424",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-red-700",
+    "path": [
+      "color",
+      "red",
+      "700"
+    ],
+    "type": "color",
+    "value": "#d0201b",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-red-900",
+    "path": [
+      "color",
+      "red",
+      "900"
+    ],
+    "type": "color",
+    "value": "#7a1210",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-orange-50",
+    "path": [
+      "color",
+      "orange",
+      "50"
+    ],
+    "type": "color",
+    "value": "#fde9dc",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-orange-100",
+    "path": [
+      "color",
+      "orange",
+      "100"
+    ],
+    "type": "color",
+    "value": "#f9c9a8",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-orange-500",
+    "path": [
+      "color",
+      "orange",
+      "500"
+    ],
+    "type": "color",
+    "value": "#f06a1d",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-orange-700",
+    "path": [
+      "color",
+      "orange",
+      "700"
+    ],
+    "type": "color",
+    "value": "#c24f0e",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-magenta-50",
+    "path": [
+      "color",
+      "magenta",
+      "50"
+    ],
+    "type": "color",
+    "value": "#fce1f3",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-magenta-100",
+    "path": [
+      "color",
+      "magenta",
+      "100"
+    ],
+    "type": "color",
+    "value": "#f7b6e4",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-magenta-500",
+    "path": [
+      "color",
+      "magenta",
+      "500"
+    ],
+    "type": "color",
+    "value": "#ec2fc0",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-magenta-700",
+    "path": [
+      "color",
+      "magenta",
+      "700"
+    ],
+    "type": "color",
+    "value": "#b31a8f",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-ink-5",
+    "path": [
+      "color",
+      "alpha",
+      "ink-5"
+    ],
+    "type": "color",
+    "value": "rgba(27, 33, 41, 0.05)",
+    "ref": null,
+    "description": "Ink at 5%. Hover washes on light surfaces.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-ink-10",
+    "path": [
+      "color",
+      "alpha",
+      "ink-10"
+    ],
+    "type": "color",
+    "value": "rgba(27, 33, 41, 0.1)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-ink-15",
+    "path": [
+      "color",
+      "alpha",
+      "ink-15"
+    ],
+    "type": "color",
+    "value": "rgba(27, 33, 41, 0.15)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-ink-30",
+    "path": [
+      "color",
+      "alpha",
+      "ink-30"
+    ],
+    "type": "color",
+    "value": "rgba(27, 33, 41, 0.3)",
+    "ref": null,
+    "description": "Modal scrim.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-white-5",
+    "path": [
+      "color",
+      "alpha",
+      "white-5"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.05)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-white-10",
+    "path": [
+      "color",
+      "alpha",
+      "white-10"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.1)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-white-90",
+    "path": [
+      "color",
+      "alpha",
+      "white-90"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.9)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-blue-15",
+    "path": [
+      "color",
+      "alpha",
+      "blue-15"
+    ],
+    "type": "color",
+    "value": "rgba(10, 99, 201, 0.15)",
+    "ref": null,
+    "description": "Focus ring halo.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-blue-40",
+    "path": [
+      "color",
+      "alpha",
+      "blue-40"
+    ],
+    "type": "color",
+    "value": "rgba(10, 99, 201, 0.4)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-alpha-blue-60",
+    "path": [
+      "color",
+      "alpha",
+      "blue-60"
+    ],
+    "type": "color",
+    "value": "rgba(10, 99, 201, 0.6)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-shadow-ink-6",
+    "path": [
+      "color",
+      "shadow",
+      "ink-6"
+    ],
+    "type": "color",
+    "value": "rgba(20, 28, 38, 0.06)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-shadow-ink-12",
+    "path": [
+      "color",
+      "shadow",
+      "ink-12"
+    ],
+    "type": "color",
+    "value": "rgba(20, 28, 38, 0.12)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-shadow-ink-14",
+    "path": [
+      "color",
+      "shadow",
+      "ink-14"
+    ],
+    "type": "color",
+    "value": "rgba(20, 28, 38, 0.14)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-shadow-ink-18",
+    "path": [
+      "color",
+      "shadow",
+      "ink-18"
+    ],
+    "type": "color",
+    "value": "rgba(20, 28, 38, 0.18)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-shadow-ink-22",
+    "path": [
+      "color",
+      "shadow",
+      "ink-22"
+    ],
+    "type": "color",
+    "value": "rgba(20, 28, 38, 0.22)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-shadow-ink-25",
+    "path": [
+      "color",
+      "shadow",
+      "ink-25"
+    ],
+    "type": "color",
+    "value": "rgba(20, 28, 38, 0.25)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-canvas",
+    "path": [
+      "color",
+      "bg",
+      "canvas"
+    ],
+    "type": "color",
+    "value": "#e5e8eb",
+    "ref": "color.neutral.200",
+    "description": "App background behind the 3D viewport.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-surface",
+    "path": [
+      "color",
+      "bg",
+      "surface"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": "Cards, panels, dialogs, menus.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-panel",
+    "path": [
+      "color",
+      "bg",
+      "panel"
+    ],
+    "type": "color",
+    "value": "#f3f4f6",
+    "ref": "color.neutral.100",
+    "description": "Panel body behind controls.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-subtle",
+    "path": [
+      "color",
+      "bg",
+      "subtle"
+    ],
+    "type": "color",
+    "value": "#f8f8f9",
+    "ref": "color.neutral.50",
+    "description": "Footers, sunken rows.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-sunken",
+    "path": [
+      "color",
+      "bg",
+      "sunken"
+    ],
+    "type": "color",
+    "value": "#eceef0",
+    "ref": "color.neutral.150",
+    "description": "Disabled fields, empty thumbnails.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-muted",
+    "path": [
+      "color",
+      "bg",
+      "muted"
+    ],
+    "type": "color",
+    "value": "#e5e8eb",
+    "ref": "color.neutral.200",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-muted-hover",
+    "path": [
+      "color",
+      "bg",
+      "muted-hover"
+    ],
+    "type": "color",
+    "value": "#d6d9dd",
+    "ref": "color.neutral.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-hover",
+    "path": [
+      "color",
+      "bg",
+      "hover"
+    ],
+    "type": "color",
+    "value": "rgba(27, 33, 41, 0.05)",
+    "ref": "color.alpha.ink-5",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-pressed",
+    "path": [
+      "color",
+      "bg",
+      "pressed"
+    ],
+    "type": "color",
+    "value": "rgba(27, 33, 41, 0.1)",
+    "ref": "color.alpha.ink-10",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-inverse",
+    "path": [
+      "color",
+      "bg",
+      "inverse"
+    ],
+    "type": "color",
+    "value": "#2e3640",
+    "ref": "color.neutral.850",
+    "description": "Top navigation bar.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-inverse-active",
+    "path": [
+      "color",
+      "bg",
+      "inverse-active"
+    ],
+    "type": "color",
+    "value": "#3c4551",
+    "ref": "color.neutral.750",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-inverse-hover",
+    "path": [
+      "color",
+      "bg",
+      "inverse-hover"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.05)",
+    "ref": "color.alpha.white-5",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-overlay",
+    "path": [
+      "color",
+      "bg",
+      "overlay"
+    ],
+    "type": "color",
+    "value": "rgba(27, 33, 41, 0.3)",
+    "ref": "color.alpha.ink-30",
+    "description": "Modal scrim.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-accent",
+    "path": [
+      "color",
+      "bg",
+      "accent"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-accent-hover",
+    "path": [
+      "color",
+      "bg",
+      "accent-hover"
+    ],
+    "type": "color",
+    "value": "#0857b2",
+    "ref": "color.blue.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-accent-soft",
+    "path": [
+      "color",
+      "bg",
+      "accent-soft"
+    ],
+    "type": "color",
+    "value": "#dbe8f8",
+    "ref": "color.blue.100",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-accent-subtle",
+    "path": [
+      "color",
+      "bg",
+      "accent-subtle"
+    ],
+    "type": "color",
+    "value": "#f2f6fb",
+    "ref": "color.blue.50",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-accent-selected",
+    "path": [
+      "color",
+      "bg",
+      "accent-selected"
+    ],
+    "type": "color",
+    "value": "#cfe0f4",
+    "ref": "color.blue.200",
+    "description": "Active tool in the rail.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-bg-accent-disabled",
+    "path": [
+      "color",
+      "bg",
+      "accent-disabled"
+    ],
+    "type": "color",
+    "value": "rgba(10, 99, 201, 0.6)",
+    "ref": "color.alpha.blue-60",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-default",
+    "path": [
+      "color",
+      "fg",
+      "default"
+    ],
+    "type": "color",
+    "value": "#30343a",
+    "ref": "color.neutral.800",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-secondary",
+    "path": [
+      "color",
+      "fg",
+      "secondary"
+    ],
+    "type": "color",
+    "value": "#4b5056",
+    "ref": "color.neutral.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-muted",
+    "path": [
+      "color",
+      "fg",
+      "muted"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-faint",
+    "path": [
+      "color",
+      "fg",
+      "faint"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-disabled",
+    "path": [
+      "color",
+      "fg",
+      "disabled"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-placeholder",
+    "path": [
+      "color",
+      "fg",
+      "placeholder"
+    ],
+    "type": "color",
+    "value": "#8d9298",
+    "ref": "color.neutral.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-accent",
+    "path": [
+      "color",
+      "fg",
+      "accent"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-accent-hover",
+    "path": [
+      "color",
+      "fg",
+      "accent-hover"
+    ],
+    "type": "color",
+    "value": "#0857b2",
+    "ref": "color.blue.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-link",
+    "path": [
+      "color",
+      "fg",
+      "link"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-on-accent",
+    "path": [
+      "color",
+      "fg",
+      "on-accent"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-on-inverse",
+    "path": [
+      "color",
+      "fg",
+      "on-inverse"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-on-inverse-muted",
+    "path": [
+      "color",
+      "fg",
+      "on-inverse-muted"
+    ],
+    "type": "color",
+    "value": "#d6d9dd",
+    "ref": "color.neutral.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-fg-on-status",
+    "path": [
+      "color",
+      "fg",
+      "on-status"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-border-subtle",
+    "path": [
+      "color",
+      "border",
+      "subtle"
+    ],
+    "type": "color",
+    "value": "#eceef0",
+    "ref": "color.neutral.150",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-border-default",
+    "path": [
+      "color",
+      "border",
+      "default"
+    ],
+    "type": "color",
+    "value": "#d6d9dd",
+    "ref": "color.neutral.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-border-strong",
+    "path": [
+      "color",
+      "border",
+      "strong"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-border-accent",
+    "path": [
+      "color",
+      "border",
+      "accent"
+    ],
+    "type": "color",
+    "value": "#9cc0ea",
+    "ref": "color.blue.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-border-focus",
+    "path": [
+      "color",
+      "border",
+      "focus"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-border-inverse",
+    "path": [
+      "color",
+      "border",
+      "inverse"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.1)",
+    "ref": "color.alpha.white-10",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-focus-ring",
+    "path": [
+      "color",
+      "focus",
+      "ring"
+    ],
+    "type": "color",
+    "value": "#9cc0ea",
+    "ref": "color.blue.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-focus-ring-soft",
+    "path": [
+      "color",
+      "focus",
+      "ring-soft"
+    ],
+    "type": "color",
+    "value": "rgba(10, 99, 201, 0.15)",
+    "ref": "color.alpha.blue-15",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-success",
+    "path": [
+      "color",
+      "status",
+      "success"
+    ],
+    "type": "color",
+    "value": "#22b922",
+    "ref": "color.green.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-success-strong",
+    "path": [
+      "color",
+      "status",
+      "success-strong"
+    ],
+    "type": "color",
+    "value": "#16a316",
+    "ref": "color.green.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-success-soft",
+    "path": [
+      "color",
+      "status",
+      "success-soft"
+    ],
+    "type": "color",
+    "value": "#e2f8e1",
+    "ref": "color.green.50",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-warning",
+    "path": [
+      "color",
+      "status",
+      "warning"
+    ],
+    "type": "color",
+    "value": "#f5a623",
+    "ref": "color.amber.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-warning-strong",
+    "path": [
+      "color",
+      "status",
+      "warning-strong"
+    ],
+    "type": "color",
+    "value": "#dd8c10",
+    "ref": "color.amber.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-warning-soft",
+    "path": [
+      "color",
+      "status",
+      "warning-soft"
+    ],
+    "type": "color",
+    "value": "#fcf0dc",
+    "ref": "color.amber.50",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-danger",
+    "path": [
+      "color",
+      "status",
+      "danger"
+    ],
+    "type": "color",
+    "value": "#e02424",
+    "ref": "color.red.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-danger-strong",
+    "path": [
+      "color",
+      "status",
+      "danger-strong"
+    ],
+    "type": "color",
+    "value": "#d0201b",
+    "ref": "color.red.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-danger-soft",
+    "path": [
+      "color",
+      "status",
+      "danger-soft"
+    ],
+    "type": "color",
+    "value": "#fdecec",
+    "ref": "color.red.50",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-info",
+    "path": [
+      "color",
+      "status",
+      "info"
+    ],
+    "type": "color",
+    "value": "#3a9be0",
+    "ref": "color.blue.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-info-strong",
+    "path": [
+      "color",
+      "status",
+      "info-strong"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-status-info-soft",
+    "path": [
+      "color",
+      "status",
+      "info-soft"
+    ],
+    "type": "color",
+    "value": "#f2f6fb",
+    "ref": "color.blue.50",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-control-track-off",
+    "path": [
+      "color",
+      "control",
+      "track-off"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": "Toggle track when off.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-control-track-on",
+    "path": [
+      "color",
+      "control",
+      "track-on"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-control-thumb",
+    "path": [
+      "color",
+      "control",
+      "thumb"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-control-slider-rail",
+    "path": [
+      "color",
+      "control",
+      "slider-rail"
+    ],
+    "type": "color",
+    "value": "#e5e8eb",
+    "ref": "color.neutral.200",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-control-slider-fill",
+    "path": [
+      "color",
+      "control",
+      "slider-fill"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-control-slider-soft",
+    "path": [
+      "color",
+      "control",
+      "slider-soft"
+    ],
+    "type": "color",
+    "value": "#7fb0e3",
+    "ref": "color.blue.400",
+    "description": "Soft blue track for simple ranges.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-accent-tone-blue",
+    "path": [
+      "color",
+      "accent-tone",
+      "blue"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-accent-tone-green",
+    "path": [
+      "color",
+      "accent-tone",
+      "green"
+    ],
+    "type": "color",
+    "value": "#22b922",
+    "ref": "color.green.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-accent-tone-amber",
+    "path": [
+      "color",
+      "accent-tone",
+      "amber"
+    ],
+    "type": "color",
+    "value": "#f5a623",
+    "ref": "color.amber.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-accent-tone-red",
+    "path": [
+      "color",
+      "accent-tone",
+      "red"
+    ],
+    "type": "color",
+    "value": "#e02424",
+    "ref": "color.red.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-accent-tone-orange",
+    "path": [
+      "color",
+      "accent-tone",
+      "orange"
+    ],
+    "type": "color",
+    "value": "#f06a1d",
+    "ref": "color.orange.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-accent-tone-magenta",
+    "path": [
+      "color",
+      "accent-tone",
+      "magenta"
+    ],
+    "type": "color",
+    "value": "#ec2fc0",
+    "ref": "color.magenta.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--space-0",
+    "path": [
+      "space",
+      "0"
+    ],
+    "type": "dimension",
+    "value": "0px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-1",
+    "path": [
+      "space",
+      "1"
+    ],
+    "type": "dimension",
+    "value": "4px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-2",
+    "path": [
+      "space",
+      "2"
+    ],
+    "type": "dimension",
+    "value": "8px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-3",
+    "path": [
+      "space",
+      "3"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-4",
+    "path": [
+      "space",
+      "4"
+    ],
+    "type": "dimension",
+    "value": "16px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-5",
+    "path": [
+      "space",
+      "5"
+    ],
+    "type": "dimension",
+    "value": "20px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-6",
+    "path": [
+      "space",
+      "6"
+    ],
+    "type": "dimension",
+    "value": "24px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-7",
+    "path": [
+      "space",
+      "7"
+    ],
+    "type": "dimension",
+    "value": "28px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-8",
+    "path": [
+      "space",
+      "8"
+    ],
+    "type": "dimension",
+    "value": "32px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-10",
+    "path": [
+      "space",
+      "10"
+    ],
+    "type": "dimension",
+    "value": "40px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-12",
+    "path": [
+      "space",
+      "12"
+    ],
+    "type": "dimension",
+    "value": "48px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-16",
+    "path": [
+      "space",
+      "16"
+    ],
+    "type": "dimension",
+    "value": "64px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-20",
+    "path": [
+      "space",
+      "20"
+    ],
+    "type": "dimension",
+    "value": "80px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-24",
+    "path": [
+      "space",
+      "24"
+    ],
+    "type": "dimension",
+    "value": "96px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-px",
+    "path": [
+      "space",
+      "px"
+    ],
+    "type": "dimension",
+    "value": "1px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--space-half",
+    "path": [
+      "space",
+      "half"
+    ],
+    "type": "dimension",
+    "value": "2px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-control-xs",
+    "path": [
+      "size",
+      "control",
+      "xs"
+    ],
+    "type": "dimension",
+    "value": "20px",
+    "ref": null,
+    "description": "Dense chrome controls (close buttons).",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-control-sm",
+    "path": [
+      "size",
+      "control",
+      "sm"
+    ],
+    "type": "dimension",
+    "value": "24px",
+    "ref": null,
+    "description": "Default field/button height.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-control-md",
+    "path": [
+      "size",
+      "control",
+      "md"
+    ],
+    "type": "dimension",
+    "value": "28px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-control-lg",
+    "path": [
+      "size",
+      "control",
+      "lg"
+    ],
+    "type": "dimension",
+    "value": "32px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-control-xl",
+    "path": [
+      "size",
+      "control",
+      "xl"
+    ],
+    "type": "dimension",
+    "value": "40px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-icon-xs",
+    "path": [
+      "size",
+      "icon",
+      "xs"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-icon-sm",
+    "path": [
+      "size",
+      "icon",
+      "sm"
+    ],
+    "type": "dimension",
+    "value": "16px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-icon-md",
+    "path": [
+      "size",
+      "icon",
+      "md"
+    ],
+    "type": "dimension",
+    "value": "20px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-icon-lg",
+    "path": [
+      "size",
+      "icon",
+      "lg"
+    ],
+    "type": "dimension",
+    "value": "24px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-field-sm",
+    "path": [
+      "size",
+      "field",
+      "sm"
+    ],
+    "type": "dimension",
+    "value": "84px",
+    "ref": null,
+    "description": "Numeric field width (84 = 21 × 4).",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-field-md",
+    "path": [
+      "size",
+      "field",
+      "md"
+    ],
+    "type": "dimension",
+    "value": "96px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-field-lg",
+    "path": [
+      "size",
+      "field",
+      "lg"
+    ],
+    "type": "dimension",
+    "value": "160px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-layout-nav",
+    "path": [
+      "size",
+      "layout",
+      "nav"
+    ],
+    "type": "dimension",
+    "value": "40px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-layout-rail",
+    "path": [
+      "size",
+      "layout",
+      "rail"
+    ],
+    "type": "dimension",
+    "value": "40px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-layout-panel",
+    "path": [
+      "size",
+      "layout",
+      "panel"
+    ],
+    "type": "dimension",
+    "value": "300px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-layout-sidebar",
+    "path": [
+      "size",
+      "layout",
+      "sidebar"
+    ],
+    "type": "dimension",
+    "value": "232px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-layout-dialog-sm",
+    "path": [
+      "size",
+      "layout",
+      "dialog-sm"
+    ],
+    "type": "dimension",
+    "value": "320px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-layout-dialog-md",
+    "path": [
+      "size",
+      "layout",
+      "dialog-md"
+    ],
+    "type": "dimension",
+    "value": "380px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-layout-dialog-lg",
+    "path": [
+      "size",
+      "layout",
+      "dialog-lg"
+    ],
+    "type": "dimension",
+    "value": "520px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--size-layout-menu-min",
+    "path": [
+      "size",
+      "layout",
+      "menu-min"
+    ],
+    "type": "dimension",
+    "value": "180px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--radius-none",
+    "path": [
+      "radius",
+      "none"
+    ],
+    "type": "dimension",
+    "value": "0px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--radius-xs",
+    "path": [
+      "radius",
+      "xs"
+    ],
+    "type": "dimension",
+    "value": "2px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--radius-sm",
+    "path": [
+      "radius",
+      "sm"
+    ],
+    "type": "dimension",
+    "value": "4px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--radius-md",
+    "path": [
+      "radius",
+      "md"
+    ],
+    "type": "dimension",
+    "value": "6px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--radius-lg",
+    "path": [
+      "radius",
+      "lg"
+    ],
+    "type": "dimension",
+    "value": "8px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--radius-xl",
+    "path": [
+      "radius",
+      "xl"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--radius-full",
+    "path": [
+      "radius",
+      "full"
+    ],
+    "type": "dimension",
+    "value": "9999px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--border-width-1",
+    "path": [
+      "border-width",
+      "1"
+    ],
+    "type": "dimension",
+    "value": "1px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--border-width-2",
+    "path": [
+      "border-width",
+      "2"
+    ],
+    "type": "dimension",
+    "value": "2px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--border-width-3",
+    "path": [
+      "border-width",
+      "3"
+    ],
+    "type": "dimension",
+    "value": "3px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-family-sans",
+    "path": [
+      "font",
+      "family",
+      "sans"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-family-mono",
+    "path": [
+      "font",
+      "family",
+      "mono"
+    ],
+    "type": "fontFamily",
+    "value": "'JetBrains Mono', ui-monospace, monospace",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-weight-regular",
+    "path": [
+      "font",
+      "weight",
+      "regular"
+    ],
+    "type": "fontWeight",
+    "value": 400,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-weight-medium",
+    "path": [
+      "font",
+      "weight",
+      "medium"
+    ],
+    "type": "fontWeight",
+    "value": 500,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-weight-semibold",
+    "path": [
+      "font",
+      "weight",
+      "semibold"
+    ],
+    "type": "fontWeight",
+    "value": 600,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-weight-bold",
+    "path": [
+      "font",
+      "weight",
+      "bold"
+    ],
+    "type": "fontWeight",
+    "value": 700,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-weight-extrabold",
+    "path": [
+      "font",
+      "weight",
+      "extrabold"
+    ],
+    "type": "fontWeight",
+    "value": 800,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-2xs",
+    "path": [
+      "font",
+      "size",
+      "2xs"
+    ],
+    "type": "dimension",
+    "value": "10px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-xs",
+    "path": [
+      "font",
+      "size",
+      "xs"
+    ],
+    "type": "dimension",
+    "value": "11px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-sm",
+    "path": [
+      "font",
+      "size",
+      "sm"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-md",
+    "path": [
+      "font",
+      "size",
+      "md"
+    ],
+    "type": "dimension",
+    "value": "13px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-lg",
+    "path": [
+      "font",
+      "size",
+      "lg"
+    ],
+    "type": "dimension",
+    "value": "14px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-xl",
+    "path": [
+      "font",
+      "size",
+      "xl"
+    ],
+    "type": "dimension",
+    "value": "16px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-2xl",
+    "path": [
+      "font",
+      "size",
+      "2xl"
+    ],
+    "type": "dimension",
+    "value": "20px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-3xl",
+    "path": [
+      "font",
+      "size",
+      "3xl"
+    ],
+    "type": "dimension",
+    "value": "24px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-size-4xl",
+    "path": [
+      "font",
+      "size",
+      "4xl"
+    ],
+    "type": "dimension",
+    "value": "30px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-line-height-none",
+    "path": [
+      "font",
+      "line-height",
+      "none"
+    ],
+    "type": "number",
+    "value": 1,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-line-height-tight",
+    "path": [
+      "font",
+      "line-height",
+      "tight"
+    ],
+    "type": "number",
+    "value": 1.15,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-line-height-snug",
+    "path": [
+      "font",
+      "line-height",
+      "snug"
+    ],
+    "type": "number",
+    "value": 1.3,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-line-height-normal",
+    "path": [
+      "font",
+      "line-height",
+      "normal"
+    ],
+    "type": "number",
+    "value": 1.45,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-letter-spacing-normal",
+    "path": [
+      "font",
+      "letter-spacing",
+      "normal"
+    ],
+    "type": "dimension",
+    "value": "0px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--font-letter-spacing-wide",
+    "path": [
+      "font",
+      "letter-spacing",
+      "wide"
+    ],
+    "type": "dimension",
+    "value": "0.4px",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--shadow-xs",
+    "path": [
+      "shadow",
+      "xs"
+    ],
+    "type": "shadow",
+    "value": "0px 1px 2px 0px rgba(20, 28, 38, 0.12)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--shadow-sm",
+    "path": [
+      "shadow",
+      "sm"
+    ],
+    "type": "shadow",
+    "value": "0px 1px 4px 0px rgba(20, 28, 38, 0.14)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--shadow-md",
+    "path": [
+      "shadow",
+      "md"
+    ],
+    "type": "shadow",
+    "value": "0px 3px 12px 0px rgba(20, 28, 38, 0.14)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--shadow-lg",
+    "path": [
+      "shadow",
+      "lg"
+    ],
+    "type": "shadow",
+    "value": "0px 6px 20px 0px rgba(20, 28, 38, 0.18)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--shadow-xl",
+    "path": [
+      "shadow",
+      "xl"
+    ],
+    "type": "shadow",
+    "value": "0px 12px 40px 0px rgba(20, 28, 38, 0.25)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--motion-duration-instant",
+    "path": [
+      "motion",
+      "duration",
+      "instant"
+    ],
+    "type": "duration",
+    "value": "0ms",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--motion-duration-fast",
+    "path": [
+      "motion",
+      "duration",
+      "fast"
+    ],
+    "type": "duration",
+    "value": "150ms",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--motion-duration-base",
+    "path": [
+      "motion",
+      "duration",
+      "base"
+    ],
+    "type": "duration",
+    "value": "200ms",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--motion-duration-slow",
+    "path": [
+      "motion",
+      "duration",
+      "slow"
+    ],
+    "type": "duration",
+    "value": "300ms",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--motion-easing-standard",
+    "path": [
+      "motion",
+      "easing",
+      "standard"
+    ],
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+    "ref": null,
+    "description": "Ease-out quint used across PreForm overlays.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--motion-easing-linear",
+    "path": [
+      "motion",
+      "easing",
+      "linear"
+    ],
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0, 0, 1, 1)",
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--z-index-base",
+    "path": [
+      "z-index",
+      "base"
+    ],
+    "type": "number",
+    "value": 0,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--z-index-raised",
+    "path": [
+      "z-index",
+      "raised"
+    ],
+    "type": "number",
+    "value": 10,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--z-index-sticky",
+    "path": [
+      "z-index",
+      "sticky"
+    ],
+    "type": "number",
+    "value": 20,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--z-index-dropdown",
+    "path": [
+      "z-index",
+      "dropdown"
+    ],
+    "type": "number",
+    "value": 30,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--z-index-modal",
+    "path": [
+      "z-index",
+      "modal"
+    ],
+    "type": "number",
+    "value": 50,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--z-index-popover",
+    "path": [
+      "z-index",
+      "popover"
+    ],
+    "type": "number",
+    "value": 80,
+    "ref": null,
+    "description": "Popovers may open from inside modals, so they sit above them.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--z-index-toast",
+    "path": [
+      "z-index",
+      "toast"
+    ],
+    "type": "number",
+    "value": 90,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--opacity-disabled",
+    "path": [
+      "opacity",
+      "disabled"
+    ],
+    "type": "number",
+    "value": 0.6,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--opacity-dimmed",
+    "path": [
+      "opacity",
+      "dimmed"
+    ],
+    "type": "number",
+    "value": 0.5,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--opacity-hidden",
+    "path": [
+      "opacity",
+      "hidden"
+    ],
+    "type": "number",
+    "value": 0,
+    "ref": null,
+    "description": null,
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-display-size",
+    "path": [
+      "typography",
+      "display",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "30px",
+    "ref": "font.size.4xl",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-display-line-height",
+    "path": [
+      "typography",
+      "display",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.15,
+    "ref": "font.line-height.tight",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-display-weight",
+    "path": [
+      "typography",
+      "display",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 800,
+    "ref": "font.weight.extrabold",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-display-family",
+    "path": [
+      "typography",
+      "display",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-heading-size",
+    "path": [
+      "typography",
+      "heading",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "20px",
+    "ref": "font.size.2xl",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-heading-line-height",
+    "path": [
+      "typography",
+      "heading",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.15,
+    "ref": "font.line-height.tight",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-heading-weight",
+    "path": [
+      "typography",
+      "heading",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 700,
+    "ref": "font.weight.bold",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-heading-family",
+    "path": [
+      "typography",
+      "heading",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-title-size",
+    "path": [
+      "typography",
+      "title",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "16px",
+    "ref": "font.size.xl",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-title-line-height",
+    "path": [
+      "typography",
+      "title",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.15,
+    "ref": "font.line-height.tight",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-title-weight",
+    "path": [
+      "typography",
+      "title",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 700,
+    "ref": "font.weight.bold",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-title-family",
+    "path": [
+      "typography",
+      "title",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-title-sm-size",
+    "path": [
+      "typography",
+      "title-sm",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "14px",
+    "ref": "font.size.lg",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-title-sm-line-height",
+    "path": [
+      "typography",
+      "title-sm",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.15,
+    "ref": "font.line-height.tight",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-title-sm-weight",
+    "path": [
+      "typography",
+      "title-sm",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 700,
+    "ref": "font.weight.bold",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-title-sm-family",
+    "path": [
+      "typography",
+      "title-sm",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-strong-size",
+    "path": [
+      "typography",
+      "body-strong",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "13px",
+    "ref": "font.size.md",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-strong-line-height",
+    "path": [
+      "typography",
+      "body-strong",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.3,
+    "ref": "font.line-height.snug",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-strong-weight",
+    "path": [
+      "typography",
+      "body-strong",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 600,
+    "ref": "font.weight.semibold",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-strong-family",
+    "path": [
+      "typography",
+      "body-strong",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-size",
+    "path": [
+      "typography",
+      "body",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "13px",
+    "ref": "font.size.md",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-line-height",
+    "path": [
+      "typography",
+      "body",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.3,
+    "ref": "font.line-height.snug",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-weight",
+    "path": [
+      "typography",
+      "body",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 400,
+    "ref": "font.weight.regular",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-family",
+    "path": [
+      "typography",
+      "body",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-sm-size",
+    "path": [
+      "typography",
+      "body-sm",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": "font.size.sm",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-sm-line-height",
+    "path": [
+      "typography",
+      "body-sm",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.3,
+    "ref": "font.line-height.snug",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-sm-weight",
+    "path": [
+      "typography",
+      "body-sm",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 400,
+    "ref": "font.weight.regular",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-body-sm-family",
+    "path": [
+      "typography",
+      "body-sm",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-label-size",
+    "path": [
+      "typography",
+      "label",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": "font.size.sm",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-label-line-height",
+    "path": [
+      "typography",
+      "label",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.15,
+    "ref": "font.line-height.tight",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-label-weight",
+    "path": [
+      "typography",
+      "label",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 500,
+    "ref": "font.weight.medium",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-label-family",
+    "path": [
+      "typography",
+      "label",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-label-sm-size",
+    "path": [
+      "typography",
+      "label-sm",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "11px",
+    "ref": "font.size.xs",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-label-sm-line-height",
+    "path": [
+      "typography",
+      "label-sm",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.15,
+    "ref": "font.line-height.tight",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-label-sm-weight",
+    "path": [
+      "typography",
+      "label-sm",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 400,
+    "ref": "font.weight.regular",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-label-sm-family",
+    "path": [
+      "typography",
+      "label-sm",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-caption-size",
+    "path": [
+      "typography",
+      "caption",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "10px",
+    "ref": "font.size.2xs",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-caption-line-height",
+    "path": [
+      "typography",
+      "caption",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.15,
+    "ref": "font.line-height.tight",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-caption-weight",
+    "path": [
+      "typography",
+      "caption",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 600,
+    "ref": "font.weight.semibold",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-caption-family",
+    "path": [
+      "typography",
+      "caption",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "Figtree, system-ui, sans-serif",
+    "ref": "font.family.sans",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-mono-size",
+    "path": [
+      "typography",
+      "mono",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": "font.size.sm",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-mono-line-height",
+    "path": [
+      "typography",
+      "mono",
+      "line-height"
+    ],
+    "type": "number",
+    "value": 1.45,
+    "ref": "font.line-height.normal",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-mono-weight",
+    "path": [
+      "typography",
+      "mono",
+      "weight"
+    ],
+    "type": "fontWeight",
+    "value": 400,
+    "ref": "font.weight.regular",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--typography-mono-family",
+    "path": [
+      "typography",
+      "mono",
+      "family"
+    ],
+    "type": "fontFamily",
+    "value": "'JetBrains Mono', ui-monospace, monospace",
+    "ref": "font.family.mono",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--elevation-raised",
+    "path": [
+      "elevation",
+      "raised"
+    ],
+    "type": "shadow",
+    "value": "0px 1px 2px 0px rgba(20, 28, 38, 0.12)",
+    "ref": "shadow.xs",
+    "description": "Floating toolbar pills on the viewport.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--elevation-card",
+    "path": [
+      "elevation",
+      "card"
+    ],
+    "type": "shadow",
+    "value": "0px 1px 4px 0px rgba(20, 28, 38, 0.14)",
+    "ref": "shadow.sm",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--elevation-panel",
+    "path": [
+      "elevation",
+      "panel"
+    ],
+    "type": "shadow",
+    "value": "0px 3px 12px 0px rgba(20, 28, 38, 0.14)",
+    "ref": "shadow.md",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--elevation-popover",
+    "path": [
+      "elevation",
+      "popover"
+    ],
+    "type": "shadow",
+    "value": "0px 6px 20px 0px rgba(20, 28, 38, 0.18)",
+    "ref": "shadow.lg",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--elevation-modal",
+    "path": [
+      "elevation",
+      "modal"
+    ],
+    "type": "shadow",
+    "value": "0px 12px 40px 0px rgba(20, 28, 38, 0.25)",
+    "ref": "shadow.xl",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--component-button-height-sm",
+    "path": [
+      "component",
+      "button",
+      "height-sm"
+    ],
+    "type": "dimension",
+    "value": "24px",
+    "ref": "size.control.sm",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-button-height-md",
+    "path": [
+      "component",
+      "button",
+      "height-md"
+    ],
+    "type": "dimension",
+    "value": "28px",
+    "ref": "size.control.md",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-button-height-lg",
+    "path": [
+      "component",
+      "button",
+      "height-lg"
+    ],
+    "type": "dimension",
+    "value": "32px",
+    "ref": "size.control.lg",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-button-padding-x",
+    "path": [
+      "component",
+      "button",
+      "padding-x"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": "space.3",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-button-gap",
+    "path": [
+      "component",
+      "button",
+      "gap"
+    ],
+    "type": "dimension",
+    "value": "8px",
+    "ref": "space.2",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-button-radius",
+    "path": [
+      "component",
+      "button",
+      "radius"
+    ],
+    "type": "dimension",
+    "value": "9999px",
+    "ref": "radius.full",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-field-height",
+    "path": [
+      "component",
+      "field",
+      "height"
+    ],
+    "type": "dimension",
+    "value": "24px",
+    "ref": "size.control.sm",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-field-radius",
+    "path": [
+      "component",
+      "field",
+      "radius"
+    ],
+    "type": "dimension",
+    "value": "4px",
+    "ref": "radius.sm",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-field-padding-x",
+    "path": [
+      "component",
+      "field",
+      "padding-x"
+    ],
+    "type": "dimension",
+    "value": "8px",
+    "ref": "space.2",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-toggle-width",
+    "path": [
+      "component",
+      "toggle",
+      "width"
+    ],
+    "type": "dimension",
+    "value": "20px",
+    "ref": "space.5",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-toggle-height",
+    "path": [
+      "component",
+      "toggle",
+      "height"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": "space.3",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-toggle-thumb",
+    "path": [
+      "component",
+      "toggle",
+      "thumb"
+    ],
+    "type": "dimension",
+    "value": "8px",
+    "ref": "space.2",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-toggle-inset",
+    "path": [
+      "component",
+      "toggle",
+      "inset"
+    ],
+    "type": "dimension",
+    "value": "2px",
+    "ref": "space.half",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-checkbox-size",
+    "path": [
+      "component",
+      "checkbox",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": "space.3",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-checkbox-radius",
+    "path": [
+      "component",
+      "checkbox",
+      "radius"
+    ],
+    "type": "dimension",
+    "value": "2px",
+    "ref": "radius.xs",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-panel-width",
+    "path": [
+      "component",
+      "panel",
+      "width"
+    ],
+    "type": "dimension",
+    "value": "300px",
+    "ref": "size.layout.panel",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-panel-header-height",
+    "path": [
+      "component",
+      "panel",
+      "header-height"
+    ],
+    "type": "dimension",
+    "value": "32px",
+    "ref": "size.control.lg",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-panel-radius",
+    "path": [
+      "component",
+      "panel",
+      "radius"
+    ],
+    "type": "dimension",
+    "value": "8px",
+    "ref": "radius.lg",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-panel-padding-x",
+    "path": [
+      "component",
+      "panel",
+      "padding-x"
+    ],
+    "type": "dimension",
+    "value": "8px",
+    "ref": "space.2",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-menu-min-width",
+    "path": [
+      "component",
+      "menu",
+      "min-width"
+    ],
+    "type": "dimension",
+    "value": "180px",
+    "ref": "size.layout.menu-min",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-menu-radius",
+    "path": [
+      "component",
+      "menu",
+      "radius"
+    ],
+    "type": "dimension",
+    "value": "8px",
+    "ref": "radius.lg",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-menu-item-height",
+    "path": [
+      "component",
+      "menu",
+      "item-height"
+    ],
+    "type": "dimension",
+    "value": "28px",
+    "ref": "size.control.md",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-modal-radius",
+    "path": [
+      "component",
+      "modal",
+      "radius"
+    ],
+    "type": "dimension",
+    "value": "12px",
+    "ref": "radius.xl",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-modal-width-sm",
+    "path": [
+      "component",
+      "modal",
+      "width-sm"
+    ],
+    "type": "dimension",
+    "value": "320px",
+    "ref": "size.layout.dialog-sm",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-modal-width-md",
+    "path": [
+      "component",
+      "modal",
+      "width-md"
+    ],
+    "type": "dimension",
+    "value": "380px",
+    "ref": "size.layout.dialog-md",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-modal-width-lg",
+    "path": [
+      "component",
+      "modal",
+      "width-lg"
+    ],
+    "type": "dimension",
+    "value": "520px",
+    "ref": "size.layout.dialog-lg",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-tool-button-size",
+    "path": [
+      "component",
+      "tool-button",
+      "size"
+    ],
+    "type": "dimension",
+    "value": "40px",
+    "ref": "size.control.xl",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-tool-button-radius",
+    "path": [
+      "component",
+      "tool-button",
+      "radius"
+    ],
+    "type": "dimension",
+    "value": "6px",
+    "ref": "radius.md",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-focus-ring-width",
+    "path": [
+      "component",
+      "focus-ring",
+      "width"
+    ],
+    "type": "dimension",
+    "value": "2px",
+    "ref": "border-width.2",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  },
+  {
+    "name": "--component-focus-ring-offset",
+    "path": [
+      "component",
+      "focus-ring",
+      "offset"
+    ],
+    "type": "dimension",
+    "value": "2px",
+    "ref": "space.half",
+    "description": null,
+    "tier": "component",
+    "theme": "light"
+  }
+]

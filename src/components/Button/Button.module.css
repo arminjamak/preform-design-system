@@ -1,0 +1,74 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--component-button-gap);
+  height: var(--button-height);
+  padding-inline: var(--component-button-padding-x);
+  border-radius: var(--component-button-radius);
+  border: var(--border-width-1) solid transparent;
+  font: var(--typography-label-weight) var(--button-font-size) / var(--font-line-height-none) var(--typography-label-family);
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    color var(--motion-duration-fast) var(--motion-easing-standard),
+    border-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.button:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.button:disabled,
+.button[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+/* sizes */
+.sm { --button-height: var(--component-button-height-sm); --button-font-size: var(--font-size-sm); }
+.md { --button-height: var(--component-button-height-md); --button-font-size: var(--font-size-md); }
+.lg { --button-height: var(--component-button-height-lg); --button-font-size: var(--font-size-lg); padding-inline: var(--space-4); }
+.rounded { border-radius: var(--radius-md); }
+.fullWidth { width: 100%; }
+
+/* variants */
+.primary { background: var(--color-bg-accent); color: var(--color-fg-on-accent); }
+.primary:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-accent-hover); }
+.primary:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-blue-800); }
+.primary:disabled { background: var(--color-bg-accent-disabled); }
+
+.outline { background: var(--color-bg-surface); color: var(--color-fg-default); border-color: var(--color-border-default); }
+.outline:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-panel); }
+.outline:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-muted); }
+.outline:disabled { color: var(--color-fg-disabled); }
+
+.outlineAccent { background: var(--color-bg-surface); color: var(--color-fg-accent); border-color: var(--color-border-accent); }
+.outlineAccent:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-accent-soft); }
+.outlineAccent:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-accent-selected); }
+.outlineAccent:disabled { color: var(--color-fg-disabled); border-color: var(--color-border-default); }
+
+.muted { background: var(--color-bg-muted); color: var(--color-fg-default); }
+.muted:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-muted-hover); }
+.muted:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-border-strong); }
+.muted:disabled { color: var(--color-fg-disabled); }
+
+.ghost { background: transparent; color: var(--color-fg-default); }
+.ghost:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-hover); }
+.ghost:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-pressed); }
+.ghost:disabled { color: var(--color-fg-disabled); }
+
+.danger { background: var(--color-status-danger); color: var(--color-fg-on-status); }
+.danger:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-status-danger-strong); }
+.danger:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-red-900); }
+.danger:disabled { opacity: var(--opacity-disabled); }
+
+.link { background: transparent; color: var(--color-fg-link); padding-inline: 0; height: auto; text-decoration: underline; text-underline-offset: var(--space-half); }
+.link:is(:hover, [data-state~='hover']):not(:disabled) { color: var(--color-fg-accent-hover); }
+.link:disabled { color: var(--color-fg-disabled); }
+
+.icon {
+  display: inline-flex;
+  flex: none;
+  width: var(--size-icon-xs);
+  height: var(--size-icon-xs);
+}
+.icon > svg { width: 100%; height: 100%; }
+.loadingLabel { opacity: var(--opacity-dimmed); }

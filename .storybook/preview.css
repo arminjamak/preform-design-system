@@ -1,0 +1,25 @@
+/* Storybook-only chrome. Uses system tokens so the sandbox itself is on-brand. */
+.sb-surface {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--size-layout-panel);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  color: var(--color-fg-default);
+}
+.sb-surface[data-surface='canvas'] { background: var(--color-bg-canvas); }
+.sb-surface[data-surface='surface'] { background: var(--color-bg-surface); box-shadow: var(--elevation-card); }
+.sb-surface[data-surface='panel'] { background: var(--color-bg-panel); }
+.sb-surface[data-surface='inverse'] { background: var(--color-bg-inverse); color: var(--color-fg-on-inverse); }
+
+.sb-main-padded .sb-surface { min-width: 0; }
+.docs-story .sb-surface { padding: var(--space-4); }
+
+/* State matrix table used by the "States" stories */
+.sb-matrix { border-collapse: separate; border-spacing: var(--space-3) var(--space-2); }
+.sb-matrix th { text-align: left; color: var(--color-fg-muted); font-weight: var(--font-weight-semibold); text-transform: uppercase; letter-spacing: var(--font-letter-spacing-wide); white-space: nowrap; }
+.sb-matrix td { vertical-align: middle; }
+.sb-stack { display: flex; flex-direction: column; gap: var(--space-3); align-items: flex-start; }
+.sb-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+.sb-panel-demo { width: var(--size-layout-panel); }

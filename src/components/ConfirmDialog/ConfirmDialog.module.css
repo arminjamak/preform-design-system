@@ -1,0 +1,25 @@
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-overlay);
+}
+.inline { position: relative; inset: auto; padding: var(--space-6); border-radius: var(--radius-lg); }
+.dialog {
+  width: var(--component-modal-width-sm);
+  max-width: 100%;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  box-shadow: var(--elevation-modal);
+  animation: pop var(--motion-duration-base) var(--motion-easing-standard);
+}
+.title { margin: 0; font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--typography-title-sm-line-height) var(--typography-title-sm-family); }
+.message { margin: var(--space-1) 0 0; font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family); color: var(--color-fg-muted); }
+.actions { display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-4); }
+.cancel { margin-right: auto; }
+@keyframes pop { from { opacity: 0; scale: 0.96; } }

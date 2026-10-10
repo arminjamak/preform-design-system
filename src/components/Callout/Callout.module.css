@@ -1,0 +1,40 @@
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  color: var(--color-fg-default);
+  background: var(--callout-bg);
+  box-shadow: 0 0 0 var(--border-width-1) var(--callout-border);
+}
+.icon { display: inline-flex; flex: none; margin-top: var(--space-px); color: var(--callout-accent); }
+.icon > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); }
+.content { min-width: 0; flex: 1; }
+.title { display: block; font-weight: var(--font-weight-semibold); }
+.action { flex: none; margin-left: auto; }
+
+.soft.neutral { --callout-bg: var(--color-bg-surface); --callout-border: var(--color-border-default); --callout-accent: var(--color-fg-secondary); }
+.soft.info    { --callout-bg: var(--color-status-info-soft); --callout-border: var(--color-border-accent); --callout-accent: var(--color-status-info-strong); }
+.soft.success { --callout-bg: var(--color-status-success-soft); --callout-border: var(--color-green-300); --callout-accent: var(--color-status-success-strong); }
+.soft.warning { --callout-bg: var(--color-status-warning-soft); --callout-border: var(--color-amber-300); --callout-accent: var(--color-status-warning-strong); }
+.soft.danger  { --callout-bg: var(--color-status-danger-soft); --callout-border: var(--color-red-300); --callout-accent: var(--color-status-danger); }
+
+/* Strip: the "Models Need More Support" row with a coloured left edge. */
+.strip {
+  border-radius: 0;
+  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-2);
+  min-height: var(--size-control-md);
+  align-items: center;
+  background: var(--color-bg-surface);
+  box-shadow: inset var(--border-width-3) 0 0 var(--callout-accent), 0 var(--border-width-1) 0 var(--color-border-default), 0 calc(var(--border-width-1) * -1) 0 var(--color-border-default);
+}
+.strip.neutral { --callout-accent: var(--color-fg-muted); }
+.strip.info    { --callout-accent: var(--color-status-info); }
+.strip.success { --callout-accent: var(--color-status-success); }
+.strip.warning { --callout-accent: var(--color-status-warning); }
+.strip.danger  { --callout-accent: var(--color-status-danger); }
+.strip.interactive { cursor: pointer; }
+.strip.interactive:is(:hover, [data-state~='hover']) { background: var(--color-bg-panel); }

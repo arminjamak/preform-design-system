@@ -1,0 +1,49 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: var(--ib-size);
+  height: var(--ib-size);
+  border-radius: var(--radius-md);
+  border: var(--border-width-1) solid transparent;
+  color: var(--color-fg-default);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    color var(--motion-duration-fast) var(--motion-easing-standard),
+    border-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.button > svg { width: var(--ib-icon); height: var(--ib-icon); }
+.button:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.button:disabled { cursor: not-allowed; color: var(--color-fg-disabled); }
+
+.xs { --ib-size: var(--size-control-xs); --ib-icon: var(--size-icon-xs); }
+.sm { --ib-size: var(--size-control-sm); --ib-icon: var(--size-icon-xs); }
+.md { --ib-size: var(--size-control-md); --ib-icon: var(--size-icon-sm); }
+.lg { --ib-size: var(--size-control-lg); --ib-icon: var(--size-icon-sm); }
+.circle { border-radius: var(--radius-full); }
+
+.ghost:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-hover); }
+.ghost:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-pressed); }
+
+.outline { background: var(--color-bg-surface); border-color: var(--color-border-default); }
+.outline:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-panel); }
+.outline:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-muted); }
+
+.accentOutline { background: var(--color-bg-surface); border-color: var(--color-fg-accent); color: var(--color-fg-accent); }
+.accentOutline:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-accent-soft); }
+
+.filled { background: var(--color-bg-accent); color: var(--color-fg-on-accent); }
+.filled:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-accent-hover); }
+.filled:disabled { background: var(--color-bg-accent-disabled); color: var(--color-fg-on-accent); }
+
+/* Floating viewport control: white disc with a raised shadow. */
+.floating { background: var(--color-bg-surface); box-shadow: var(--elevation-raised); }
+.floating:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-panel); }
+
+.inverse { color: var(--color-fg-on-inverse); }
+.inverse:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-inverse-hover); }
+
+.pressed { background: var(--color-bg-accent-soft); color: var(--color-fg-accent); }

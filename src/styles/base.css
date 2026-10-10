@@ -1,0 +1,81 @@
+/* Base layer: token imports, reset and text-style utilities. No raw values below this line. */
+@import '../tokens/tokens.css';
+@import '../tokens/tokens.dark.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--typography-body-family);
+  font-size: var(--typography-body-size);
+  line-height: var(--typography-body-line-height);
+  font-weight: var(--typography-body-weight);
+  color: var(--color-fg-default);
+  background: var(--color-bg-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Text styles — one class per semantic typography token group. */
+.pf-text-display,
+.pf-text-heading,
+.pf-text-title,
+.pf-text-title-sm,
+.pf-text-body-strong,
+.pf-text-body,
+.pf-text-body-sm,
+.pf-text-label,
+.pf-text-label-sm,
+.pf-text-caption,
+.pf-text-mono {
+  margin: 0;
+}
+.pf-text-display     { font: var(--typography-display-weight) var(--typography-display-size) / var(--typography-display-line-height) var(--typography-display-family); }
+.pf-text-heading     { font: var(--typography-heading-weight) var(--typography-heading-size) / var(--typography-heading-line-height) var(--typography-heading-family); }
+.pf-text-title       { font: var(--typography-title-weight) var(--typography-title-size) / var(--typography-title-line-height) var(--typography-title-family); }
+.pf-text-title-sm    { font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--typography-title-sm-line-height) var(--typography-title-sm-family); }
+.pf-text-body-strong { font: var(--typography-body-strong-weight) var(--typography-body-strong-size) / var(--typography-body-strong-line-height) var(--typography-body-strong-family); }
+.pf-text-body        { font: var(--typography-body-weight) var(--typography-body-size) / var(--typography-body-line-height) var(--typography-body-family); }
+.pf-text-body-sm     { font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family); }
+.pf-text-label       { font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family); }
+.pf-text-label-sm    { font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family); }
+.pf-text-caption     { font: var(--typography-caption-weight) var(--typography-caption-size) / var(--typography-caption-line-height) var(--typography-caption-family); }
+.pf-text-mono        { font: var(--typography-mono-weight) var(--typography-mono-size) / var(--typography-mono-line-height) var(--typography-mono-family); }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: var(--motion-duration-instant) !important;
+    animation-duration: var(--motion-duration-instant) !important;
+  }
+}

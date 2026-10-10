@@ -1,0 +1,21 @@
+.card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border-radius: var(--radius-lg);
+  border: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-standard), background-color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.none { padding: 0; }
+.sm { padding: var(--space-2); }
+.md { padding: var(--space-3); }
+.lg { padding: var(--space-4); }
+.elevated { border-color: transparent; box-shadow: var(--elevation-card); }
+.subtle { background: var(--color-bg-panel); border-color: var(--color-border-subtle); }
+.interactive { cursor: pointer; }
+.interactive:is(:hover, [data-state~='hover']) { border-color: var(--color-border-accent); }
+.interactive:is(:focus-visible, [data-state~='focus']) { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }
+.selected { border-color: var(--color-fg-accent); background: var(--color-bg-accent-subtle); box-shadow: 0 0 0 var(--border-width-1) var(--color-fg-accent); }
+.dragging { box-shadow: var(--elevation-popover); scale: 1.02; }

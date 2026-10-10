@@ -1,0 +1,40 @@
+{
+  "name": "@preform/design-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PreForm design system: DTCG tokens, React components and a live sandbox.",
+  "main": "./dist/lib/index.js",
+  "types": "./dist/lib/index.d.ts",
+  "files": [
+    "dist",
+    "src/tokens"
+  ],
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
+    "build": "npm run tokens && storybook build -o dist/storybook",
+    "build:lib": "npm run tokens && vite build --config vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "tokens": "node tokens/build.mjs",
+    "lint:tokens": "node scripts/check-no-raw-values.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "check": "npm run tokens && npm run lint:tokens && npm run typecheck"
+  },
+  "dependencies": {
+    "lucide-react": "^0.546.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.6.1",
+    "@storybook/addon-docs": "^10.6.1",
+    "@storybook/react-vite": "^10.6.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "storybook": "^10.6.1",
+    "style-dictionary": "^4.3.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

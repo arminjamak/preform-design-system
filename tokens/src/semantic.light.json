@@ -1,0 +1,109 @@
+{
+  "color": {
+    "$type": "color",
+    "bg": {
+      "canvas":          { "$value": "{color.neutral.200}", "$description": "App background behind the 3D viewport." },
+      "surface":         { "$value": "{color.neutral.0}",   "$description": "Cards, panels, dialogs, menus." },
+      "panel":           { "$value": "{color.neutral.100}", "$description": "Panel body behind controls." },
+      "subtle":          { "$value": "{color.neutral.50}",  "$description": "Footers, sunken rows." },
+      "sunken":          { "$value": "{color.neutral.150}", "$description": "Disabled fields, empty thumbnails." },
+      "muted":           { "$value": "{color.neutral.200}" },
+      "muted-hover":     { "$value": "{color.neutral.300}" },
+      "hover":           { "$value": "{color.alpha.ink-5}" },
+      "pressed":         { "$value": "{color.alpha.ink-10}" },
+      "inverse":         { "$value": "{color.neutral.850}", "$description": "Top navigation bar." },
+      "inverse-active":  { "$value": "{color.neutral.750}" },
+      "inverse-hover":   { "$value": "{color.alpha.white-5}" },
+      "overlay":         { "$value": "{color.alpha.ink-30}", "$description": "Modal scrim." },
+      "accent":          { "$value": "{color.blue.600}" },
+      "accent-hover":    { "$value": "{color.blue.700}" },
+      "accent-soft":     { "$value": "{color.blue.100}" },
+      "accent-subtle":   { "$value": "{color.blue.50}" },
+      "accent-selected": { "$value": "{color.blue.200}", "$description": "Active tool in the rail." },
+      "accent-disabled": { "$value": "{color.alpha.blue-60}" }
+    },
+    "fg": {
+      "default":         { "$value": "{color.neutral.800}" },
+      "secondary":       { "$value": "{color.neutral.700}" },
+      "muted":           { "$value": "{color.neutral.600}" },
+      "faint":           { "$value": "{color.neutral.400}" },
+      "disabled":        { "$value": "{color.neutral.400}" },
+      "placeholder":     { "$value": "{color.neutral.500}" },
+      "accent":          { "$value": "{color.blue.600}" },
+      "accent-hover":    { "$value": "{color.blue.700}" },
+      "link":            { "$value": "{color.blue.600}" },
+      "on-accent":       { "$value": "{color.neutral.0}" },
+      "on-inverse":      { "$value": "{color.neutral.0}" },
+      "on-inverse-muted":{ "$value": "{color.neutral.300}" },
+      "on-status":       { "$value": "{color.neutral.0}" }
+    },
+    "border": {
+      "subtle":   { "$value": "{color.neutral.150}" },
+      "default":  { "$value": "{color.neutral.300}" },
+      "strong":   { "$value": "{color.neutral.400}" },
+      "accent":   { "$value": "{color.blue.300}" },
+      "focus":    { "$value": "{color.blue.600}" },
+      "inverse":  { "$value": "{color.alpha.white-10}" }
+    },
+    "focus": {
+      "ring":      { "$value": "{color.blue.300}" },
+      "ring-soft": { "$value": "{color.alpha.blue-15}" }
+    },
+    "status": {
+      "success":        { "$value": "{color.green.500}" },
+      "success-strong": { "$value": "{color.green.600}" },
+      "success-soft":   { "$value": "{color.green.50}" },
+      "warning":        { "$value": "{color.amber.500}" },
+      "warning-strong": { "$value": "{color.amber.600}" },
+      "warning-soft":   { "$value": "{color.amber.50}" },
+      "danger":         { "$value": "{color.red.600}" },
+      "danger-strong":  { "$value": "{color.red.700}" },
+      "danger-soft":    { "$value": "{color.red.50}" },
+      "info":           { "$value": "{color.blue.500}" },
+      "info-strong":    { "$value": "{color.blue.600}" },
+      "info-soft":      { "$value": "{color.blue.50}" }
+    },
+    "control": {
+      "track-off":   { "$value": "{color.neutral.600}", "$description": "Toggle track when off." },
+      "track-on":    { "$value": "{color.blue.600}" },
+      "thumb":       { "$value": "{color.neutral.0}" },
+      "slider-rail": { "$value": "{color.neutral.200}" },
+      "slider-fill": { "$value": "{color.blue.600}" },
+      "slider-soft": { "$value": "{color.blue.400}", "$description": "Soft blue track for simple ranges." }
+    },
+    "accent-tone": {
+      "$description": "Alternative accent hues used by colour-coded checkboxes and swatches.",
+      "blue":    { "$value": "{color.blue.600}" },
+      "green":   { "$value": "{color.green.500}" },
+      "amber":   { "$value": "{color.amber.500}" },
+      "red":     { "$value": "{color.red.600}" },
+      "orange":  { "$value": "{color.orange.500}" },
+      "magenta": { "$value": "{color.magenta.500}" }
+    }
+  },
+
+  "typography": {
+    "$description": "Text styles. Each style is a size, line-height, weight and family that components reference together.",
+    "display":     { "size": { "$type": "dimension", "$value": "{font.size.4xl}" }, "line-height": { "$type": "number", "$value": "{font.line-height.tight}" }, "weight": { "$type": "fontWeight", "$value": "{font.weight.extrabold}" }, "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "heading":     { "size": { "$type": "dimension", "$value": "{font.size.2xl}" }, "line-height": { "$type": "number", "$value": "{font.line-height.tight}" }, "weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },      "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "title":       { "size": { "$type": "dimension", "$value": "{font.size.xl}" },  "line-height": { "$type": "number", "$value": "{font.line-height.tight}" }, "weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },      "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "title-sm":    { "size": { "$type": "dimension", "$value": "{font.size.lg}" },  "line-height": { "$type": "number", "$value": "{font.line-height.tight}" }, "weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },      "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "body-strong": { "size": { "$type": "dimension", "$value": "{font.size.md}" },  "line-height": { "$type": "number", "$value": "{font.line-height.snug}" },  "weight": { "$type": "fontWeight", "$value": "{font.weight.semibold}" },  "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "body":        { "size": { "$type": "dimension", "$value": "{font.size.md}" },  "line-height": { "$type": "number", "$value": "{font.line-height.snug}" },  "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },   "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "body-sm":     { "size": { "$type": "dimension", "$value": "{font.size.sm}" },  "line-height": { "$type": "number", "$value": "{font.line-height.snug}" },  "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },   "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "label":       { "size": { "$type": "dimension", "$value": "{font.size.sm}" },  "line-height": { "$type": "number", "$value": "{font.line-height.tight}" }, "weight": { "$type": "fontWeight", "$value": "{font.weight.medium}" },    "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "label-sm":    { "size": { "$type": "dimension", "$value": "{font.size.xs}" },  "line-height": { "$type": "number", "$value": "{font.line-height.tight}" }, "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },   "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "caption":     { "size": { "$type": "dimension", "$value": "{font.size.2xs}" }, "line-height": { "$type": "number", "$value": "{font.line-height.tight}" }, "weight": { "$type": "fontWeight", "$value": "{font.weight.semibold}" },  "family": { "$type": "fontFamily", "$value": "{font.family.sans}" } },
+    "mono":        { "size": { "$type": "dimension", "$value": "{font.size.sm}" },  "line-height": { "$type": "number", "$value": "{font.line-height.normal}" },"weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },   "family": { "$type": "fontFamily", "$value": "{font.family.mono}" } }
+  },
+
+  "elevation": {
+    "$type": "shadow",
+    "$description": "Semantic shadows: what casts the shadow, not how big it is.",
+    "raised":  { "$value": "{shadow.xs}", "$description": "Floating toolbar pills on the viewport." },
+    "card":    { "$value": "{shadow.sm}" },
+    "panel":   { "$value": "{shadow.md}" },
+    "popover": { "$value": "{shadow.lg}" },
+    "modal":   { "$value": "{shadow.xl}" }
+  }
+}

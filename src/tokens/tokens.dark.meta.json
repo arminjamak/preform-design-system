@@ -1,0 +1,898 @@
+[
+  {
+    "name": "--color-bg-canvas",
+    "path": [
+      "color",
+      "bg",
+      "canvas"
+    ],
+    "type": "color",
+    "value": "#1b2129",
+    "ref": "color.neutral.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-surface",
+    "path": [
+      "color",
+      "bg",
+      "surface"
+    ],
+    "type": "color",
+    "value": "#30343a",
+    "ref": "color.neutral.800",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-panel",
+    "path": [
+      "color",
+      "bg",
+      "panel"
+    ],
+    "type": "color",
+    "value": "#2e3640",
+    "ref": "color.neutral.850",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-subtle",
+    "path": [
+      "color",
+      "bg",
+      "subtle"
+    ],
+    "type": "color",
+    "value": "#2e3640",
+    "ref": "color.neutral.850",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-sunken",
+    "path": [
+      "color",
+      "bg",
+      "sunken"
+    ],
+    "type": "color",
+    "value": "#1b2129",
+    "ref": "color.neutral.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-muted",
+    "path": [
+      "color",
+      "bg",
+      "muted"
+    ],
+    "type": "color",
+    "value": "#3c4551",
+    "ref": "color.neutral.750",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-muted-hover",
+    "path": [
+      "color",
+      "bg",
+      "muted-hover"
+    ],
+    "type": "color",
+    "value": "#4b5056",
+    "ref": "color.neutral.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-hover",
+    "path": [
+      "color",
+      "bg",
+      "hover"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.05)",
+    "ref": "color.alpha.white-5",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-pressed",
+    "path": [
+      "color",
+      "bg",
+      "pressed"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.1)",
+    "ref": "color.alpha.white-10",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-inverse",
+    "path": [
+      "color",
+      "bg",
+      "inverse"
+    ],
+    "type": "color",
+    "value": "#1b2129",
+    "ref": "color.neutral.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-inverse-active",
+    "path": [
+      "color",
+      "bg",
+      "inverse-active"
+    ],
+    "type": "color",
+    "value": "#30343a",
+    "ref": "color.neutral.800",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-inverse-hover",
+    "path": [
+      "color",
+      "bg",
+      "inverse-hover"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.05)",
+    "ref": "color.alpha.white-5",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-overlay",
+    "path": [
+      "color",
+      "bg",
+      "overlay"
+    ],
+    "type": "color",
+    "value": "rgba(27, 33, 41, 0.3)",
+    "ref": "color.alpha.ink-30",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-accent",
+    "path": [
+      "color",
+      "bg",
+      "accent"
+    ],
+    "type": "color",
+    "value": "#3a9be0",
+    "ref": "color.blue.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-accent-hover",
+    "path": [
+      "color",
+      "bg",
+      "accent-hover"
+    ],
+    "type": "color",
+    "value": "#7fb0e3",
+    "ref": "color.blue.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-accent-soft",
+    "path": [
+      "color",
+      "bg",
+      "accent-soft"
+    ],
+    "type": "color",
+    "value": "#0b2f55",
+    "ref": "color.blue.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-accent-subtle",
+    "path": [
+      "color",
+      "bg",
+      "accent-subtle"
+    ],
+    "type": "color",
+    "value": "#0b2f55",
+    "ref": "color.blue.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-accent-selected",
+    "path": [
+      "color",
+      "bg",
+      "accent-selected"
+    ],
+    "type": "color",
+    "value": "#06447f",
+    "ref": "color.blue.800",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-bg-accent-disabled",
+    "path": [
+      "color",
+      "bg",
+      "accent-disabled"
+    ],
+    "type": "color",
+    "value": "rgba(10, 99, 201, 0.4)",
+    "ref": "color.alpha.blue-40",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-default",
+    "path": [
+      "color",
+      "fg",
+      "default"
+    ],
+    "type": "color",
+    "value": "#f3f4f6",
+    "ref": "color.neutral.100",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-secondary",
+    "path": [
+      "color",
+      "fg",
+      "secondary"
+    ],
+    "type": "color",
+    "value": "#d6d9dd",
+    "ref": "color.neutral.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-muted",
+    "path": [
+      "color",
+      "fg",
+      "muted"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-faint",
+    "path": [
+      "color",
+      "fg",
+      "faint"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-disabled",
+    "path": [
+      "color",
+      "fg",
+      "disabled"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-placeholder",
+    "path": [
+      "color",
+      "fg",
+      "placeholder"
+    ],
+    "type": "color",
+    "value": "#8d9298",
+    "ref": "color.neutral.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-accent",
+    "path": [
+      "color",
+      "fg",
+      "accent"
+    ],
+    "type": "color",
+    "value": "#7fb0e3",
+    "ref": "color.blue.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-accent-hover",
+    "path": [
+      "color",
+      "fg",
+      "accent-hover"
+    ],
+    "type": "color",
+    "value": "#9cc0ea",
+    "ref": "color.blue.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-link",
+    "path": [
+      "color",
+      "fg",
+      "link"
+    ],
+    "type": "color",
+    "value": "#7fb0e3",
+    "ref": "color.blue.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-on-accent",
+    "path": [
+      "color",
+      "fg",
+      "on-accent"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-on-inverse",
+    "path": [
+      "color",
+      "fg",
+      "on-inverse"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-on-inverse-muted",
+    "path": [
+      "color",
+      "fg",
+      "on-inverse-muted"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-fg-on-status",
+    "path": [
+      "color",
+      "fg",
+      "on-status"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-border-subtle",
+    "path": [
+      "color",
+      "border",
+      "subtle"
+    ],
+    "type": "color",
+    "value": "#3c4551",
+    "ref": "color.neutral.750",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-border-default",
+    "path": [
+      "color",
+      "border",
+      "default"
+    ],
+    "type": "color",
+    "value": "#4b5056",
+    "ref": "color.neutral.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-border-strong",
+    "path": [
+      "color",
+      "border",
+      "strong"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-border-accent",
+    "path": [
+      "color",
+      "border",
+      "accent"
+    ],
+    "type": "color",
+    "value": "#06447f",
+    "ref": "color.blue.800",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-border-focus",
+    "path": [
+      "color",
+      "border",
+      "focus"
+    ],
+    "type": "color",
+    "value": "#7fb0e3",
+    "ref": "color.blue.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-border-inverse",
+    "path": [
+      "color",
+      "border",
+      "inverse"
+    ],
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.1)",
+    "ref": "color.alpha.white-10",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-focus-ring",
+    "path": [
+      "color",
+      "focus",
+      "ring"
+    ],
+    "type": "color",
+    "value": "#3a9be0",
+    "ref": "color.blue.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-focus-ring-soft",
+    "path": [
+      "color",
+      "focus",
+      "ring-soft"
+    ],
+    "type": "color",
+    "value": "rgba(10, 99, 201, 0.4)",
+    "ref": "color.alpha.blue-40",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-success",
+    "path": [
+      "color",
+      "status",
+      "success"
+    ],
+    "type": "color",
+    "value": "#22b922",
+    "ref": "color.green.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-success-strong",
+    "path": [
+      "color",
+      "status",
+      "success-strong"
+    ],
+    "type": "color",
+    "value": "#6fd86f",
+    "ref": "color.green.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-success-soft",
+    "path": [
+      "color",
+      "status",
+      "success-soft"
+    ],
+    "type": "color",
+    "value": "#0a4d0a",
+    "ref": "color.green.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-warning",
+    "path": [
+      "color",
+      "status",
+      "warning"
+    ],
+    "type": "color",
+    "value": "#f5a623",
+    "ref": "color.amber.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-warning-strong",
+    "path": [
+      "color",
+      "status",
+      "warning-strong"
+    ],
+    "type": "color",
+    "value": "#f7c466",
+    "ref": "color.amber.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-warning-soft",
+    "path": [
+      "color",
+      "status",
+      "warning-soft"
+    ],
+    "type": "color",
+    "value": "#6b4206",
+    "ref": "color.amber.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-danger",
+    "path": [
+      "color",
+      "status",
+      "danger"
+    ],
+    "type": "color",
+    "value": "#e53935",
+    "ref": "color.red.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-danger-strong",
+    "path": [
+      "color",
+      "status",
+      "danger-strong"
+    ],
+    "type": "color",
+    "value": "#ef8c8c",
+    "ref": "color.red.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-danger-soft",
+    "path": [
+      "color",
+      "status",
+      "danger-soft"
+    ],
+    "type": "color",
+    "value": "#7a1210",
+    "ref": "color.red.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-info",
+    "path": [
+      "color",
+      "status",
+      "info"
+    ],
+    "type": "color",
+    "value": "#3a9be0",
+    "ref": "color.blue.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-info-strong",
+    "path": [
+      "color",
+      "status",
+      "info-strong"
+    ],
+    "type": "color",
+    "value": "#9cc0ea",
+    "ref": "color.blue.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-status-info-soft",
+    "path": [
+      "color",
+      "status",
+      "info-soft"
+    ],
+    "type": "color",
+    "value": "#0b2f55",
+    "ref": "color.blue.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-control-track-off",
+    "path": [
+      "color",
+      "control",
+      "track-off"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-control-track-on",
+    "path": [
+      "color",
+      "control",
+      "track-on"
+    ],
+    "type": "color",
+    "value": "#3a9be0",
+    "ref": "color.blue.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-control-thumb",
+    "path": [
+      "color",
+      "control",
+      "thumb"
+    ],
+    "type": "color",
+    "value": "#ffffff",
+    "ref": "color.neutral.0",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-control-slider-rail",
+    "path": [
+      "color",
+      "control",
+      "slider-rail"
+    ],
+    "type": "color",
+    "value": "#4b5056",
+    "ref": "color.neutral.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-control-slider-fill",
+    "path": [
+      "color",
+      "control",
+      "slider-fill"
+    ],
+    "type": "color",
+    "value": "#3a9be0",
+    "ref": "color.blue.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-control-slider-soft",
+    "path": [
+      "color",
+      "control",
+      "slider-soft"
+    ],
+    "type": "color",
+    "value": "#0857b2",
+    "ref": "color.blue.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-accent-tone-blue",
+    "path": [
+      "color",
+      "accent-tone",
+      "blue"
+    ],
+    "type": "color",
+    "value": "#3a9be0",
+    "ref": "color.blue.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-accent-tone-green",
+    "path": [
+      "color",
+      "accent-tone",
+      "green"
+    ],
+    "type": "color",
+    "value": "#22b922",
+    "ref": "color.green.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-accent-tone-amber",
+    "path": [
+      "color",
+      "accent-tone",
+      "amber"
+    ],
+    "type": "color",
+    "value": "#f5a623",
+    "ref": "color.amber.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-accent-tone-red",
+    "path": [
+      "color",
+      "accent-tone",
+      "red"
+    ],
+    "type": "color",
+    "value": "#e53935",
+    "ref": "color.red.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-accent-tone-orange",
+    "path": [
+      "color",
+      "accent-tone",
+      "orange"
+    ],
+    "type": "color",
+    "value": "#f06a1d",
+    "ref": "color.orange.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-accent-tone-magenta",
+    "path": [
+      "color",
+      "accent-tone",
+      "magenta"
+    ],
+    "type": "color",
+    "value": "#ec2fc0",
+    "ref": "color.magenta.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  }
+]
