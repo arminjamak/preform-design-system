@@ -1,0 +1,77 @@
+/* Registered so the fade length can transition when an edge becomes scrollable. */
+@property --scroll-fade-top { syntax: '<length>'; inherits: false; initial-value: 0px; }
+@property --scroll-fade-bottom { syntax: '<length>'; inherits: false; initial-value: 0px; }
+@property --scroll-fade-left { syntax: '<length>'; inherits: false; initial-value: 0px; }
+@property --scroll-fade-right { syntax: '<length>'; inherits: false; initial-value: 0px; }
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  border-radius: var(--radius-sm);
+}
+/* The ring sits on the wrapper so the fade mask on the viewport cannot hide it. */
+.root:has(> .viewport:focus-visible),
+.root[data-state~='focus'] {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+
+.viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  max-height: var(--scroll-max-height, none);
+  border-radius: inherit;
+  outline: none;
+  overscroll-behavior: contain;
+  /* Standard scrollbars (Firefox, Chromium 121+). */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-default) transparent;
+  transition: scrollbar-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.viewport:hover { scrollbar-color: var(--color-border-strong) transparent; }
+
+/* WebKit scrollbars (Safari, older Chromium). */
+.viewport::-webkit-scrollbar { width: var(--space-2); height: var(--space-2); }
+.viewport::-webkit-scrollbar-track,
+.viewport::-webkit-scrollbar-corner { background: transparent; }
+.viewport::-webkit-scrollbar-thumb {
+  border: var(--space-half) solid transparent;
+  border-radius: var(--radius-full);
+  background-color: var(--color-border-default);
+  background-clip: padding-box;
+}
+.viewport::-webkit-scrollbar-thumb:hover { background-color: var(--color-border-strong); }
+
+.vertical { overflow-x: hidden; overflow-y: auto; }
+.horizontal { overflow-x: auto; overflow-y: hidden; }
+.both { overflow: auto; }
+
+.horizontal > .content,
+.both > .content { width: max-content; min-width: 100%; }
+
+/* ---------- Edge fades ---------- */
+.fade {
+  --scroll-fade-size: var(--space-6);
+  mask-image:
+    linear-gradient(to bottom, transparent, var(--color-neutral-1000) var(--scroll-fade-top), var(--color-neutral-1000) calc(100% - var(--scroll-fade-bottom)), transparent),
+    linear-gradient(to right, transparent, var(--color-neutral-1000) var(--scroll-fade-left), var(--color-neutral-1000) calc(100% - var(--scroll-fade-right)), transparent);
+  mask-composite: intersect;
+  transition:
+    --scroll-fade-top var(--motion-duration-fast) var(--motion-easing-standard),
+    --scroll-fade-bottom var(--motion-duration-fast) var(--motion-easing-standard),
+    --scroll-fade-left var(--motion-duration-fast) var(--motion-easing-standard),
+    --scroll-fade-right var(--motion-duration-fast) var(--motion-easing-standard),
+    scrollbar-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.fade[data-fade-top] { --scroll-fade-top: var(--scroll-fade-size); }
+.fade[data-fade-bottom] { --scroll-fade-bottom: var(--scroll-fade-size); }
+.fade[data-fade-left] { --scroll-fade-left: var(--scroll-fade-size); }
+.fade[data-fade-right] { --scroll-fade-right: var(--scroll-fade-size); }
+
+@media (prefers-reduced-motion: reduce) {
+  .viewport, .fade { transition-duration: var(--motion-duration-instant); }
+}

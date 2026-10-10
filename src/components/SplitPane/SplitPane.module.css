@@ -1,0 +1,95 @@
+/* ---------- SplitPane ---------- */
+.split {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  color: var(--color-fg-default);
+}
+.horizontal { flex-direction: row; }
+.vertical { flex-direction: column; }
+.dragging { user-select: none; }
+.horizontal.dragging { cursor: col-resize; }
+.vertical.dragging { cursor: row-resize; }
+
+.pane { min-width: 0; min-height: 0; overflow: auto; }
+.first { flex: 0 0 calc(var(--split-ratio, 0.5) * (100% - var(--space-px))); }
+.second { flex: 1 1 0; }
+.pane[data-collapsed] { visibility: hidden; }
+.animate > .first {
+  transition: flex-basis var(--motion-duration-base) var(--motion-easing-standard);
+}
+
+/* ---------- Separator (shared) ---------- */
+.handle {
+  position: relative;
+  z-index: var(--z-index-raised);
+  flex: none;
+  background: var(--color-border-default);
+  touch-action: none;
+  outline: none;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+/* Widen the pointer target past the hairline without changing layout. */
+.handle::before { content: ''; position: absolute; }
+.horizontal > .handle,
+.edgeX { width: var(--space-px); cursor: col-resize; }
+.vertical > .handle,
+.edgeY { height: var(--space-px); cursor: row-resize; }
+.horizontal > .handle::before,
+.edgeX::before { inset: 0 calc(var(--space-1) * -1); }
+.vertical > .handle::before,
+.edgeY::before { inset: calc(var(--space-1) * -1) 0; }
+
+.grip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: var(--border-width-1) solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  box-shadow: var(--elevation-raised);
+  pointer-events: none;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.horizontal > .handle > .grip,
+.edgeX > .grip { width: calc(var(--space-1) + var(--space-px)); height: var(--size-control-sm); }
+.vertical > .handle > .grip,
+.edgeY > .grip { width: var(--size-control-sm); height: calc(var(--space-1) + var(--space-px)); }
+
+.handle:is(:hover, [data-state~='hover']) { background: var(--color-border-accent); }
+.handle:is(:hover, [data-state~='hover']) > .grip { border-color: var(--color-border-accent); }
+.handle:is(:focus-visible, [data-state~='focus']) { background: var(--color-fg-accent); }
+.handle:is(:focus-visible, [data-state~='focus']) > .grip {
+  border-color: var(--color-fg-accent);
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.handle:is(:active, [data-state~='active'], [data-dragging]) { background: var(--color-fg-accent); }
+.handle:is(:active, [data-state~='active'], [data-dragging]) > .grip { border-color: var(--color-fg-accent); background: var(--color-bg-accent); }
+
+.handle[aria-disabled='true'] { cursor: default; background: var(--color-border-default); }
+.handle[aria-disabled='true'] > .grip { opacity: var(--opacity-disabled); border-color: var(--color-border-default); background: var(--color-bg-surface); outline: none; }
+
+/* ---------- ResizablePanel ---------- */
+.resizable {
+  position: relative;
+  flex: none;
+  min-width: 0;
+  min-height: 0;
+}
+.sizeX { width: var(--resizable-size); min-width: var(--resizable-min); max-width: var(--resizable-max); }
+.sizeY { height: var(--resizable-size); min-height: var(--resizable-min); max-height: var(--resizable-max); }
+.resizableBody { width: 100%; height: 100%; overflow: auto; }
+
+.edge { position: absolute; background: transparent; }
+.edge > .grip { opacity: var(--opacity-hidden); transition: opacity var(--motion-duration-fast) var(--motion-easing-standard), background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard); }
+.resizable:hover > .edge > .grip,
+.edge:is(:hover, :focus-visible, [data-state], [data-dragging]) > .grip { opacity: 1; }
+.edgeRight { inset-block: 0; right: 0; }
+.edgeLeft { inset-block: 0; left: 0; }
+.edgeBottom { inset-inline: 0; bottom: 0; }
+.edgeTop { inset-inline: 0; top: 0; }

@@ -1,0 +1,42 @@
+.bar {
+  position: sticky;
+  z-index: var(--z-index-sticky);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--size-control-xl);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-3);
+  border: 0 solid transparent;
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  transition:
+    box-shadow var(--motion-duration-fast) var(--motion-easing-standard),
+    border-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.top { top: var(--sticky-offset, 0); border-bottom-width: var(--border-width-1); }
+.bottom { bottom: var(--sticky-offset, 0); border-top-width: var(--border-width-1); }
+
+/* Respect notches and home indicators when the bar meets the viewport edge. */
+.safeArea {
+  padding-inline: max(var(--space-3), env(safe-area-inset-left, 0px)) max(var(--space-3), env(safe-area-inset-right, 0px));
+}
+.safeArea.top { padding-top: max(var(--space-2), env(safe-area-inset-top, 0px)); }
+.safeArea.bottom { padding-bottom: max(var(--space-2), env(safe-area-inset-bottom, 0px)); }
+
+/* Elevation appears only once content scrolls underneath. */
+.top[data-stuck] { border-bottom-color: var(--color-border-default); }
+.bottom[data-stuck] { border-top-color: var(--color-border-default); }
+.shadow.top[data-stuck] { box-shadow: var(--elevation-card); }
+.shadow.bottom[data-stuck] {
+  box-shadow: 0 calc(var(--space-px) * -1) var(--space-1) 0 var(--color-shadow-ink-14);
+}
+
+.sentinel {
+  flex: none;
+  height: var(--space-px);
+  visibility: hidden;
+  pointer-events: none;
+}
+.sentinelTop { margin-bottom: calc(var(--space-px) * -1); }
+.sentinelBottom { margin-top: calc(var(--space-px) * -1); }

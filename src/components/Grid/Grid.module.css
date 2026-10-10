@@ -1,0 +1,44 @@
+/*
+ * The wrapper is the size container; the grid inside measures it with `cqi`.
+ * Size-query conditions (`@container (min-width: …)`) cannot read custom properties, so the
+ * breakpoints below are selected with clamp() on container units instead. Each breakpoint is a
+ * multiple of --size-layout-panel; each track size is the exact width that fits N columns.
+ */
+.container {
+  container-type: inline-size;
+  min-width: 0;
+  width: 100%;
+}
+
+.grid {
+  --grid-bp-sm: calc(var(--size-layout-panel) * 1.5);
+  --grid-bp-md: calc(var(--size-layout-panel) * 2.5);
+  --grid-bp-lg: calc(var(--size-layout-panel) * 3.5);
+  display: grid;
+  gap: var(--grid-row-gap, var(--grid-gap, var(--space-3))) var(--grid-gap, var(--space-3));
+  align-items: var(--grid-align, stretch);
+}
+
+/* columns={3} */
+.fixed {
+  grid-template-columns: repeat(var(--grid-cols-base), minmax(0, 1fr));
+}
+
+/* columns={{ base, sm, md, lg }} */
+.responsive {
+  --grid-track-base: calc((100cqi - (var(--grid-cols-base) - 1) * var(--grid-gap, var(--space-3))) / var(--grid-cols-base));
+  --grid-track-sm: calc((100cqi - (var(--grid-cols-sm) - 1) * var(--grid-gap, var(--space-3))) / var(--grid-cols-sm));
+  --grid-track-md: calc((100cqi - (var(--grid-cols-md) - 1) * var(--grid-gap, var(--space-3))) / var(--grid-cols-md));
+  --grid-track-lg: calc((100cqi - (var(--grid-cols-lg) - 1) * var(--grid-gap, var(--space-3))) / var(--grid-cols-lg));
+  /* clamp(narrow, (breakpoint - width) * big, wide): picks the next track once the container reaches the breakpoint. */
+  --grid-track-1: clamp(var(--grid-track-sm), (var(--grid-bp-sm) - 100cqi) * 9999, var(--grid-track-base));
+  --grid-track-2: clamp(var(--grid-track-md), (var(--grid-bp-md) - 100cqi) * 9999, var(--grid-track-1));
+  --grid-track: clamp(var(--grid-track-lg), (var(--grid-bp-lg) - 100cqi) * 9999, var(--grid-track-2));
+  /* One hairline of slack absorbs sub-pixel rounding so exactly N tracks fit. */
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--grid-track) - var(--space-px)), 1fr));
+}
+
+/* minItemWidth="panel" */
+.autoFill {
+  grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-min-item), 100%), 1fr));
+}

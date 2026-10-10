@@ -1,0 +1,13 @@
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x, var(--space-4));
+  padding-block: var(--container-padding-y, 0);
+}
+.sm { max-width: calc(var(--size-layout-panel) * 2); }
+.md { max-width: calc(var(--size-layout-panel) * 3); }
+.lg { max-width: calc(var(--size-layout-panel) * 4); }
+.full { max-width: none; }
+.start { margin-inline: 0 auto; }
