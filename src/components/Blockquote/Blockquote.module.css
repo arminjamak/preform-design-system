@@ -1,0 +1,51 @@
+.figure { margin: 0; display: flex; flex-direction: column; gap: var(--space-2); color: var(--color-fg-default); }
+.quote { margin: 0; }
+.quote > * { margin-block: 0; }
+.quote > * + * { margin-top: var(--space-2); }
+
+.caption {
+  color: var(--color-fg-muted);
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+}
+.caption::before { content: '\2014\00a0'; }
+.citation { color: var(--color-fg-secondary); font-weight: var(--font-weight-semibold); }
+.source { font-style: italic; }
+.link {
+  color: var(--color-fg-link);
+  text-decoration: underline;
+  text-decoration-thickness: var(--space-px);
+  text-underline-offset: var(--space-half);
+  border-radius: var(--radius-xs);
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.link:is(:hover, [data-state~='hover']) { color: var(--color-fg-accent-hover); }
+.link:is(:focus-visible, [data-state~='focus']) { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }
+
+/* default: accent rule on the left, body text */
+.default {
+  padding: var(--space-1) 0 var(--space-1) var(--space-3);
+  border-left: var(--border-width-3) solid var(--color-fg-accent);
+}
+.default .quote {
+  color: var(--color-fg-secondary);
+  font: var(--typography-body-weight) var(--typography-body-size) / var(--font-line-height-normal) var(--typography-body-family);
+}
+
+/* pull: larger, centred, framed by short accent rules */
+.pull {
+  align-items: center;
+  max-width: var(--size-layout-dialog-lg);
+  margin-inline: auto;
+  padding: var(--space-4) var(--space-6);
+  text-align: center;
+}
+.pull .quote {
+  color: var(--color-fg-default);
+  font: var(--font-weight-semibold) var(--typography-title-size) / var(--font-line-height-snug) var(--typography-title-family);
+}
+.pull .caption::before { content: none; }
+.mark { width: var(--size-icon-lg); height: var(--size-icon-lg); color: var(--color-fg-accent); }
+.pull .caption {
+  padding-top: var(--space-2);
+  border-top: var(--border-width-2) solid var(--color-fg-accent);
+}

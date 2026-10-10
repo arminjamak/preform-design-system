@@ -1,0 +1,18 @@
+/* Syntax colours shared by CodeBlock, CodeEditor and the Markdown preview.
+   Every colour is a semantic token so the palette flips with the theme;
+   the two primitives (magenta, orange) are re-pointed for dark below. */
+.plain { color: inherit; }
+.keyword { color: var(--color-fg-accent); }
+.string { color: var(--color-status-success-strong); }
+.number { color: var(--color-status-warning-strong); }
+.comment { color: var(--color-fg-muted); font-style: italic; }
+.punctuation { color: var(--color-fg-secondary); }
+.operator { color: var(--color-fg-secondary); }
+.function { color: var(--color-status-danger-strong); }
+.type { color: var(--color-magenta-700); }
+.property { color: var(--color-orange-700); }
+.variable { color: var(--color-orange-700); font-weight: var(--font-weight-medium); }
+
+:global([data-theme='dark']) .type { color: var(--color-magenta-100); }
+:global([data-theme='dark']) .property,
+:global([data-theme='dark']) .variable { color: var(--color-orange-100); }
