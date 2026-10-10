@@ -15,7 +15,7 @@ const walk = (dir) =>
     return statSync(p).isDirectory() ? walk(p) : [p];
   });
 
-const COLOR = /#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|oklch|color-mix)\(/g;
+const COLOR = /#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|oklch)\(/g;
 const LENGTH = /(?<![\w-])-?\d*\.?\d+(?:px|rem|em|ms|s|vh|vw)\b/g;
 const ALLOWED_LENGTH = new Set(['0px', '0rem', '0em', '0ms', '0s']);
 

@@ -1,0 +1,49 @@
+/* Shared chart chrome. Every chart imports these classes so axes, gridlines and labels look identical. */
+.frame { margin: 0; position: relative; display: flex; flex-direction: column; gap: var(--space-2); width: 100%; min-width: 0; color: var(--color-fg-default); }
+.header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); }
+.title { margin: 0; font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--typography-title-sm-line-height) var(--typography-title-sm-family); }
+.subtitle { margin: 0; font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family); color: var(--color-fg-muted); }
+.plot { position: relative; width: 100%; }
+.svg { display: block; overflow: visible; }
+
+.grid { stroke: var(--color-chart-grid); stroke-width: var(--border-width-1); shape-rendering: crispEdges; }
+.axisLine { stroke: var(--color-chart-axis); stroke-width: var(--border-width-1); shape-rendering: crispEdges; }
+.tickLabel { fill: var(--color-chart-label); font-family: var(--font-family-sans); font-size: var(--font-size-2xs); font-variant-numeric: tabular-nums; }
+.axisTitle { fill: var(--color-chart-label); font-family: var(--font-family-sans); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); }
+.valueLabel { fill: var(--color-fg-default); font-family: var(--font-family-sans); font-size: var(--font-size-2xs); font-weight: var(--font-weight-semibold); font-variant-numeric: tabular-nums; }
+.mark { transition: opacity var(--motion-duration-fast) var(--motion-easing-standard); }
+.dimmed { opacity: var(--opacity-dimmed); }
+
+/* Legend */
+.legend { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); margin: 0; padding: 0; list-style: none; }
+.legendVertical { flex-direction: column; }
+.legendItem { display: inline-flex; align-items: center; gap: var(--space-1); font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family); color: var(--color-fg-secondary); }
+.legendButton { display: inline-flex; align-items: center; gap: var(--space-1); padding: var(--space-half) var(--space-1); border-radius: var(--radius-sm); color: inherit; }
+.legendButton:hover { background: var(--color-bg-hover); }
+.legendButton:focus-visible { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }
+.legendButton[aria-pressed='false'] { opacity: var(--opacity-dimmed); }
+.swatch { flex: none; width: var(--space-2); height: var(--space-2); border-radius: var(--radius-xs); }
+.swatchLine { height: var(--space-half); border-radius: var(--radius-full); }
+.swatchDot { border-radius: var(--radius-full); }
+.legendValue { margin-left: var(--space-1); color: var(--color-fg-default); font-variant-numeric: tabular-nums; }
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  z-index: var(--z-index-popover);
+  min-width: var(--size-layout-menu-min);
+  max-width: var(--size-layout-sidebar);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  box-shadow: var(--elevation-popover), 0 0 0 var(--border-width-1) var(--color-border-subtle);
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - var(--space-2)));
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--font-line-height-snug) var(--typography-label-sm-family);
+  white-space: nowrap;
+}
+.tooltipTitle { margin: 0 0 var(--space-1); font-weight: var(--font-weight-semibold); }
+.tooltipRow { display: flex; align-items: center; gap: var(--space-2); }
+.tooltipLabel { flex: 1; color: var(--color-fg-muted); }
+.tooltipValue { font-variant-numeric: tabular-nums; font-weight: var(--font-weight-semibold); }
