@@ -61,7 +61,7 @@ const readMode = (): Mode => {
 };
 
 const STYLE = `
-.pf-version { position: relative; flex: 1; min-width: 0; }
+.pf-version { position: relative; flex: 1 1 auto; min-width: 0; }
 .pf-version__trigger { display: flex; width: 100%; align-items: center; gap: 8px; padding: 6px 8px; margin-left: -8px; border: 0; border-radius: 6px; background: transparent; color: ${C.ink}; text-align: left; cursor: pointer; font: inherit; }
 .pf-version__trigger:hover { background: rgba(27,33,41,0.05); }
 .pf-version__trigger:focus-visible { outline: 2px solid ${C.accent}; outline-offset: 1px; }
@@ -71,7 +71,7 @@ const STYLE = `
 .pf-version__sub { font-size: 11px; color: ${C.muted}; }
 .pf-version__chev { margin-left: auto; flex: none; width: 10px; height: 10px; color: ${C.muted}; transition: transform 150ms cubic-bezier(0.23,1,0.32,1); }
 .pf-version[data-open='true'] .pf-version__chev { transform: rotate(180deg); }
-.pf-version__menu { position: absolute; z-index: 100; top: calc(100% + 4px); left: -8px; right: -40px; margin: 0; padding: 4px; list-style: none; border-radius: 8px; background: ${C.surface}; box-shadow: 0 6px 20px rgba(20,28,38,0.18), 0 0 0 1px rgba(20,28,38,0.06); }
+.pf-version__menu { position: absolute; z-index: 100; top: calc(100% + 4px); left: -8px; width: 264px; margin: 0; padding: 4px; list-style: none; border-radius: 8px; background: ${C.surface}; box-shadow: 0 6px 20px rgba(20,28,38,0.18), 0 0 0 1px rgba(20,28,38,0.06); }
 .pf-version__opt { display: flex; gap: 8px; align-items: flex-start; padding: 8px; border-radius: 6px; cursor: pointer; outline: none; }
 .pf-version__opt:hover, .pf-version__opt:focus-visible { background: ${C.panel}; }
 .pf-version__opt[aria-selected='true'] { background: ${C.accentSoft}; }
@@ -79,7 +79,7 @@ const STYLE = `
 .pf-version__opt[aria-selected='true'] .pf-version__radio { border: 4px solid ${C.accent}; }
 .pf-version__optName { display: block; font-weight: 600; font-size: 13px; color: ${C.ink}; }
 .pf-version__optDetail { display: block; font-size: 11px; color: ${C.muted}; margin-top: 2px; }
-.sidebar-header[data-pf-version] > .pf-version + * { display: none !important; }
+.sidebar-header[data-pf-version] > div:not(.pf-version) { display: none !important; }
 `;
 
 addons.register('preform/version-switcher', (api) => {
@@ -183,8 +183,10 @@ addons.register('preform/version-switcher', (api) => {
       if (!menu.hidden && root && !root.contains(e.target as Node)) open(false);
     });
 
+    // Replace the default brand wrapper (a <div>), keeping Storybook's skip link and settings button.
+    const brand = Array.from(header.children).find((c) => c.tagName === 'DIV' && !c.classList.contains('pf-version')) ?? null;
     header.setAttribute('data-pf-version', '');
-    header.insertBefore(root, header.firstChild);
+    header.insertBefore(root, brand);
     render();
   }
 

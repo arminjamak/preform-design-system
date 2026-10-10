@@ -1,0 +1,62 @@
+/* SVG ring progress. Size and stroke come from tokens; the ring is drawn with pathLength=100 so the dash offset is the percentage. */
+.root {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--cp-size);
+  height: var(--cp-size);
+  color: var(--cp-tone);
+}
+.xs { --cp-size: var(--size-icon-xs); --cp-stroke: var(--border-width-2); }
+.sm { --cp-size: var(--size-icon-sm); --cp-stroke: var(--border-width-2); }
+.md { --cp-size: var(--size-icon-md); --cp-stroke: calc(var(--border-width-2) + var(--space-half) / 4); }
+.lg { --cp-size: var(--size-icon-lg); --cp-stroke: var(--border-width-3); }
+.xl { --cp-size: var(--size-control-xl); --cp-stroke: var(--space-1); }
+
+.accent  { --cp-tone: var(--color-bg-accent); --cp-text: var(--color-fg-accent); }
+.success { --cp-tone: var(--color-status-success); --cp-text: var(--color-status-success-strong); }
+.warning { --cp-tone: var(--color-status-warning); --cp-text: var(--color-status-warning-strong); }
+.danger  { --cp-tone: var(--color-status-danger); --cp-text: var(--color-status-danger-strong); }
+
+.svg { display: block; width: 100%; height: 100%; overflow: visible; transform: rotate(-90deg); }
+.track,
+.arc {
+  fill: none;
+  stroke-width: var(--cp-stroke);
+  r: calc(50% - var(--cp-stroke) / 2);
+}
+.track { stroke: var(--color-chart-track); }
+.arc {
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-dasharray: 100 100;
+  transition: stroke-dashoffset var(--motion-duration-slow) var(--motion-easing-standard), stroke var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--typography-caption-weight) var(--typography-caption-size) / var(--font-line-height-none) var(--typography-caption-family);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg-default);
+}
+
+/* Indeterminate: a quarter arc rotates around the ring. */
+.indeterminate .arc { stroke-dasharray: 28 72; stroke-dashoffset: 0; transition: none; }
+.indeterminate .svg { animation: spin calc(var(--motion-duration-slow) * 3) var(--motion-easing-linear) infinite; }
+@keyframes spin {
+  from { transform: rotate(-90deg); }
+  to { transform: rotate(270deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* No rotation: a full, dimmed ring signals "working" without motion. */
+  .indeterminate .svg { animation: none; }
+  .indeterminate .arc { stroke-dasharray: none; opacity: var(--opacity-dimmed); }
+  .arc { transition: none; }
+}

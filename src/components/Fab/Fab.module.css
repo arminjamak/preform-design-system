@@ -1,0 +1,46 @@
+.fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  gap: var(--space-2);
+  width: var(--fab-size);
+  height: var(--fab-size);
+  padding: 0;
+  border-radius: var(--radius-full);
+  border: var(--border-width-1) solid transparent;
+  box-shadow: var(--elevation-popover);
+  font: var(--typography-label-weight) var(--fab-font) / var(--font-line-height-none) var(--typography-label-family);
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    color var(--motion-duration-fast) var(--motion-easing-standard),
+    box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.fab:is(:hover, [data-state~='hover']):not(:disabled) { box-shadow: var(--elevation-modal); }
+.fab:is(:active, [data-state~='active']):not(:disabled) { box-shadow: var(--elevation-panel); }
+.fab:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.fab:disabled { cursor: not-allowed; opacity: var(--opacity-disabled); box-shadow: var(--elevation-raised); }
+
+.icon { display: inline-flex; flex: none; width: var(--fab-icon); height: var(--fab-icon); }
+.icon > svg { width: 100%; height: 100%; }
+
+.extended {
+  width: auto;
+  padding-inline: var(--fab-pad-start) var(--fab-pad-end);
+}
+
+/* sizes */
+.md { --fab-size: var(--size-control-xl); --fab-icon: var(--size-icon-md); --fab-font: var(--font-size-md); --fab-pad-start: var(--space-3); --fab-pad-end: var(--space-4); }
+.lg { --fab-size: var(--space-12); --fab-icon: var(--size-icon-lg); --fab-font: var(--font-size-lg); --fab-pad-start: var(--space-4); --fab-pad-end: var(--space-5); }
+
+/* tones */
+.accent { background: var(--color-bg-accent); color: var(--color-fg-on-accent); }
+.accent:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-accent-hover); }
+.accent:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-blue-800); }
+
+.surface { background: var(--color-bg-surface); color: var(--color-fg-default); border-color: var(--color-border-subtle); }
+.surface:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-panel); }
+.surface:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-muted); }

@@ -1,0 +1,62 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--space-1) * 1.5);
+  min-width: 0;
+  color: var(--color-fg-default);
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  white-space: nowrap;
+}
+.sm { --cs-dot: calc(var(--space-1) * 1.5); }
+.md { --cs-dot: var(--space-2); }
+
+.dot {
+  position: relative;
+  flex: none;
+  width: var(--cs-dot);
+  height: var(--cs-dot);
+  border-radius: var(--radius-full);
+  background: var(--cs-color);
+}
+/* Offline is a hollow ring so the state does not rely on colour alone. */
+.offline .dot { background: transparent; box-shadow: inset 0 0 0 var(--border-width-2) var(--cs-color); }
+.connecting .dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--cs-color);
+  animation: csPulse calc(var(--motion-duration-slow) * 4) var(--motion-easing-standard) infinite;
+}
+@keyframes csPulse {
+  from { transform: scale(1); opacity: var(--opacity-dimmed); }
+  to { transform: scale(2.6); opacity: var(--opacity-hidden); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .connecting .dot::after { animation: none; display: none; }
+}
+
+.online     { --cs-color: var(--color-status-success); }
+.degraded   { --cs-color: var(--color-status-warning); }
+.connecting { --cs-color: var(--color-bg-accent); }
+.offline    { --cs-color: var(--color-fg-faint); }
+
+.name { overflow: hidden; text-overflow: ellipsis; }
+.separator { color: var(--color-fg-faint); }
+.status { color: var(--color-fg-muted); }
+
+/* Compact: the dot alone, focusable so the tooltip is reachable by keyboard. */
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-control-xs);
+  height: var(--size-control-xs);
+  border-radius: var(--radius-full);
+  cursor: default;
+}
+.trigger:is(:hover, [data-state~='hover']) { background: var(--color-bg-hover); }
+.trigger:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}

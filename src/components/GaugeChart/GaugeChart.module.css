@@ -1,0 +1,66 @@
+/* Semicircle gauge. Arc geometry lives in a fixed viewBox; colours, stroke widths and text come from tokens. */
+/* Compound selector so it outranks the shared .frame width regardless of stylesheet order. */
+.root:is(.sm, .md, .lg) { width: var(--gauge-w); max-width: 100%; }
+.sm { --gauge-w: var(--size-field-lg); }
+.md { --gauge-w: var(--size-layout-sidebar); }
+.lg { --gauge-w: var(--size-layout-panel); }
+
+.accent  { --gauge-tone: var(--color-bg-accent); }
+.success { --gauge-tone: var(--color-status-success); }
+.warning { --gauge-tone: var(--color-status-warning); }
+.danger  { --gauge-tone: var(--color-status-danger); }
+
+.svg { width: 100%; height: auto; }
+.track,
+.arc { fill: none; stroke-width: var(--space-3); stroke-linecap: butt; }
+.track { stroke: var(--color-chart-track); }
+.arc {
+  stroke: var(--gauge-tone);
+  stroke-dasharray: 100 100;
+  transition: stroke-dashoffset var(--motion-duration-slow) var(--motion-easing-standard), stroke var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.target { stroke: var(--color-fg-default); stroke-width: var(--border-width-2); stroke-linecap: round; }
+
+.center {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-half);
+  pointer-events: none;
+}
+.value {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-half);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg-default);
+}
+.sm .value { font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--font-line-height-none) var(--typography-title-sm-family); }
+.md .value { font: var(--typography-heading-weight) var(--typography-heading-size) / var(--font-line-height-none) var(--typography-heading-family); }
+.lg .value { font: var(--typography-display-weight) var(--typography-display-size) / var(--font-line-height-none) var(--typography-display-family); }
+.unit { font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family); color: var(--color-fg-muted); }
+.caption {
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  color: var(--color-fg-muted);
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: calc(var(--space-1) * -1);
+  font: var(--typography-caption-weight) var(--typography-caption-size) / var(--typography-caption-line-height) var(--typography-caption-family);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-chart-label);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arc { transition: none; }
+}

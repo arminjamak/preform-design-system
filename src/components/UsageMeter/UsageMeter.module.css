@@ -1,0 +1,80 @@
+/* Consumption against a quota: resin cartridge, cloud storage, print hours. Tone flips to warning/danger at thresholds. */
+.root { display: flex; flex-direction: column; gap: var(--space-1); width: 100%; min-width: 0; color: var(--color-fg-default); }
+
+.header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); min-width: 0; }
+.label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+}
+.amount {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-1);
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg-muted);
+}
+.used { font-weight: var(--font-weight-semibold); color: var(--um-text); }
+.amount > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); color: var(--um-tone); }
+
+.track {
+  position: relative;
+  display: flex;
+  gap: var(--space-half);
+  width: 100%;
+  height: var(--um-height);
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--color-chart-track);
+}
+.segment {
+  flex: none;
+  height: 100%;
+  width: calc(var(--um-pct, 0) * 100%);
+  background: var(--um-fill, var(--um-tone));
+  transition: width var(--motion-duration-slow) var(--motion-easing-standard), background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.segment:first-child { border-start-start-radius: var(--radius-full); border-end-start-radius: var(--radius-full); }
+.single .segment { border-radius: var(--radius-full); }
+
+.sm { --um-height: var(--space-1); }
+.md { --um-height: var(--space-2); }
+.md .label { font: var(--typography-body-strong-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-strong-family); }
+.md .amount { font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family); }
+
+.accent  { --um-tone: var(--color-bg-accent); --um-text: var(--color-fg-default); }
+.warning { --um-tone: var(--color-status-warning); --um-text: var(--color-status-warning-strong); }
+.danger  { --um-tone: var(--color-status-danger); --um-text: var(--color-status-danger-strong); }
+
+.legend { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); margin: 0; padding: 0; list-style: none; }
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  color: var(--color-fg-secondary);
+}
+.legendValue { color: var(--color-fg-default); font-variant-numeric: tabular-nums; }
+.swatch { flex: none; width: var(--space-2); height: var(--space-2); border-radius: var(--radius-xs); }
+
+.footer { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); }
+.helper {
+  margin: 0;
+  min-width: 0;
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--font-line-height-snug) var(--typography-label-sm-family);
+  color: var(--color-fg-muted);
+}
+.warning .helper, .danger .helper { color: var(--um-text); }
+.action { flex: none; }
+.link { font: var(--typography-label-sm-weight) var(--font-size-sm) / var(--typography-label-sm-line-height) var(--typography-label-sm-family); color: var(--color-fg-link); text-decoration: underline; text-underline-offset: var(--space-half); border-radius: var(--radius-xs); }
+.link:is(:hover, [data-state~='hover']) { color: var(--color-fg-accent-hover); }
+.link:is(:focus-visible, [data-state~='focus']) { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }
+
+@media (prefers-reduced-motion: reduce) {
+  .segment { transition: none; }
+}

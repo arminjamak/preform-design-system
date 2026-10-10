@@ -1,0 +1,19 @@
+.trigger { display: block; }
+.layer {
+  position: fixed;
+  z-index: var(--z-index-popover);
+  min-width: var(--component-menu-min-width);
+  overflow-y: auto;
+  border-radius: var(--component-menu-radius);
+  background: var(--color-bg-surface);
+  box-shadow: var(--elevation-popover), 0 0 0 var(--border-width-1) var(--color-border-subtle);
+  color: var(--color-fg-default);
+  transform-origin: top left;
+  animation: enter var(--motion-duration-base) var(--motion-easing-standard);
+}
+.measuring { visibility: hidden; animation: none; }
+
+@keyframes enter {
+  from { opacity: 0; scale: 0.96; }
+  to { opacity: 1; scale: 1; }
+}

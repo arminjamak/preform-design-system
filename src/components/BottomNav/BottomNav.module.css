@@ -1,0 +1,64 @@
+.bar {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  padding: var(--space-1) var(--space-2) calc(var(--space-1) + env(safe-area-inset-bottom, var(--space-0)));
+  background: var(--color-bg-surface);
+  border-top: var(--border-width-1) solid var(--color-border-subtle);
+  box-shadow: var(--elevation-card);
+  color: var(--color-fg-default);
+}
+
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-width: 0;
+  min-height: calc(var(--size-control-xl) + var(--space-3));
+  padding: var(--space-1) var(--space-1);
+  border-radius: var(--component-tool-button-radius);
+  color: var(--color-fg-secondary);
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.item:is(:focus-visible, [data-state~='focus']) { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: calc(var(--component-focus-ring-offset) * -1); }
+.item:disabled { cursor: not-allowed; color: var(--color-fg-disabled); }
+
+/* Pill behind the icon carries hover / pressed / active feedback. */
+.iconWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-control-xl);
+  height: var(--size-control-sm);
+  border-radius: var(--radius-full);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.iconWrap > svg { width: var(--size-icon-md); height: var(--size-icon-md); }
+.item:is(:hover, [data-state~='hover']):not(:disabled):not(.active) .iconWrap { background: var(--color-bg-hover); }
+.item:is(:active, [data-state~='active']):not(:disabled):not(.active) .iconWrap { background: var(--color-bg-pressed); }
+
+.label {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+}
+
+.active { color: var(--color-fg-accent); }
+.active .iconWrap { background: var(--color-bg-accent-selected); }
+.active .label { font-weight: var(--font-weight-semibold); }
+
+.iconWrap .badge {
+  position: absolute;
+  top: calc(var(--space-1) * -1);
+  left: calc(50% + var(--space-1));
+  min-width: var(--space-4);
+  justify-content: center;
+  padding-inline: var(--space-1);
+  box-shadow: 0 0 0 var(--border-width-2) var(--color-bg-surface);
+}

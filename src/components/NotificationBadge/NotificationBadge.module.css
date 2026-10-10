@@ -1,0 +1,61 @@
+.wrap {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: var(--z-index-raised);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-radius: var(--radius-full);
+  background: var(--nb-bg);
+  color: var(--nb-fg);
+  /* hairline cut-out so the badge separates from the icon under it */
+  box-shadow: 0 0 0 var(--border-width-2) var(--nb-ring, var(--color-bg-surface));
+  animation: badgePop var(--motion-duration-base) var(--motion-easing-standard);
+}
+.count {
+  min-width: var(--space-4);
+  height: var(--space-4);
+  padding-inline: var(--space-1);
+  transform: translate(40%, -40%);
+  font: var(--font-weight-bold) var(--font-size-2xs) / var(--font-line-height-none) var(--font-family-sans);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.dot {
+  width: var(--space-2);
+  height: var(--space-2);
+  transform: translate(25%, -25%);
+}
+
+.danger  { --nb-bg: var(--color-status-danger); --nb-fg: var(--color-fg-on-status); }
+.accent  { --nb-bg: var(--color-bg-accent); --nb-fg: var(--color-fg-on-accent); }
+.info    { --nb-bg: var(--color-status-info); --nb-fg: var(--color-fg-on-status); }
+.success { --nb-bg: var(--color-green-700); --nb-fg: var(--color-fg-on-status); }
+.warning { --nb-bg: var(--color-status-warning); --nb-fg: var(--color-neutral-900); }
+.neutral { --nb-bg: var(--color-fg-muted); --nb-fg: var(--color-bg-surface); }
+
+@keyframes badgePop {
+  from { scale: 0.4; opacity: var(--opacity-hidden); }
+  to { scale: 1; opacity: 1; }
+}
+
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  margin: calc(var(--space-px) * -1);
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

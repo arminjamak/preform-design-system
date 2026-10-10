@@ -1,0 +1,21 @@
+/* Popover reads --pop-w from its anchor, so the dialog width is set here. */
+.anchor { --pop-w: var(--size-layout-dialog-sm); }
+
+.dialog { display: flex; flex-direction: column; }
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3) var(--space-2);
+}
+.title {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-fg-default);
+  font: var(--typography-body-strong-weight) var(--typography-body-strong-size) / var(--typography-body-strong-line-height) var(--typography-body-strong-family);
+}
+.linkRow { display: flex; align-items: center; gap: var(--space-1); }
+.field { min-width: 0; flex: 1; color: var(--color-fg-secondary); }
+.menu { border-top: var(--border-width-1) solid var(--color-border-subtle); }

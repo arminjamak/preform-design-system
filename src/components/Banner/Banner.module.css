@@ -1,0 +1,79 @@
+.banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  width: 100%;
+  min-height: var(--size-control-xl);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+  border-radius: var(--radius-none);
+  background: var(--banner-bg);
+  color: var(--banner-fg);
+  box-shadow: inset 0 calc(var(--border-width-1) * -1) 0 var(--banner-border);
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+}
+
+.main {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.icon {
+  display: inline-flex;
+  flex: none;
+  margin-top: calc((var(--font-size-md) * var(--font-line-height-snug) - var(--size-icon-sm)) / 2);
+  color: var(--banner-accent);
+}
+.icon > svg { width: var(--size-icon-sm); height: var(--size-icon-sm); }
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--space-2);
+  min-width: 0;
+}
+.title {
+  font: var(--typography-body-strong-weight) var(--typography-body-strong-size) / var(--typography-body-strong-line-height) var(--typography-body-strong-family);
+}
+.description { color: var(--banner-fg-muted); }
+
+.end {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: none;
+  margin-left: auto;
+}
+.actions { display: inline-flex; align-items: center; gap: var(--space-2); }
+
+/* The close IconButton inherits the banner's foreground so it reads on solid fills. */
+.banner .dismiss { color: inherit; }
+
+/* soft: tinted wash with a hairline under it */
+.soft { --banner-fg: var(--color-fg-default); --banner-fg-muted: var(--color-fg-secondary); }
+.soft.neutral { --banner-bg: var(--color-bg-surface); --banner-border: var(--color-border-default); --banner-accent: var(--color-fg-secondary); }
+.soft.info    { --banner-bg: var(--color-status-info-soft); --banner-border: var(--color-border-accent); --banner-accent: var(--color-status-info-strong); }
+.soft.success { --banner-bg: var(--color-status-success-soft); --banner-border: var(--color-green-300); --banner-accent: var(--color-status-success-strong); }
+.soft.warning { --banner-bg: var(--color-status-warning-soft); --banner-border: var(--color-amber-300); --banner-accent: var(--color-status-warning-strong); }
+.soft.danger  { --banner-bg: var(--color-status-danger-soft); --banner-border: var(--color-red-300); --banner-accent: var(--color-status-danger); }
+:global([data-theme='dark']) .soft.success { --banner-border: var(--color-green-700); }
+:global([data-theme='dark']) .soft.warning { --banner-border: var(--color-amber-700); }
+:global([data-theme='dark']) .soft.danger  { --banner-border: var(--color-red-700); --banner-accent: var(--color-status-danger-strong); }
+
+/* solid: full-strength fill; fills chosen so on-status text clears contrast in both themes */
+.solid { --banner-fg: var(--color-fg-on-status); --banner-fg-muted: var(--color-fg-on-status); --banner-accent: currentColor; --banner-border: transparent; }
+.solid.neutral { --banner-bg: var(--color-bg-inverse); --banner-fg: var(--color-fg-on-inverse); --banner-fg-muted: var(--color-fg-on-inverse-muted); }
+.solid.info    { --banner-bg: var(--color-bg-accent); }
+.solid.success { --banner-bg: var(--color-green-700); }
+.solid.warning { --banner-bg: var(--color-status-warning); --banner-fg: var(--color-neutral-900); --banner-fg-muted: var(--color-neutral-900); }
+.solid.danger  { --banner-bg: var(--color-status-danger-strong); }
+:global([data-theme='dark']) .solid.danger { --banner-bg: var(--color-red-700); }
+.solid .dismiss:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-alpha-ink-10); }
+.solid.neutral .dismiss:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-inverse-hover); }

@@ -1,0 +1,100 @@
+.bar {
+  display: flex;
+  align-items: stretch;
+  height: var(--size-layout-nav);
+  min-width: 0;
+  background: var(--color-bg-inverse);
+  color: var(--color-fg-on-inverse);
+}
+
+.logo {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-layout-nav);
+  color: var(--color-fg-on-inverse);
+}
+.logo > svg { width: var(--size-icon-md); height: var(--size-icon-md); }
+
+.tabs { flex: none; }
+
+/* Centre column grows and keeps the title centred in the free space. */
+.center {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding-inline: var(--space-4);
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 100%;
+  height: var(--size-control-sm);
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-fg-on-inverse);
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.titleText { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.titleIcon { flex: none; width: var(--size-icon-xs); height: var(--size-icon-xs); color: var(--color-fg-on-inverse-muted); transition: color var(--motion-duration-fast) var(--motion-easing-standard); }
+.title:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-inverse-hover); }
+.title:is(:hover, [data-state~='hover']):not(:disabled) .titleIcon { color: var(--color-fg-on-inverse); }
+.title:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-inverse-active); }
+.title:is(:focus-visible, [data-state~='focus']) { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }
+.title:disabled { cursor: default; opacity: var(--opacity-disabled); }
+
+.titleInput {
+  width: var(--size-layout-sidebar);
+  max-width: 100%;
+  height: var(--size-control-sm);
+  padding-inline: var(--component-field-padding-x);
+  border: var(--border-width-1) solid var(--color-border-focus);
+  border-radius: var(--component-field-radius);
+  background: var(--color-bg-inverse-active);
+  color: var(--color-fg-on-inverse);
+  text-align: center;
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring-soft);
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+  padding-inline: var(--space-3);
+}
+
+.account {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+  width: var(--size-layout-sidebar);
+  height: var(--size-layout-nav);
+  padding-inline: var(--space-3);
+  border-left: var(--border-width-1) solid var(--color-border-inverse);
+  color: var(--color-fg-on-inverse);
+  text-align: left;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.account:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-inverse-hover); }
+.account:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-inverse-active); }
+.account:is(:focus-visible, [data-state~='focus']) { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: calc(var(--component-focus-ring-offset) * -1); }
+.account:disabled { cursor: default; opacity: var(--opacity-disabled); }
+.accountText { display: flex; flex: 1; flex-direction: column; min-width: 0; gap: var(--space-half); }
+.accountName,
+.accountEmail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--font-weight-bold) var(--font-size-2xs) / var(--font-line-height-tight) var(--font-family-sans);
+}
+.accountEmail { font-weight: var(--font-weight-regular); color: var(--color-fg-on-inverse-muted); }
+.accountChevron { flex: none; width: var(--size-icon-xs); height: var(--size-icon-xs); color: var(--color-fg-on-inverse-muted); }

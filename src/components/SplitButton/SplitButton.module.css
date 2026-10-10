@@ -1,0 +1,63 @@
+/* One pill made of two Buttons: the main action and a chevron menu trigger. */
+.root {
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+}
+.anchor { display: inline-flex; }
+
+/* Collapse the inner corners so both halves read as one pill. */
+.root .main {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}
+.root .trigger {
+  position: relative;
+  padding-inline: var(--space-2);
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+}
+.root .trigger svg {
+  display: block;
+  width: var(--size-icon-xs);
+  height: var(--size-icon-xs);
+  transition: transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.root .open svg { transform: scaleY(-1); }
+
+/* Keep the focus ring above the neighbouring half. */
+.root .main:is(:focus-visible, [data-state~='focus']),
+.root .trigger:focus-visible {
+  position: relative;
+  z-index: var(--z-index-raised);
+}
+
+/* Divider between the halves, drawn on the trigger's leading edge. */
+.root .trigger::before {
+  content: '';
+  position: absolute;
+  inset-block: var(--split-divider-inset);
+  inset-inline-start: 0;
+  width: var(--border-width-1);
+  background: var(--split-divider-color);
+  opacity: var(--split-divider-opacity, 1);
+  pointer-events: none;
+}
+
+.primary {
+  --split-divider-color: var(--color-fg-on-accent);
+  --split-divider-opacity: var(--opacity-dimmed);
+  --split-divider-inset: var(--space-1);
+}
+.muted {
+  --split-divider-color: var(--color-border-strong);
+  --split-divider-inset: var(--space-1);
+}
+
+/* Outline: one shared border, the divider runs the full height to join it. */
+.outline {
+  --split-divider-color: var(--color-border-default);
+  --split-divider-inset: 0;
+}
+.outline .main { border-inline-end-width: 0; }
+.outline .trigger { border-inline-start-width: 0; }

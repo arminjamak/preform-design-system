@@ -1,0 +1,58 @@
+.field {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.label {
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  color: var(--color-fg-default);
+}
+
+.boxes { display: inline-flex; gap: var(--code-gap); }
+
+.box {
+  width: var(--code-box-w);
+  height: var(--code-box-h);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--code-radius);
+  border: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  font: var(--typography-body-strong-weight) var(--code-font) / var(--font-line-height-none) var(--typography-body-strong-family);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  text-transform: uppercase;
+  caret-color: var(--color-fg-accent);
+  outline: none;
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.box::placeholder { color: var(--color-fg-faint); }
+.box:is(:hover, [data-state~='hover']):not(:disabled) { border-color: var(--color-border-strong); }
+.box:is(:focus, [data-state~='focus']) {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 var(--component-focus-ring-width) var(--color-focus-ring-soft);
+}
+.box:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-subtle); }
+.box:disabled { background: var(--color-bg-sunken); color: var(--color-fg-disabled); cursor: not-allowed; }
+.invalid .box,
+.invalid .box:is(:hover, :focus, [data-state~='hover'], [data-state~='focus']) { border-color: var(--color-status-danger); }
+
+.sm { --code-box-w: var(--size-control-md); --code-box-h: var(--size-control-lg); --code-font: var(--font-size-md); --code-gap: var(--space-1); --code-radius: var(--radius-sm); }
+.md { --code-box-w: var(--size-control-lg); --code-box-h: var(--size-control-xl); --code-font: var(--font-size-xl); --code-gap: var(--space-2); --code-radius: var(--radius-md); }
+.lg { --code-box-w: var(--size-control-xl); --code-box-h: calc(var(--size-control-xl) + var(--space-2)); --code-font: var(--font-size-2xl); --code-gap: var(--space-2); --code-radius: var(--radius-lg); }
+
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  margin: calc(var(--space-px) * -1);
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

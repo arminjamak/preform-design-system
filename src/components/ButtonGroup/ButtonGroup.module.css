@@ -1,0 +1,49 @@
+.group {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+.spaced { gap: var(--space-1); }
+
+/* Vertical stacks use rounded corners: pills read poorly when stacked. */
+.group.vertical > *,
+.group.vertical > * > button { border-radius: var(--radius-md); }
+
+/*
+ * Attached: collapse inner radii and overlap borders by one hairline so neighbours share it.
+ * `> * > button` reaches buttons wrapped by a Tooltip or Popover anchor.
+ */
+.attached.horizontal > :not(:first-child),
+.attached.horizontal > :not(:first-child) > button {
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+}
+.attached.horizontal > :not(:last-child),
+.attached.horizontal > :not(:last-child) > button {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}
+.attached.horizontal > :not(:first-child) { margin-inline-start: calc(var(--border-width-1) * -1); }
+
+.attached.vertical > :not(:first-child),
+.attached.vertical > :not(:first-child) > button {
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+}
+.attached.vertical > :not(:last-child),
+.attached.vertical > :not(:last-child) > button {
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+.attached.vertical > :not(:first-child) { margin-block-start: calc(var(--border-width-1) * -1); }
+
+/* The hovered, pressed or focused child draws its border and focus ring on top of its neighbours. */
+.attached > :is(:hover, :focus-visible, :focus-within, [data-state], [aria-pressed='true']),
+.attached > * > button:is(:hover, :focus-visible, [data-state], [aria-pressed='true']) {
+  position: relative;
+  z-index: var(--z-index-raised);
+}

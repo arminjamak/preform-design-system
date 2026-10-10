@@ -1,0 +1,32 @@
+.field {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: var(--size-layout-sidebar);
+  min-width: 0;
+}
+.fullWidth { display: flex; width: 100%; }
+
+.label {
+  display: inline-flex;
+  gap: var(--space-half);
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  color: var(--color-fg-default);
+}
+.required { color: var(--color-status-danger); }
+
+/* Applied to the TextField wrapper: fill the field column. */
+.control { --tf-w: 100%; }
+.valid { color: var(--color-status-success); }
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-1);
+  margin: 0;
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  color: var(--color-fg-muted);
+}
+.message:empty { display: none; }
+.message > svg { flex: none; width: var(--size-icon-xs); height: var(--size-icon-xs); }
+.error { color: var(--color-status-danger); }

@@ -1,0 +1,72 @@
+/* Linear progress: print progress, slicing, uploads. Track uses the shared chart track token so it reads on surface and panel in both themes. */
+.root { display: flex; flex-direction: column; gap: var(--space-1); width: 100%; min-width: 0; color: var(--color-fg-default); }
+
+.header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); min-width: 0; }
+.label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  color: var(--color-fg-default);
+}
+.value {
+  flex: none;
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg-muted);
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  height: var(--pb-height);
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--color-chart-track);
+}
+.sm { --pb-height: var(--space-1); }
+.md { --pb-height: calc(var(--space-1) + var(--space-half)); }
+.md .label { font: var(--typography-body-strong-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-strong-family); }
+.md .value { font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family); font-variant-numeric: tabular-nums; }
+
+.fill,
+.buffer {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  border-radius: var(--radius-full);
+}
+.fill {
+  width: calc(var(--pb-pct, 0) * 100%);
+  background: var(--pb-tone);
+  transition: width var(--motion-duration-slow) var(--motion-easing-standard), background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.buffer {
+  width: calc(var(--pb-buffer, 0) * 100%);
+  background: color-mix(in oklab, var(--pb-tone) 30%, var(--color-chart-track));
+  transition: width var(--motion-duration-slow) var(--motion-easing-standard);
+}
+
+.accent  { --pb-tone: var(--color-bg-accent); }
+.success { --pb-tone: var(--color-status-success); }
+.warning { --pb-tone: var(--color-status-warning); }
+.danger  { --pb-tone: var(--color-status-danger); }
+
+/* Indeterminate: a 40% segment slides across the track. */
+.indeterminate .fill {
+  width: 40%;
+  transition: none;
+  animation: slide calc(var(--motion-duration-slow) * 5) var(--motion-easing-standard) infinite;
+}
+@keyframes slide {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(250%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* No sliding: show a calm full-width dimmed bar instead. */
+  .indeterminate .fill { width: 100%; animation: none; transform: none; opacity: var(--opacity-dimmed); }
+  .fill, .buffer { transition: none; }
+}

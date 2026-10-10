@@ -1,0 +1,19 @@
+.root { position: relative; display: block; width: 100%; min-width: 0; }
+.fixed { display: inline-block; width: auto; vertical-align: middle; }
+.svg { display: block; overflow: visible; }
+
+.line { fill: none; stroke-width: calc(var(--border-width-1) * 1.5); stroke-linejoin: round; stroke-linecap: round; }
+.bar { transition: fill-opacity var(--motion-duration-fast) var(--motion-easing-standard); }
+.barMuted { fill-opacity: var(--opacity-dimmed); }
+.baseline { stroke: var(--color-chart-grid); stroke-width: var(--border-width-1); shape-rendering: crispEdges; }
+.last { stroke: var(--color-bg-surface); stroke-width: var(--border-width-1); }
+.extreme { fill: var(--color-bg-surface); stroke-width: var(--border-width-1); }
+
+.accent { --sparkline-tone: var(--color-chart-series-1); }
+.success { --sparkline-tone: var(--color-status-success); }
+.danger { --sparkline-tone: var(--color-status-danger); }
+.neutral { --sparkline-tone: var(--color-chart-series-6); }
+
+.toneStroke { stroke: var(--sparkline-tone); }
+.toneFill { fill: var(--sparkline-tone); }
+.toneStop { stop-color: var(--sparkline-tone); }

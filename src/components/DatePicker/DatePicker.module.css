@@ -1,0 +1,12 @@
+.anchor { vertical-align: middle; }
+.fullWidth { display: flex; width: 100%; }
+.field { font-variant-numeric: tabular-nums; }
+.actions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-half);
+  margin-inline-end: calc(var(--space-1) * -1);
+}
+.actions .action { color: var(--color-fg-muted); }
+.actions .action:is(:hover, [data-state~='hover']):not(:disabled) { color: var(--color-fg-default); }
+.actions .action:disabled { color: var(--color-fg-disabled); }

@@ -1,0 +1,100 @@
+/* Geometry matches Slider's `fill` variant: 4px track, 16px thumb, 20px hit row. */
+.wrap {
+  --range-track: var(--space-1);
+  --range-thumb: var(--space-4);
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: var(--range-w, 100%);
+  min-width: 0;
+  height: var(--size-control-xs);
+  cursor: pointer;
+  touch-action: none;
+}
+.rail,
+.fill {
+  position: absolute;
+  top: 50%;
+  height: var(--range-track);
+  transform: translateY(-50%);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+}
+.rail { inset-inline: 0; background: var(--color-control-slider-rail); }
+.fill {
+  left: calc(var(--range-lo) * (100% - var(--range-thumb)) + var(--range-thumb) / 2);
+  width: calc((var(--range-hi) - var(--range-lo)) * (100% - var(--range-thumb)));
+  background: var(--color-control-slider-fill);
+}
+
+/* Two stacked native ranges: the inputs ignore the pointer, only their thumbs catch it. */
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  pointer-events: none;
+  outline: none;
+}
+.top { z-index: var(--z-index-raised); }
+.input::-webkit-slider-runnable-track { height: 100%; background: transparent; }
+.input::-moz-range-track { height: 100%; background: transparent; }
+.input::-moz-range-progress { background: transparent; }
+.input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: var(--range-thumb);
+  height: var(--range-thumb);
+  margin-top: calc((var(--size-control-xs) - var(--range-thumb)) / 2);
+  border-radius: var(--radius-full);
+  background: var(--color-control-thumb);
+  border: var(--border-width-1) solid var(--color-border-strong);
+  box-shadow: var(--elevation-raised);
+  cursor: grab;
+  transition: transform var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.input::-moz-range-thumb {
+  pointer-events: auto;
+  width: var(--range-thumb);
+  height: var(--range-thumb);
+  border-radius: var(--radius-full);
+  background: var(--color-control-thumb);
+  border: var(--border-width-1) solid var(--color-border-strong);
+  box-shadow: var(--elevation-raised);
+  cursor: grab;
+}
+.input:active::-webkit-slider-thumb { cursor: grabbing; }
+
+.wrap:is(:hover, [data-state~='hover']):not(.disabled) .input::-webkit-slider-thumb { transform: scale(1.1); }
+.wrap:is(:hover, [data-state~='hover']):not(.disabled) .input::-moz-range-thumb { transform: scale(1.1); }
+
+/* Focus ring sits on the focused thumb only, so the two handles stay distinguishable. */
+.input:is(:focus-visible, [data-state~='focus'])::-webkit-slider-thumb {
+  box-shadow: var(--elevation-raised), 0 0 0 var(--component-focus-ring-offset) var(--color-bg-surface), 0 0 0 calc(var(--component-focus-ring-offset) + var(--component-focus-ring-width)) var(--color-focus-ring);
+}
+.input:is(:focus-visible, [data-state~='focus'])::-moz-range-thumb {
+  box-shadow: var(--elevation-raised), 0 0 0 var(--component-focus-ring-offset) var(--color-bg-surface), 0 0 0 calc(var(--component-focus-ring-offset) + var(--component-focus-ring-width)) var(--color-focus-ring);
+}
+.input:is(:active, [data-state~='active'])::-webkit-slider-thumb { border-color: var(--color-control-slider-fill); }
+.input:is(:active, [data-state~='active'])::-moz-range-thumb { border-color: var(--color-control-slider-fill); }
+
+.disabled { cursor: not-allowed; }
+.disabled .fill { background: var(--color-fg-disabled); }
+.disabled .input::-webkit-slider-thumb { background: var(--color-bg-sunken); cursor: not-allowed; box-shadow: none; }
+.disabled .input::-moz-range-thumb { background: var(--color-bg-sunken); cursor: not-allowed; box-shadow: none; }
+
+.row { display: flex; align-items: center; gap: var(--space-2); width: 100%; }
+.value {
+  flex: none;
+  min-width: var(--space-8);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-size-sm);
+  color: var(--color-fg-default);
+}
+.valueLo { text-align: right; }
+.valueHi { text-align: left; }
+.row:has(.disabled) .value { color: var(--color-fg-disabled); }

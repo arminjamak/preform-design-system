@@ -1,0 +1,40 @@
+/* Window mode: pinned to the viewport. */
+.fixed {
+  position: fixed;
+  z-index: var(--z-index-sticky);
+  bottom: var(--space-6);
+}
+.fixed.bottomRight { right: var(--space-6); }
+.fixed.bottomCenter { left: 50%; margin-left: calc(var(--size-control-lg) / -2); }
+
+/* Container mode: a zero-height sticky rail at the end of the scroll container. */
+.sticky {
+  position: sticky;
+  z-index: var(--z-index-sticky);
+  bottom: 0;
+  display: flex;
+  height: 0;
+  align-items: flex-end;
+  pointer-events: none;
+}
+.sticky.bottomRight { justify-content: flex-end; }
+.sticky.bottomCenter { justify-content: center; }
+.sticky > .button { position: relative; bottom: var(--space-4); margin-inline: var(--space-4); pointer-events: auto; }
+
+.button.button {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--motion-duration-base) var(--motion-easing-standard),
+    translate var(--motion-duration-base) var(--motion-easing-standard),
+    visibility 0s linear 0s,
+    background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.button.hidden {
+  opacity: var(--opacity-hidden);
+  visibility: hidden;
+  translate: 0 var(--space-2);
+  transition: opacity var(--motion-duration-base) var(--motion-easing-standard),
+    translate var(--motion-duration-base) var(--motion-easing-standard),
+    visibility 0s linear var(--motion-duration-base);
+}
+.sticky > .hidden { pointer-events: none; }

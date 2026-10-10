@@ -1,0 +1,50 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sb-gap);
+  height: var(--sb-h);
+  padding-inline: var(--sb-px);
+  border-radius: var(--radius-full);
+  border: var(--border-width-1) solid var(--sb-border, transparent);
+  background: var(--sb-bg);
+  color: var(--sb-fg);
+  font: var(--font-weight-semibold) var(--sb-font) / var(--font-line-height-none) var(--font-family-sans);
+  white-space: nowrap;
+}
+.sm { --sb-h: var(--space-4); --sb-px: calc(var(--space-1) * 1.5); --sb-gap: var(--space-1); --sb-font: var(--font-size-2xs); --sb-dot: calc(var(--space-1) * 1.5); }
+.md { --sb-h: var(--space-5); --sb-px: var(--space-2); --sb-gap: calc(var(--space-1) * 1.5); --sb-font: var(--font-size-xs); --sb-dot: var(--space-2); }
+
+.dot {
+  position: relative;
+  flex: none;
+  width: var(--sb-dot);
+  height: var(--sb-dot);
+  border-radius: var(--radius-full);
+  background: var(--sb-dot-bg);
+}
+.pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--sb-dot-bg);
+  animation: statusPulse calc(var(--motion-duration-slow) * 5) var(--motion-easing-standard) infinite;
+}
+@keyframes statusPulse {
+  from { transform: scale(1); opacity: var(--opacity-dimmed); }
+  to { transform: scale(2.6); opacity: var(--opacity-hidden); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pulse::after { animation: none; display: none; }
+}
+
+/* Text colours: *-strong flips to a light tint in dark. Amber/green strong are too light on their
+   soft wash in light mode, so light uses the -700 primitives (see report: wished --color-status-*-fg). */
+.printing { --sb-bg: var(--color-bg-accent-soft); --sb-fg: var(--color-fg-accent); --sb-dot-bg: var(--color-bg-accent); }
+.queued   { --sb-bg: var(--color-bg-muted); --sb-fg: var(--color-fg-secondary); --sb-dot-bg: var(--color-fg-muted); }
+.paused   { --sb-bg: var(--color-status-warning-soft); --sb-fg: var(--color-amber-700); --sb-dot-bg: var(--color-status-warning); }
+.complete { --sb-bg: var(--color-status-success-soft); --sb-fg: var(--color-green-700); --sb-dot-bg: var(--color-status-success); }
+.failed   { --sb-bg: var(--color-status-danger-soft); --sb-fg: var(--color-status-danger-strong); --sb-dot-bg: var(--color-status-danger); }
+.offline  { --sb-bg: transparent; --sb-border: var(--color-border-default); --sb-fg: var(--color-fg-muted); --sb-dot-bg: var(--color-fg-faint); }
+:global([data-theme='dark']) .paused   { --sb-fg: var(--color-status-warning-strong); }
+:global([data-theme='dark']) .complete { --sb-fg: var(--color-status-success-strong); }

@@ -1,0 +1,54 @@
+.root { display: inline-flex; width: var(--cb-w, calc(var(--size-field-lg) * 1.5)); min-width: 0; }
+.fullWidth { width: 100%; }
+
+/* Popover anchor fills the root, and its layer matches the input width. */
+.anchor { width: 100%; --pop-w: 100%; }
+.field { cursor: text; }
+
+.chevron { transition: transform var(--motion-duration-fast) var(--motion-easing-standard); }
+.chevronOpen { transform: rotate(180deg); }
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-1) 0;
+  max-height: calc(var(--component-menu-item-height) * 8);
+  overflow-y: auto;
+}
+.list:empty { display: none; }
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-half);
+  min-height: var(--component-menu-item-height);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-fg-default);
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.active { background: var(--color-bg-panel); }
+.current .optionLabel { font-weight: var(--font-weight-semibold); }
+.optionLabel { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.description {
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+  color: var(--color-fg-muted);
+}
+.match {
+  background: transparent;
+  color: var(--color-fg-accent);
+  font-weight: var(--font-weight-semibold);
+}
+.customText { font-weight: var(--font-weight-semibold); }
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3);
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  color: var(--color-fg-muted);
+}

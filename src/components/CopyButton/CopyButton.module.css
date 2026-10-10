@@ -1,0 +1,13 @@
+.root { position: relative; display: inline-flex; vertical-align: middle; }
+.check { color: var(--color-status-success-strong); }
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  margin: calc(var(--space-px) * -1);
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

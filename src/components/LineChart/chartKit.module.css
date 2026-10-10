@@ -1,0 +1,78 @@
+/* Chart behaviour layer shared by BarChart, LineChart, AreaChart and ScatterChart.
+   Visual chrome (grid, axis, labels) lives in ../Chart/Chart.module.css; this file adds focus, a11y and motion. */
+
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  padding: 0;
+  margin: calc(var(--space-px) * -1);
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The focusable plot. */
+.focusable { outline: none; border-radius: var(--radius-sm); touch-action: pan-y; }
+.focusable:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  border: var(--border-width-1) dashed var(--color-border-default);
+  border-radius: var(--radius-md);
+  color: var(--color-fg-muted);
+  font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--typography-label-sm-line-height) var(--typography-label-sm-family);
+}
+.emptyIcon { width: var(--size-icon-md); height: var(--size-icon-md); color: var(--color-fg-faint); }
+
+/* Marks */
+.hoverBand { fill: var(--color-bg-hover); pointer-events: none; }
+.hit { fill: transparent; }
+.crosshair { stroke: var(--color-chart-axis); stroke-width: var(--border-width-1); shape-rendering: crispEdges; pointer-events: none; }
+.line { fill: none; stroke-width: var(--border-width-2); stroke-linejoin: round; stroke-linecap: round; }
+.trend { fill: none; stroke-width: var(--border-width-1); stroke-dasharray: var(--space-1) var(--space-half); pointer-events: none; }
+.point { fill: var(--color-bg-surface); stroke-width: var(--border-width-2); }
+.activeDot { stroke: var(--color-bg-surface); stroke-width: var(--border-width-2); pointer-events: none; }
+.gradStart { stop-opacity: calc(var(--opacity-dimmed) / 2); }
+.gradEnd { stop-opacity: var(--opacity-hidden); }
+.areaStacked { fill-opacity: calc(var(--opacity-dimmed) * 0.7); }
+.dot { fill-opacity: calc(1 - var(--opacity-dimmed) / 3); stroke-width: var(--border-width-1); }
+.bubble { fill-opacity: calc(var(--opacity-dimmed) * 0.9); stroke-width: var(--border-width-1); }
+.activeMark { fill-opacity: 1; stroke: var(--color-fg-default); stroke-width: var(--border-width-2); }
+.noPointer { pointer-events: none; }
+
+/* Entry motion — disabled when the user prefers reduced motion. */
+@keyframes drawIn { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes fadeIn { from { opacity: var(--opacity-hidden); } }
+@keyframes growY { from { transform: scaleY(0); } }
+@keyframes growX { from { transform: scaleX(0); } }
+
+.draw { stroke-dasharray: 1; animation: drawIn calc(var(--motion-duration-slow) * 2) var(--motion-easing-standard) backwards; }
+.fade { animation: fadeIn calc(var(--motion-duration-slow) * 2) var(--motion-easing-standard) backwards; }
+.growUp,
+.growDown,
+.growRight,
+.growLeft { transform-box: fill-box; animation: growY var(--motion-duration-slow) var(--motion-easing-standard) backwards; }
+.growUp { transform-origin: bottom; }
+.growDown { transform-origin: top; }
+.growRight { transform-origin: left; animation-name: growX; }
+.growLeft { transform-origin: right; animation-name: growX; }
+
+@media (prefers-reduced-motion: reduce) {
+  .draw,
+  .fade,
+  .growUp,
+  .growDown,
+  .growRight,
+  .growLeft { animation: none; }
+}

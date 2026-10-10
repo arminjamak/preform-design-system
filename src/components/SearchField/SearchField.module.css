@@ -1,0 +1,12 @@
+/* Applied to the TextField wrapper. */
+.search input::-webkit-search-cancel-button,
+.search input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Pull the trailing button toward the border so it sits like the app's inline clear button. */
+.trailing .clear { margin-inline-end: calc(var(--space-1) * -1); color: var(--color-fg-muted); }
+.trailing .clear:is(:hover, [data-state~='hover']):not(:disabled) { color: var(--color-fg-default); }
+
+.trailing { display: inline-flex; align-items: center; gap: var(--space-1); }

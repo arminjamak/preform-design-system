@@ -1,0 +1,48 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  height: var(--tb-h);
+  padding-inline: var(--tb-pad);
+  border-radius: var(--component-button-radius);
+  border: var(--border-width-1) solid transparent;
+  color: var(--color-fg-default);
+  font: var(--typography-label-weight) var(--tb-font) / var(--font-line-height-none) var(--typography-label-family);
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    color var(--motion-duration-fast) var(--motion-easing-standard),
+    border-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.button:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.button:disabled { cursor: not-allowed; color: var(--color-fg-disabled); }
+
+.icon { display: inline-flex; flex: none; width: var(--tb-icon); height: var(--tb-icon); }
+.icon > svg { width: 100%; height: 100%; }
+
+.iconOnly { width: var(--tb-h); padding-inline: 0; border-radius: var(--radius-md); }
+
+/* sizes */
+.sm { --tb-h: var(--size-control-sm); --tb-font: var(--font-size-sm); --tb-pad: var(--space-3); --tb-icon: var(--size-icon-xs); }
+.md { --tb-h: var(--size-control-md); --tb-font: var(--font-size-md); --tb-pad: var(--space-3); --tb-icon: var(--size-icon-xs); }
+.lg { --tb-h: var(--size-control-lg); --tb-font: var(--font-size-lg); --tb-pad: var(--space-4); --tb-icon: var(--size-icon-sm); }
+.iconOnly.md { --tb-icon: var(--size-icon-sm); }
+
+/* off */
+.outline { background: var(--color-bg-surface); border-color: var(--color-border-default); }
+.outline:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-panel); }
+.outline:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-muted); }
+
+.ghost { background: transparent; }
+.ghost:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-hover); }
+.ghost:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-pressed); }
+
+/* on */
+.button[aria-pressed='true'] { background: var(--color-bg-accent-soft); color: var(--color-fg-accent); }
+.outline[aria-pressed='true'] { border-color: var(--color-border-accent); }
+.button[aria-pressed='true']:is(:hover, [data-state~='hover']):not(:disabled) { background: var(--color-bg-accent-selected); }
+.button[aria-pressed='true']:is(:active, [data-state~='active']):not(:disabled) { background: var(--color-bg-accent-selected); border-color: var(--color-border-focus); }
+.button[aria-pressed='true']:disabled { opacity: var(--opacity-disabled); }

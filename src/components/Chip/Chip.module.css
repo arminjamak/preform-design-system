@@ -1,0 +1,68 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  max-width: 100%;
+  height: var(--chip-h);
+  padding-inline: var(--chip-px);
+  border: var(--border-width-1) solid var(--chip-border, transparent);
+  border-radius: var(--radius-full);
+  background: var(--chip-bg, var(--color-bg-surface));
+  color: var(--chip-fg, var(--color-fg-default));
+  font: var(--typography-label-weight) var(--chip-font) / var(--font-line-height-none) var(--typography-label-family);
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.sm { --chip-h: var(--size-control-xs); --chip-px: var(--space-2); --chip-font: var(--font-size-xs); --chip-icon: var(--size-icon-xs); }
+.md { --chip-h: var(--size-control-sm); --chip-px: calc(var(--space-2) + var(--space-half)); --chip-font: var(--font-size-sm); --chip-icon: var(--size-icon-xs); }
+
+.label { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.icon { display: inline-flex; flex: none; margin-inline-start: calc(var(--space-half) * -1); }
+.icon > svg { width: var(--chip-icon); height: var(--chip-icon); }
+.chip .avatar { margin-inline-start: calc(var(--chip-px) * -1 + var(--space-half)); width: calc(var(--chip-h) - var(--space-1)); height: calc(var(--chip-h) - var(--space-1)); }
+
+/* Tag: static, tone-coloured, slightly squarer so it reads as a label rather than a control. */
+.tag { border-radius: var(--radius-sm); }
+.tag.neutral { --chip-bg: var(--color-bg-muted); --chip-fg: var(--color-fg-secondary); }
+.tag.accent  { --chip-bg: var(--color-bg-accent-soft); --chip-fg: var(--color-fg-accent); }
+.tag.success { --chip-bg: var(--color-status-success-soft); --chip-fg: var(--color-status-success-strong); }
+.tag.warning { --chip-bg: var(--color-status-warning-soft); --chip-fg: var(--color-status-warning-strong); }
+.tag.danger  { --chip-bg: var(--color-status-danger-soft); --chip-fg: var(--color-status-danger-strong); }
+.tag.info    { --chip-bg: var(--color-status-info-soft); --chip-fg: var(--color-status-info-strong); }
+
+/* Filter: outline pill that fills with the soft accent when on. */
+.filter { --chip-border: var(--color-border-default); cursor: pointer; }
+.filter .icon { color: var(--color-fg-secondary); }
+.filter:is(:hover, [data-state~='hover']):not(:disabled) { --chip-bg: var(--color-bg-panel); --chip-border: var(--color-border-strong); }
+.filter:is(:active, [data-state~='active']):not(:disabled) { --chip-bg: var(--color-bg-pressed); }
+.filter.selected { --chip-bg: var(--color-bg-accent-soft); --chip-border: var(--color-border-accent); --chip-fg: var(--color-fg-accent); }
+.filter.selected .icon { color: var(--color-fg-accent); }
+.filter.selected:is(:hover, [data-state~='hover']):not(:disabled) { --chip-bg: var(--color-bg-accent-selected); --chip-border: var(--color-fg-accent); }
+.filter:is(:focus-visible, [data-state~='focus']) { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: var(--component-focus-ring-offset); }
+.filter:disabled { cursor: not-allowed; opacity: var(--opacity-disabled); }
+
+/* Input: removable value pill. */
+.input { --chip-border: var(--color-border-default); padding-inline-end: var(--space-half); }
+.input:is(:hover, [data-state~='hover']):not(.disabled) { --chip-border: var(--color-border-strong); }
+.remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: calc(var(--chip-h) - var(--space-1));
+  height: calc(var(--chip-h) - var(--space-1));
+  border-radius: var(--radius-full);
+  color: var(--color-fg-muted);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.remove > svg { width: var(--size-icon-xs); height: var(--size-icon-xs); }
+.remove:is(:hover):not(:disabled), .input[data-state~='hover'] .remove { background: var(--color-bg-hover); color: var(--color-fg-default); }
+.remove:active:not(:disabled), .input[data-state~='active'] .remove { background: var(--color-bg-pressed); }
+.remove:focus-visible, .input[data-state~='focus'] .remove { outline: var(--component-focus-ring-width) solid var(--color-focus-ring); outline-offset: 0; }
+.remove:disabled { cursor: not-allowed; }
+
+.disabled { opacity: var(--opacity-disabled); }
+
+.group { display: flex; flex-wrap: wrap; align-items: center; }
+.groupSm { gap: var(--space-1); }
+.groupMd { gap: var(--space-2) var(--space-1); }
