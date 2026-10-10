@@ -24,8 +24,8 @@ preform-design-system/
 ## Getting started
 
 ```
-git clone https://github.com/arminjamak/preform-design-sytem.git
-cd preform-design-sytem
+git clone https://github.com/arminjamak/preform-design-system.git
+cd preform-design-system
 npm install
 npm run dev        # Storybook at http://localhost:6006
 ```
