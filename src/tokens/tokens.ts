@@ -83,6 +83,7 @@ export const tokens = {
       'blue-15': 'var(--color-alpha-blue-15)',
       'blue-40': 'var(--color-alpha-blue-40)',
       'blue-60': 'var(--color-alpha-blue-60)',
+      'black-60': 'var(--color-alpha-black-60)',
     },
     shadow: {
       'ink-6': 'var(--color-shadow-ink-6)',

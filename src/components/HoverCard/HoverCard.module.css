@@ -1,0 +1,38 @@
+.anchor { position: relative; display: inline-flex; }
+
+.card {
+  position: absolute;
+  z-index: var(--z-index-popover);
+  width: var(--hc-w);
+  padding: var(--space-3);
+  border-radius: var(--component-menu-radius);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  box-shadow: var(--elevation-popover), 0 0 0 var(--border-width-1) var(--color-border-subtle);
+  text-align: left;
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  animation: enter var(--motion-duration-fast) var(--motion-easing-standard);
+}
+/* Invisible bridge across the gap so moving from trigger to card does not close it. */
+.card::before { content: ''; position: absolute; inset: calc(var(--space-2) * -1); z-index: -1; }
+
+.sm { --hc-w: calc(var(--size-layout-sidebar) + var(--space-2)); }
+.md { --hc-w: var(--size-layout-panel); }
+.lg { --hc-w: var(--size-layout-dialog-md); }
+
+.bottom { top: calc(100% + var(--space-2)); transform-origin: top; }
+.top { bottom: calc(100% + var(--space-2)); transform-origin: bottom; }
+.right { left: calc(100% + var(--space-2)); transform-origin: left; }
+.left { right: calc(100% + var(--space-2)); transform-origin: right; }
+
+.top.alignStart, .bottom.alignStart { left: 0; }
+.top.alignEnd, .bottom.alignEnd { right: 0; }
+.top.alignCenter, .bottom.alignCenter { left: 50%; translate: -50% 0; }
+.left.alignStart, .right.alignStart { top: 0; }
+.left.alignEnd, .right.alignEnd { bottom: 0; }
+.left.alignCenter, .right.alignCenter { top: 50%; translate: 0 -50%; }
+
+@keyframes enter {
+  from { opacity: 0; scale: 0.97; }
+  to { opacity: 1; scale: 1; }
+}

@@ -896,6 +896,20 @@
     "theme": "light"
   },
   {
+    "name": "--color-alpha-black-60",
+    "path": [
+      "color",
+      "alpha",
+      "black-60"
+    ],
+    "type": "color",
+    "value": "rgba(0, 0, 0, 0.6)",
+    "ref": null,
+    "description": "Dark-theme modal scrim.",
+    "tier": "primitive",
+    "theme": "light"
+  },
+  {
     "name": "--color-shadow-ink-6",
     "path": [
       "color",

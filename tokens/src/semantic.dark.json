@@ -39,7 +39,7 @@
         "$value": "{color.alpha.white-5}"
       },
       "overlay": {
-        "$value": "{color.alpha.ink-30}"
+        "$value": "{color.alpha.black-60}"
       },
       "accent": {
         "$value": "{color.blue.500}"

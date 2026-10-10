@@ -1,0 +1,113 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-modal);
+  display: flex;
+}
+.right { justify-content: flex-end; --sheet-from: 100% 0; }
+.left { justify-content: flex-start; --sheet-from: -100% 0; }
+.bottom { align-items: flex-end; justify-content: center; --sheet-from: 0 100%; }
+.inline {
+  position: relative;
+  inset: auto;
+  z-index: auto;
+  min-height: var(--size-layout-dialog-lg);
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-overlay);
+  animation: fadeIn var(--motion-duration-base) var(--motion-easing-standard);
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-width: 100%;
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  box-shadow: var(--elevation-modal);
+  animation: slideIn var(--motion-duration-base) var(--motion-easing-standard);
+}
+.panel:focus { outline: none; }
+
+/* Side sheets: full height, width from size. */
+.right .panel,
+.left .panel { height: 100%; width: var(--sheet-w); }
+.right .panel { border-radius: var(--radius-xl) 0 0 var(--radius-xl); }
+.left .panel { border-radius: 0 var(--radius-xl) var(--radius-xl) 0; }
+.right .sm, .left .sm { --sheet-w: var(--size-layout-panel); }
+.right .md, .left .md { --sheet-w: var(--size-layout-dialog-md); }
+.right .lg, .left .lg { --sheet-w: var(--size-layout-dialog-lg); }
+
+/* Bottom sheet: centred, capped width, height from size, follows the drag handle. */
+.bottom .panel {
+  width: 100%;
+  max-width: calc(var(--size-layout-dialog-lg) + var(--size-layout-panel));
+  height: var(--sheet-h);
+  max-height: calc(100% - var(--space-6));
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  transform: translateY(calc(var(--sheet-drag, 0) * var(--space-px)));
+  transition: transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.bottom .sm { --sheet-h: var(--size-layout-dialog-sm); }
+.bottom .md { --sheet-h: var(--size-layout-dialog-lg); }
+.bottom .lg { --sheet-h: calc(100% - var(--space-12)); }
+.bottom .panel.dragging { transition: none; }
+
+.root[data-presence='closing'] .scrim { animation: fadeOut var(--motion-duration-base) var(--motion-easing-standard) forwards; }
+.root[data-presence='closing'] .panel { animation: slideOut var(--motion-duration-base) var(--motion-easing-standard) forwards; }
+
+.handleZone {
+  display: flex;
+  justify-content: center;
+  flex: none;
+  padding: var(--space-2) 0 var(--space-1);
+  cursor: grab;
+  touch-action: none;
+}
+.dragging .handleZone { cursor: grabbing; }
+.handle {
+  width: var(--space-8);
+  height: var(--space-1);
+  border-radius: var(--radius-full);
+  background: var(--color-border-strong);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  flex: none;
+  padding: var(--space-3) var(--space-3) var(--space-2) var(--space-4);
+  border-bottom: var(--border-width-1) solid var(--color-border-default);
+}
+.headerWithHandle { padding-top: 0; }
+.titles { min-width: 0; flex: 1; }
+.title { margin: 0; font: var(--typography-title-sm-weight) var(--typography-title-sm-size) / var(--typography-title-sm-line-height) var(--typography-title-sm-family); }
+.description { margin: var(--space-half) 0 0; font: var(--typography-label-sm-weight) var(--typography-label-sm-size) / var(--font-line-height-snug) var(--typography-label-sm-family); color: var(--color-fg-muted); }
+.headerActions { display: flex; align-items: center; gap: var(--space-1); }
+
+.body { min-height: 0; flex: 1; overflow-y: auto; padding: var(--space-3) var(--space-4); background: var(--color-bg-surface); }
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: none;
+  padding: var(--space-2) var(--space-4);
+  border-top: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-subtle);
+}
+.left .footer { border-bottom-right-radius: var(--radius-xl); }
+.right .footer { border-bottom-left-radius: var(--radius-xl); }
+
+@keyframes fadeIn { from { opacity: 0; } }
+@keyframes fadeOut { to { opacity: 0; } }
+@keyframes slideIn { from { translate: var(--sheet-from); } }
+@keyframes slideOut { to { translate: var(--sheet-from); } }
