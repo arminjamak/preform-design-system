@@ -1,0 +1,16 @@
+.group { display: inline-flex; align-items: center; gap: var(--space-half); }
+.floating {
+  padding: var(--space-half);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  box-shadow: var(--elevation-raised);
+}
+.outline {
+  padding: var(--space-half);
+  border-radius: var(--radius-md);
+  border: var(--border-width-1) solid var(--color-border-default);
+  background: var(--color-bg-surface);
+}
+.tip { display: inline-flex; align-items: center; gap: var(--space-2); }
+.count { margin-left: var(--space-1); }
+.floating .count { margin-right: var(--space-1); }

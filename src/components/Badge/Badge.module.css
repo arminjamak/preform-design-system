@@ -22,22 +22,22 @@
 .solid.neutral { --badge-bg: var(--color-fg-muted); }
 .solid.accent  { --badge-bg: var(--color-bg-accent); --badge-fg: var(--color-fg-on-accent); }
 .solid.success { --badge-bg: var(--color-status-success); }
-.solid.warning { --badge-bg: var(--color-status-warning); }
+.solid.warning { --badge-bg: var(--color-status-warning); --badge-fg: var(--color-fg-on-warning); }
 .solid.danger  { --badge-bg: var(--color-status-danger); }
 .solid.info    { --badge-bg: var(--color-status-info); }
 
 .soft { --badge-border: transparent; }
 .soft.neutral { --badge-bg: var(--color-bg-muted); --badge-fg: var(--color-fg-secondary); }
 .soft.accent  { --badge-bg: var(--color-bg-accent-soft); --badge-fg: var(--color-fg-accent); }
-.soft.success { --badge-bg: var(--color-status-success-soft); --badge-fg: var(--color-green-700); }
-.soft.warning { --badge-bg: var(--color-status-warning-soft); --badge-fg: var(--color-amber-700); }
+.soft.success { --badge-bg: var(--color-status-success-soft); --badge-fg: var(--color-status-success-fg); }
+.soft.warning { --badge-bg: var(--color-status-warning-soft); --badge-fg: var(--color-status-warning-fg); }
 .soft.danger  { --badge-bg: var(--color-status-danger-soft); --badge-fg: var(--color-status-danger-strong); }
 .soft.info    { --badge-bg: var(--color-status-info-soft); --badge-fg: var(--color-status-info-strong); }
 
 .outline { --badge-bg: var(--color-bg-surface); }
 .outline.neutral { --badge-fg: var(--color-fg-secondary); --badge-border: var(--color-border-default); }
 .outline.accent  { --badge-fg: var(--color-fg-accent); --badge-border: var(--color-border-accent); }
-.outline.success { --badge-fg: var(--color-green-700); --badge-border: var(--color-status-success); }
-.outline.warning { --badge-fg: var(--color-amber-700); --badge-border: var(--color-status-warning); }
+.outline.success { --badge-fg: var(--color-status-success-fg); --badge-border: var(--color-status-success); }
+.outline.warning { --badge-fg: var(--color-status-warning-fg); --badge-border: var(--color-status-warning); }
 .outline.danger  { --badge-fg: var(--color-status-danger-strong); --badge-border: var(--color-status-danger); }
 .outline.info    { --badge-fg: var(--color-status-info-strong); --badge-border: var(--color-status-info); }

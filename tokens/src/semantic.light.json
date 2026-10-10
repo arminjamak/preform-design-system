@@ -107,6 +107,10 @@
       },
       "on-status": {
         "$value": "{color.neutral.0}"
+      },
+      "on-warning": {
+        "$value": "{color.neutral.900}",
+        "$description": "Text on amber/warning fills, which are too light for white text."
       }
     },
     "border": {

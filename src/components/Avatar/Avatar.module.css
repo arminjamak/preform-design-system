@@ -18,6 +18,6 @@
 .sm { --av-size: var(--size-control-sm); --av-font: var(--font-size-2xs); }
 .md { --av-size: var(--size-control-lg); --av-font: var(--font-size-sm); }
 .lg { --av-size: var(--size-control-xl); --av-font: var(--font-size-lg); }
-.neutral { background: var(--color-fg-muted); }
+.neutral { background: var(--color-bg-muted); color: var(--color-fg-default); }
 .accent { background: var(--color-bg-accent); }
 .inverse { background: var(--color-bg-inverse-active); }

@@ -1,0 +1,67 @@
+.bar {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: var(--size-control-xl);
+  max-width: calc(100% - var(--space-8));
+  padding: var(--space-1) var(--space-1) var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  border: var(--border-width-1) solid var(--color-border-subtle);
+  background: var(--color-bg-surface);
+  color: var(--color-fg-default);
+  box-shadow: var(--elevation-popover);
+  white-space: nowrap;
+}
+.floating {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  z-index: var(--z-index-sticky);
+}
+.floating.bottom { bottom: var(--space-4); }
+.floating.top { top: var(--space-4); }
+.inline { position: relative; max-width: 100%; }
+
+.bottom { animation: enterBottom var(--motion-duration-base) var(--motion-easing-standard); }
+.top { animation: enterTop var(--motion-duration-base) var(--motion-easing-standard); }
+.leaving.bottom { animation: leaveBottom var(--motion-duration-fast) var(--motion-easing-standard) forwards; }
+.leaving.top { animation: leaveTop var(--motion-duration-fast) var(--motion-easing-standard) forwards; }
+
+@keyframes enterBottom {
+  from { opacity: 0; transform: translateY(var(--space-4)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes enterTop {
+  from { opacity: 0; transform: translateY(calc(var(--space-4) * -1)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes leaveBottom {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translateY(var(--space-4)); }
+}
+@keyframes leaveTop {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translateY(calc(var(--space-4) * -1)); }
+}
+
+.count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  padding-right: var(--space-2);
+  color: var(--color-fg-secondary);
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+}
+.number {
+  color: var(--color-fg-accent);
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+.divider {
+  flex: none;
+  width: var(--border-width-1);
+  height: var(--size-icon-md);
+  margin-inline: var(--space-1);
+  background: var(--color-border-default);
+}
+.actions { display: inline-flex; align-items: center; gap: var(--space-1); min-width: 0; }

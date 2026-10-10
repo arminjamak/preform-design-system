@@ -99,6 +99,9 @@
       },
       "on-status": {
         "$value": "{color.neutral.0}"
+      },
+      "on-warning": {
+        "$value": "{color.neutral.900}"
       }
     },
     "border": {

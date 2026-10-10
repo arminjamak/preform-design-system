@@ -128,6 +128,7 @@ export const tokens = {
       'on-inverse': 'var(--color-fg-on-inverse)',
       'on-inverse-muted': 'var(--color-fg-on-inverse-muted)',
       'on-status': 'var(--color-fg-on-status)',
+      'on-warning': 'var(--color-fg-on-warning)',
     },
     border: {
       subtle: 'var(--color-border-subtle)',

@@ -35,6 +35,7 @@
   --color-fg-on-inverse: var(--color-neutral-0);
   --color-fg-on-inverse-muted: var(--color-neutral-400);
   --color-fg-on-status: var(--color-neutral-0);
+  --color-fg-on-warning: var(--color-neutral-900);
   --color-border-subtle: var(--color-neutral-750);
   --color-border-default: var(--color-neutral-700);
   --color-border-strong: var(--color-neutral-600);

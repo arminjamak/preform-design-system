@@ -191,6 +191,7 @@
   --color-fg-on-inverse: var(--color-neutral-0);
   --color-fg-on-inverse-muted: var(--color-neutral-300);
   --color-fg-on-status: var(--color-neutral-0);
+  --color-fg-on-warning: var(--color-neutral-900); /** Text on amber/warning fills, which are too light for white text. */
   --color-border-subtle: var(--color-neutral-150);
   --color-border-default: var(--color-neutral-300);
   --color-border-strong: var(--color-neutral-400);

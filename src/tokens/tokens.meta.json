@@ -1442,6 +1442,20 @@
     "theme": "light"
   },
   {
+    "name": "--color-fg-on-warning",
+    "path": [
+      "color",
+      "fg",
+      "on-warning"
+    ],
+    "type": "color",
+    "value": "#1b2129",
+    "ref": "color.neutral.900",
+    "description": "Text on amber/warning fills, which are too light for white text.",
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
     "name": "--color-border-subtle",
     "path": [
       "color",
