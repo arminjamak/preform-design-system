@@ -4,7 +4,7 @@ import { ChevronRightIcon } from 'lucide-react';
 import { Button, Callout } from '../components';
 
 const meta = {
-  title: 'Components/Callout',
+  title: 'Components/Feedback/Callout',
   component: Callout,
   args: { tone: 'info', variant: 'soft', title: 'Ready to print', children: '128 touchpoints generated.' },
   argTypes: {

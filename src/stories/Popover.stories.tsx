@@ -5,7 +5,7 @@ import { ChevronDownIcon } from 'lucide-react';
 import { Button, Popover } from '../components';
 
 const meta = {
-  title: 'Components/Popover',
+  title: 'Components/Overlays/Popover',
   component: Popover,
   args: { open: true, onClose: fn(), placement: 'bottom', align: 'start', padded: true, width: 240, trigger: null, children: null },
   argTypes: {

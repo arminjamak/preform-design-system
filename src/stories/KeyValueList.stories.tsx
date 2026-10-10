@@ -3,7 +3,7 @@ import { Clock3Icon, DropletsIcon, LayersIcon } from 'lucide-react';
 import { Button, KeyValueList } from '../components';
 
 const meta = {
-  title: 'Components/KeyValueList',
+  title: 'Components/Data Display/KeyValueList',
   component: KeyValueList,
   args: {
     size: 'sm',

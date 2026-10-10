@@ -4,7 +4,7 @@ import { useArgs } from 'storybook/preview-api';
 import { Slider } from '../components';
 
 const meta = {
-  title: 'Components/Slider',
+  title: 'Components/Inputs/Slider',
   component: Slider,
   args: { label: 'Brush size', value: 40, onChange: fn(), min: 0, max: 100, step: 1, variant: 'fill', showValue: true, disabled: false },
   argTypes: {

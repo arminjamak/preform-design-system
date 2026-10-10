@@ -3,7 +3,7 @@ import { fn } from 'storybook/test';
 import { Badge, Button, FieldRow, NumberField, PanelShell, SectionTitle, Segmented, Toggle } from '../components';
 
 const meta = {
-  title: 'Components/PanelShell',
+  title: 'Components/Layout/PanelShell',
   component: PanelShell,
   args: { title: 'Supports', onClose: fn(), children: null },
   argTypes: { children: { control: false }, footer: { control: false }, badge: { control: 'boolean', mapping: { true: <Badge tone="accent" variant="soft">Beta</Badge>, false: undefined } } },

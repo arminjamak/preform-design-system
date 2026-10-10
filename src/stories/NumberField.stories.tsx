@@ -5,7 +5,7 @@ import { NumberField } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/NumberField',
+  title: 'Components/Inputs/NumberField',
   component: NumberField,
   args: { label: 'Touchpoint size', value: 0.6, onChange: fn(), unit: 'mm', step: 0.05, min: 0, max: 5, decimals: 2, size: 'sm', disabled: false, invalid: false },
   argTypes: {

@@ -222,6 +222,18 @@
   --color-accent-tone-red: var(--color-red-600);
   --color-accent-tone-orange: var(--color-orange-500);
   --color-accent-tone-magenta: var(--color-magenta-500);
+  --color-chart-series-1: var(--color-blue-600);
+  --color-chart-series-2: var(--color-green-500);
+  --color-chart-series-3: var(--color-amber-500);
+  --color-chart-series-4: var(--color-magenta-500);
+  --color-chart-series-5: var(--color-orange-500);
+  --color-chart-series-6: var(--color-neutral-500);
+  --color-chart-grid: var(--color-neutral-150);
+  --color-chart-axis: var(--color-neutral-400);
+  --color-chart-label: var(--color-neutral-600);
+  --color-chart-sequential-low: var(--color-blue-50);
+  --color-chart-sequential-high: var(--color-blue-800);
+  --color-chart-track: var(--color-neutral-200);
   --shadow-xs: 0px 1px 2px 0px var(--color-shadow-ink-12);
   --shadow-sm: 0px 1px 4px 0px var(--color-shadow-ink-14);
   --shadow-md: 0px 3px 12px 0px var(--color-shadow-ink-14);

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FieldRow, NumberField, Select, TextField, Toggle } from '../components';
 
 const meta = {
-  title: 'Components/FieldRow',
+  title: 'Components/Inputs/FieldRow',
   component: FieldRow,
   args: { label: 'Layer thickness', info: 'Height of each printed layer', layout: 'inline', children: <NumberField label="Layer thickness" value={0.05} decimals={3} step={0.025} unit="mm" onChange={() => {}} /> },
   argTypes: { layout: { control: 'inline-radio', options: ['inline', 'stacked'] }, children: { control: false } },

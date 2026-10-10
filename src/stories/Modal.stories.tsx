@@ -4,7 +4,7 @@ import { fn } from 'storybook/test';
 import { Button, FieldRow, Modal, Select, TextField } from '../components';
 
 const meta = {
-  title: 'Components/Modal',
+  title: 'Components/Overlays/Modal',
   component: Modal,
   args: { open: true, onRequestClose: fn(), title: 'Save Profile', description: 'Store the current auto support settings as a reusable profile.', size: 'md', inline: true, children: null },
   argTypes: { size: { control: 'inline-radio', options: ['sm', 'md', 'lg'] }, children: { control: false }, footer: { control: false } },

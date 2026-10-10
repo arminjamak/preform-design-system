@@ -5,7 +5,7 @@ import { IconButton } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/IconButton',
+  title: 'Components/Actions/IconButton',
   component: IconButton,
   args: { label: 'Close', icon: <XIcon strokeWidth={2.6} />, variant: 'ghost', size: 'sm', shape: 'rounded', onClick: fn() },
   argTypes: {

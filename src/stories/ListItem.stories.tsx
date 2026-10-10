@@ -5,7 +5,7 @@ import { IconButton, ListItem, Menu } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/ListItem',
+  title: 'Components/Data Display/ListItem',
   component: ListItem,
   args: { label: 'Mini Chassis Kit', selected: false, highlighted: false, muted: false, variant: 'tinted', onClick: fn() },
   argTypes: {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button, InfoTip, Tooltip } from '../components';
 
 const meta = {
-  title: 'Components/Tooltip',
+  title: 'Components/Feedback/Tooltip',
   component: Tooltip,
   args: { content: 'Profiles store every auto support setting', placement: 'top', open: true, children: <Button variant="outline">Hover me</Button> },
   argTypes: { placement: { control: 'inline-radio', options: ['top', 'bottom'] }, children: { control: false } },

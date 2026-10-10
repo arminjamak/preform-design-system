@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button, SectionTitle } from '../components';
 
 const meta = {
-  title: 'Components/SectionTitle',
+  title: 'Components/Layout/SectionTitle',
   component: SectionTitle,
   args: { children: 'Touchpoints', info: 'Where supports meet the model', size: 'md' },
   argTypes: { size: { control: 'inline-radio', options: ['sm', 'md'] }, action: { control: 'boolean', mapping: { true: <Button variant="link">Reset</Button>, false: undefined } } },

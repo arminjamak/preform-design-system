@@ -6,7 +6,7 @@ import { TextField } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/TextField',
+  title: 'Components/Inputs/TextField',
   component: TextField,
   args: { label: 'Profile name', value: 'Fine detail', onChange: fn(), placeholder: 'Name this profile', size: 'sm', invalid: false, disabled: false, fullWidth: false },
   argTypes: {

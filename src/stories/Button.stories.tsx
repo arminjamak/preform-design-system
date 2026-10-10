@@ -5,7 +5,7 @@ import { Button } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/Button',
+  title: 'Components/Actions/Button',
   component: Button,
   args: { children: 'Generate Supports', variant: 'primary', size: 'sm', shape: 'pill', onClick: fn() },
   argTypes: {

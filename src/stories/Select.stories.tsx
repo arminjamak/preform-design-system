@@ -5,7 +5,7 @@ import { Select } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/Select',
+  title: 'Components/Inputs/Select',
   component: Select,
   args: { label: 'Material', value: 'Alumina 4N V1', onChange: fn(), options: ['Alumina 4N V1', 'Clear V4', 'Tough 2000', 'Rigid 10K'], size: 'sm', invalid: false, disabled: false, fullWidth: false },
   argTypes: {

@@ -10,7 +10,7 @@ const options = [
 ];
 
 const meta = {
-  title: 'Components/Segmented',
+  title: 'Components/Actions/Segmented',
   component: Segmented,
   args: { label: 'Orientation mode', value: 'auto', options, onChange: fn(), size: 'md', fullWidth: false, disabled: false },
   argTypes: {

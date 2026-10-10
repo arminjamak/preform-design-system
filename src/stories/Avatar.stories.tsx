@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Avatar } from '../components';
 
 const meta = {
-  title: 'Components/Avatar',
+  title: 'Components/Data Display/Avatar',
   component: Avatar,
   args: { name: 'Armin Jamak', size: 'xs', tone: 'accent' },
   argTypes: { size: { control: 'inline-radio', options: ['xs', 'sm', 'md', 'lg'] }, tone: { control: 'inline-radio', options: ['accent', 'neutral', 'inverse'] } },

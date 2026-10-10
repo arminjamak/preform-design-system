@@ -23,7 +23,7 @@ const groups = [
 ];
 
 const meta = {
-  title: 'Components/ToolRail',
+  title: 'Components/Navigation/ToolRail',
   component: ToolRail,
   args: { groups, active: 'support', dimmed: false, onSelect: fn() },
   globals: { surface: 'canvas' },

@@ -11,7 +11,7 @@ const items = [
 ];
 
 const meta = {
-  title: 'Components/Menu',
+  title: 'Components/Overlays/Menu',
   component: Menu,
   args: { label: 'Actions', items, placement: 'bottom', align: 'end', buttonVariant: 'ghost', buttonSize: 'sm' },
   argTypes: {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Spinner } from '../components';
 
 const meta = {
-  title: 'Components/Spinner',
+  title: 'Components/Feedback/Spinner',
   component: Spinner,
   args: { size: 'sm', tone: 'accent' },
   argTypes: { size: { control: 'inline-radio', options: ['xs', 'sm', 'md', 'lg'] }, tone: { control: 'inline-radio', options: ['current', 'accent', 'muted'] } },

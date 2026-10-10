@@ -53,7 +53,7 @@ const preview: Preview = {
     docs: { codePanel: true },
     options: {
       storySort: {
-        order: ['Introduction', 'Foundations', ['Colors', 'Typography', 'Spacing & Sizing', 'Radius & Borders', 'Elevation', 'Motion', 'Tokens'], 'Components', 'Patterns'],
+        order: ['Introduction', 'Coverage', 'Foundations', ['Colors', 'Typography', 'Spacing & Sizing', 'Radius & Borders', 'Elevation', 'Motion', 'Tokens'], 'Components', ['Actions', 'Inputs', 'Navigation', 'Feedback', 'Layout', 'Data Display', 'Overlays', 'Media', 'Charts', 'Collaboration', 'Interaction', 'Specialized'], 'Patterns'],
       },
     },
   },

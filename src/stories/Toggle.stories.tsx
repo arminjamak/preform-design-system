@@ -5,7 +5,7 @@ import { Toggle } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/Toggle',
+  title: 'Components/Inputs/Toggle',
   component: Toggle,
   args: { label: 'Undersupported Models', checked: true, onChange: fn(), size: 'sm', showLabel: false, disabled: false },
   argTypes: {

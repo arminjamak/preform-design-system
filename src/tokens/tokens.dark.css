@@ -67,4 +67,16 @@
   --color-accent-tone-red: var(--color-red-500);
   --color-accent-tone-orange: var(--color-orange-500);
   --color-accent-tone-magenta: var(--color-magenta-500);
+  --color-chart-series-1: var(--color-blue-400);
+  --color-chart-series-2: var(--color-green-300);
+  --color-chart-series-3: var(--color-amber-300);
+  --color-chart-series-4: var(--color-magenta-500);
+  --color-chart-series-5: var(--color-orange-500);
+  --color-chart-series-6: var(--color-neutral-400);
+  --color-chart-grid: var(--color-neutral-750);
+  --color-chart-axis: var(--color-neutral-600);
+  --color-chart-label: var(--color-neutral-400);
+  --color-chart-sequential-low: var(--color-blue-900);
+  --color-chart-sequential-high: var(--color-blue-300);
+  --color-chart-track: var(--color-neutral-700);
 }

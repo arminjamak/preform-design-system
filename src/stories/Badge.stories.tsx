@@ -3,7 +3,7 @@ import { CheckIcon } from 'lucide-react';
 import { Badge, PassBadge } from '../components';
 
 const meta = {
-  title: 'Components/Badge',
+  title: 'Components/Feedback/Badge',
   component: Badge,
   args: { children: 'Current', tone: 'accent', variant: 'solid', size: 'sm' },
   argTypes: {

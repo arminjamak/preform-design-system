@@ -894,5 +894,173 @@
     "description": null,
     "tier": "semantic",
     "theme": "dark"
+  },
+  {
+    "name": "--color-chart-series-1",
+    "path": [
+      "color",
+      "chart",
+      "series-1"
+    ],
+    "type": "color",
+    "value": "#7fb0e3",
+    "ref": "color.blue.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-series-2",
+    "path": [
+      "color",
+      "chart",
+      "series-2"
+    ],
+    "type": "color",
+    "value": "#6fd86f",
+    "ref": "color.green.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-series-3",
+    "path": [
+      "color",
+      "chart",
+      "series-3"
+    ],
+    "type": "color",
+    "value": "#f7c466",
+    "ref": "color.amber.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-series-4",
+    "path": [
+      "color",
+      "chart",
+      "series-4"
+    ],
+    "type": "color",
+    "value": "#ec2fc0",
+    "ref": "color.magenta.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-series-5",
+    "path": [
+      "color",
+      "chart",
+      "series-5"
+    ],
+    "type": "color",
+    "value": "#f06a1d",
+    "ref": "color.orange.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-series-6",
+    "path": [
+      "color",
+      "chart",
+      "series-6"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-grid",
+    "path": [
+      "color",
+      "chart",
+      "grid"
+    ],
+    "type": "color",
+    "value": "#3c4551",
+    "ref": "color.neutral.750",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-axis",
+    "path": [
+      "color",
+      "chart",
+      "axis"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-label",
+    "path": [
+      "color",
+      "chart",
+      "label"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-sequential-low",
+    "path": [
+      "color",
+      "chart",
+      "sequential-low"
+    ],
+    "type": "color",
+    "value": "#0b2f55",
+    "ref": "color.blue.900",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-sequential-high",
+    "path": [
+      "color",
+      "chart",
+      "sequential-high"
+    ],
+    "type": "color",
+    "value": "#9cc0ea",
+    "ref": "color.blue.300",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
+  },
+  {
+    "name": "--color-chart-track",
+    "path": [
+      "color",
+      "chart",
+      "track"
+    ],
+    "type": "color",
+    "value": "#4b5056",
+    "ref": "color.neutral.700",
+    "description": null,
+    "tier": "semantic",
+    "theme": "dark"
   }
 ]

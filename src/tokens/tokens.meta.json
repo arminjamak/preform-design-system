@@ -1876,6 +1876,174 @@
     "theme": "light"
   },
   {
+    "name": "--color-chart-series-1",
+    "path": [
+      "color",
+      "chart",
+      "series-1"
+    ],
+    "type": "color",
+    "value": "#0a63c9",
+    "ref": "color.blue.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-series-2",
+    "path": [
+      "color",
+      "chart",
+      "series-2"
+    ],
+    "type": "color",
+    "value": "#22b922",
+    "ref": "color.green.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-series-3",
+    "path": [
+      "color",
+      "chart",
+      "series-3"
+    ],
+    "type": "color",
+    "value": "#f5a623",
+    "ref": "color.amber.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-series-4",
+    "path": [
+      "color",
+      "chart",
+      "series-4"
+    ],
+    "type": "color",
+    "value": "#ec2fc0",
+    "ref": "color.magenta.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-series-5",
+    "path": [
+      "color",
+      "chart",
+      "series-5"
+    ],
+    "type": "color",
+    "value": "#f06a1d",
+    "ref": "color.orange.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-series-6",
+    "path": [
+      "color",
+      "chart",
+      "series-6"
+    ],
+    "type": "color",
+    "value": "#8d9298",
+    "ref": "color.neutral.500",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-grid",
+    "path": [
+      "color",
+      "chart",
+      "grid"
+    ],
+    "type": "color",
+    "value": "#eceef0",
+    "ref": "color.neutral.150",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-axis",
+    "path": [
+      "color",
+      "chart",
+      "axis"
+    ],
+    "type": "color",
+    "value": "#b2b6bc",
+    "ref": "color.neutral.400",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-label",
+    "path": [
+      "color",
+      "chart",
+      "label"
+    ],
+    "type": "color",
+    "value": "#767b82",
+    "ref": "color.neutral.600",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-sequential-low",
+    "path": [
+      "color",
+      "chart",
+      "sequential-low"
+    ],
+    "type": "color",
+    "value": "#f2f6fb",
+    "ref": "color.blue.50",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-sequential-high",
+    "path": [
+      "color",
+      "chart",
+      "sequential-high"
+    ],
+    "type": "color",
+    "value": "#06447f",
+    "ref": "color.blue.800",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
+    "name": "--color-chart-track",
+    "path": [
+      "color",
+      "chart",
+      "track"
+    ],
+    "type": "color",
+    "value": "#e5e8eb",
+    "ref": "color.neutral.200",
+    "description": null,
+    "tier": "semantic",
+    "theme": "light"
+  },
+  {
     "name": "--space-0",
     "path": [
       "space",

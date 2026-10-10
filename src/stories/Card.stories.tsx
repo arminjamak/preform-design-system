@@ -4,7 +4,7 @@ import { Card, IconButton } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/Card',
+  title: 'Components/Layout/Card',
   component: Card,
   args: { variant: 'outline', padding: 'md', interactive: false, selected: false, dragging: false, children: null },
   argTypes: {

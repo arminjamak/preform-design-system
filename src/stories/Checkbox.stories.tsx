@@ -5,7 +5,7 @@ import { Checkbox } from '../components';
 import { StateMatrix } from './helpers/StateMatrix';
 
 const meta = {
-  title: 'Components/Checkbox',
+  title: 'Components/Inputs/Checkbox',
   component: Checkbox,
   args: { label: 'Show raft', checked: true, onChange: fn(), tone: 'blue', showLabel: true, indeterminate: false, disabled: false },
   argTypes: {

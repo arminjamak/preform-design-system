@@ -4,7 +4,7 @@ import { fn } from 'storybook/test';
 import { Button, ConfirmDialog } from '../components';
 
 const meta = {
-  title: 'Components/ConfirmDialog',
+  title: 'Components/Overlays/ConfirmDialog',
   component: ConfirmDialog,
   args: { open: true, onConfirm: fn(), onCancel: fn(), title: 'Unsaved changes', message: 'Your edits to this profile will be lost unless you save them.', confirmLabel: 'Save', secondaryLabel: 'Discard', cancelLabel: 'Keep Editing', tone: 'default', inline: true },
   argTypes: { tone: { control: 'inline-radio', options: ['default', 'danger'] } },

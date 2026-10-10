@@ -5,7 +5,7 @@ import { CloudIcon, PrinterIcon } from 'lucide-react';
 import { Tabs } from '../components';
 
 const meta = {
-  title: 'Components/Tabs',
+  title: 'Components/Navigation/Tabs',
   component: Tabs,
   args: {
     label: 'App sections',
