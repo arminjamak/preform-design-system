@@ -1,0 +1,96 @@
+/* Always inverse: the console reads as a dark panel in both themes. Status hues use the light
+   primitives because the semantic status tokens are tuned for light surfaces. */
+.terminal {
+  --term-stdout: var(--color-fg-on-inverse);
+  --term-muted: var(--color-fg-on-inverse-muted);
+  --term-prompt: var(--color-green-300);
+  --term-stderr: var(--color-red-300);
+  --term-info: var(--color-blue-300);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: var(--border-width-1) solid var(--color-border-inverse);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-inverse);
+  color: var(--term-stdout);
+  box-shadow: var(--elevation-card);
+  overflow: hidden;
+  transition: outline-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.terminal:has(.input:focus-visible) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--size-control-md);
+  padding-inline: var(--space-3) var(--space-1);
+  border-bottom: var(--border-width-1) solid var(--color-border-inverse);
+  background: var(--color-bg-inverse-active);
+}
+.headerIcon { flex: none; width: var(--size-icon-xs); height: var(--size-icon-xs); color: var(--term-muted); }
+.title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  color: var(--term-muted);
+}
+.actions { display: flex; gap: var(--space-half); }
+
+.screen {
+  height: var(--terminal-h);
+  padding: var(--space-2) var(--space-3);
+  overflow: auto;
+  cursor: text;
+  font: var(--typography-mono-weight) var(--typography-mono-size) / var(--typography-mono-line-height) var(--typography-mono-family);
+}
+.screen::selection,
+.screen *::selection { background: var(--color-alpha-blue-60); color: var(--color-fg-on-inverse); }
+
+.line { white-space: pre-wrap; overflow-wrap: anywhere; }
+.stdout { color: var(--term-stdout); }
+.stderr { color: var(--term-stderr); }
+.info { color: var(--term-info); }
+.prompt { color: var(--term-prompt); font-weight: var(--font-weight-semibold); white-space: pre; }
+.command { color: var(--term-stdout); }
+
+.inputLine { display: flex; }
+.busy { min-height: calc(var(--typography-mono-size) * var(--typography-mono-line-height)); }
+.field { position: relative; flex: 1; min-width: 0; }
+.mirror { white-space: pre-wrap; overflow-wrap: anywhere; }
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  color: transparent;
+  caret-color: transparent;
+  opacity: var(--opacity-hidden);
+}
+
+.caret {
+  box-shadow: inset 0 0 0 var(--space-px) var(--term-muted);
+}
+.focused .caret {
+  background: var(--term-stdout);
+  color: var(--color-bg-inverse);
+  box-shadow: none;
+  animation: caret-blink calc(var(--motion-duration-slow) * 4) steps(1, end) infinite;
+}
+@keyframes caret-blink {
+  50% { background: transparent; color: var(--term-stdout); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .focused .caret { animation: none; }
+}

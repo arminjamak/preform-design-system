@@ -1,0 +1,84 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  min-width: 0;
+}
+.none { --carousel-gap: var(--space-0); }
+.sm { --carousel-gap: var(--space-2); }
+.md { --carousel-gap: var(--space-3); }
+.lg { --carousel-gap: var(--space-4); }
+
+.viewport { position: relative; }
+
+.track {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--carousel-per-view) - 1) * var(--carousel-gap)) / var(--carousel-per-view));
+  gap: var(--carousel-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: var(--radius-lg);
+}
+.track::-webkit-scrollbar { display: none; }
+.track:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.slide {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: var(--z-index-raised);
+  transition: opacity var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.arrow:disabled { opacity: var(--opacity-hidden); pointer-events: none; }
+.prev { left: var(--space-2); }
+.next { right: var(--space-2); }
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+}
+.dots { display: flex; align-items: center; }
+.dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-control-xs);
+  height: var(--size-control-xs);
+  border-radius: var(--radius-full);
+}
+.dot::before {
+  content: '';
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-border-strong);
+  transition: width var(--motion-duration-fast) var(--motion-easing-standard), background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.dot:is(:hover, [data-state~='hover'])::before { background: var(--color-fg-muted); }
+.dot:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: calc(var(--component-focus-ring-offset) * -1);
+}
+.dotCurrent { width: calc(var(--space-4) + var(--space-2)); }
+.dotCurrent::before,
+.dotCurrent:is(:hover, [data-state~='hover'])::before { width: var(--space-4); background: var(--color-bg-accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .track { scroll-behavior: auto; }
+  .arrow, .dot::before { transition: none; }
+}

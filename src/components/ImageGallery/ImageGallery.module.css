@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--space-24), 1fr));
+  gap: var(--gallery-gap);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sm { --gallery-gap: var(--space-1); }
+.md { --gallery-gap: var(--space-2); }
+.lg { --gallery-gap: var(--space-3); }
+.item { min-width: 0; }

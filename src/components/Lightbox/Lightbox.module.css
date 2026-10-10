@@ -1,0 +1,147 @@
+/* Dark viewer: the modal scrim layered over the inverse chrome colour, so it stays dark in both themes. */
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-modal);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  background: linear-gradient(var(--color-bg-overlay), var(--color-bg-overlay)), var(--color-bg-inverse);
+  color: var(--color-fg-on-inverse);
+  font: var(--typography-body-sm-weight) var(--typography-body-sm-size) / var(--typography-body-sm-line-height) var(--typography-body-sm-family);
+  animation: fade var(--motion-duration-base) var(--motion-easing-standard);
+}
+.root:focus { outline: none; }
+.inline { position: absolute; z-index: var(--z-index-base); border-radius: var(--radius-lg); overflow: hidden; }
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: var(--size-control-xl);
+  padding-inline: var(--space-3) var(--space-2);
+  border-bottom: var(--border-width-1) solid var(--color-border-inverse);
+}
+.counter {
+  font: var(--typography-label-weight) var(--typography-label-size) / var(--typography-label-line-height) var(--typography-label-family);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg-on-inverse);
+}
+.spacer { flex: 1; }
+.zoomValue {
+  min-width: var(--space-10);
+  text-align: center;
+  font: var(--typography-label-weight) var(--typography-label-sm-size) / var(--typography-label-line-height) var(--typography-label-family);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg-on-inverse-muted);
+}
+.divider {
+  width: var(--space-px);
+  height: var(--size-icon-md);
+  margin-inline: var(--space-1);
+  background: var(--color-border-inverse);
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  padding: var(--space-4) var(--space-16);
+  cursor: zoom-in;
+  touch-action: pan-y;
+  user-select: none;
+}
+.zoomed { cursor: grab; touch-action: none; }
+.dragging { cursor: grabbing; }
+
+.image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--elevation-modal);
+  transform: translate(calc(var(--lb-x) * var(--space-px)), calc(var(--lb-y) * var(--space-px))) scale(var(--lb-zoom));
+  transition: transform var(--motion-duration-base) var(--motion-easing-standard), opacity var(--motion-duration-base) var(--motion-easing-standard);
+  will-change: transform;
+}
+.dragging .image { transition: none; }
+.imageLoading { opacity: var(--opacity-hidden); }
+
+.stageStatus {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  color: var(--color-fg-on-inverse-muted);
+  pointer-events: none;
+}
+.stageStatus > svg { width: var(--size-icon-lg); height: var(--size-icon-lg); }
+
+.nav {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: var(--z-index-raised);
+}
+/* Doubled class beats IconButton's own inverse hover so the disc stays visible on bright images. */
+.nav.nav { background: var(--color-bg-inverse-active); box-shadow: var(--elevation-popover); }
+.nav.nav:is(:hover, [data-state~='hover']):not(:disabled) { background: linear-gradient(var(--color-bg-inverse-hover), var(--color-bg-inverse-hover)), var(--color-bg-inverse-active); }
+.nav.nav:disabled { opacity: var(--opacity-dimmed); color: var(--color-fg-on-inverse-muted); }
+.prev { left: var(--space-3); }
+.next { right: var(--space-3); }
+
+.caption {
+  min-height: calc(var(--space-4) + var(--space-6));
+  padding: var(--space-2) var(--space-4);
+  text-align: center;
+  color: var(--color-fg-on-inverse-muted);
+}
+.caption:empty { min-height: 0; padding: 0; }
+
+.strip {
+  position: relative;
+  display: flex;
+  justify-content: safe center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  overflow-x: auto;
+  scrollbar-width: thin;
+  border-top: var(--border-width-1) solid var(--color-border-inverse);
+}
+.thumb {
+  flex: none;
+  width: var(--space-12);
+  padding: 0;
+  border-radius: var(--radius-md);
+  border: var(--border-width-2) solid transparent;
+  opacity: var(--opacity-disabled);
+  transition: opacity var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.thumb:is(:hover, [data-state~='hover']) { opacity: 1; }
+.thumb:is(:focus-visible, [data-state~='focus']) {
+  outline: var(--component-focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--component-focus-ring-offset);
+}
+.thumbCurrent { opacity: 1; border-color: var(--color-fg-on-inverse); }
+
+.srOnly {
+  position: absolute;
+  width: var(--space-px);
+  height: var(--space-px);
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@keyframes fade { from { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .root { animation: none; }
+  .image, .thumb { transition: none; }
+}
